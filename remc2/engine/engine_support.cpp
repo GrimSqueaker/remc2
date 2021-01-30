@@ -790,7 +790,7 @@ Bit32u compare_with_snapshot_D41A0(char* filename, Bit8u* adress, Bit32u adressd
 	return(i);
 };
 
-Bit32u compare_with_sequence_E7EE0(char* filename, Bit8u* adress, Bit32u adressdos, Bit32u count, Bit32u size1, Bit32u size2, Bit8u* origbyte, Bit8u* copybyte, long offset) {
+Bit32u compare_with_sequence_E7EE0(char* filename, Bit8u* adress, Bit32u  /*adressdos*/, Bit32u count, Bit32u size1, Bit32u size2, Bit8u* origbyte, Bit8u* copybyte, long offset) {
 	char findnamec[500];
 	Bit8u* buffer = (Bit8u*)malloc(size2);
 	FILE* fptestepc;
@@ -839,7 +839,7 @@ Bit32u compare_with_sequence_E7EE0(char* filename, Bit8u* adress, Bit32u adressd
 	return(i);
 };
 
-Bit32u compare_with_sequence_D41A0(char* filename, Bit8u* adress, Bit32u adressdos, Bit32u count, Bit32u size, Bit8u* origbyte, Bit8u* copybyte, long offset) {
+Bit32u compare_with_sequence_D41A0(char* filename, Bit8u* adress, Bit32u  /*adressdos*/, Bit32u count, Bit32u size, Bit8u* origbyte, Bit8u* copybyte, long offset) {
 	char findnamec[500];
 	Bit8u* buffer = (Bit8u*)malloc(size);
 	FILE* fptestepc;
@@ -995,7 +995,7 @@ Bit32u compare_with_sequence_EA3E4(char* filename, type_str_0x6E8E** adress, Bit
 	return(1);
 };
 
-Bit32u compare_with_sequence_D41A0_4(char* filename, Bit8u* adress, Bit32u adressdos, Bit32u count, Bit32u size, Bit8u* origbyte, Bit8u* copybyte, long offset) {
+Bit32u compare_with_sequence_D41A0_4(char* filename, Bit8u* adress, Bit32u  /*adressdos*/, Bit32u count, Bit32u size, Bit8u* origbyte, Bit8u* copybyte, long offset) {
 	char findnamec[500];
 	Bit8u* buffer = (Bit8u*)malloc(size);
 	FILE* fptestepc;
@@ -1050,7 +1050,7 @@ int test_F2C20ar_id_pointer(Bit32u adress) {
 	return 0;
 }
 
-Bit32u compare_with_sequence_x_DWORD_F2C20ar(char* filename, Bit8u* adress, Bit32u adressdos, Bit32u count, Bit32u size, Bit8u* origbyte, Bit8u* copybyte, int* posdiff) {
+Bit32u compare_with_sequence_x_DWORD_F2C20ar(char* filename, Bit8u* adress, Bit32u  /*adressdos*/, Bit32u count, Bit32u size, Bit8u* origbyte, Bit8u* copybyte, int* posdiff) {
 	char findnamec[500];
 	Bit8u* buffer = (Bit8u*)malloc(size);
 	FILE* fptestepc;
@@ -1101,7 +1101,7 @@ Bit32u compare_with_sequence_x_DWORD_F2C20ar(char* filename, Bit8u* adress, Bit3
 	return(diffindex);
 };
 
-Bit32u compare_with_sequence_array_E2A74(char* filename, Bit8u* adress, Bit32u adressdos, Bit32u count, Bit32u size1, Bit32u size2, Bit8u* origbyte, Bit8u* copybyte, long offset) {
+Bit32u compare_with_sequence_array_E2A74(char* filename, Bit8u* adress, Bit32u  /*adressdos*/, Bit32u count, Bit32u size1, Bit32u size2, Bit8u* origbyte, Bit8u* copybyte, long offset) {
 	char findnamec[500];
 	Bit8u* buffer = (Bit8u*)malloc(size2);
 	FILE* fptestepc;
@@ -1150,7 +1150,7 @@ Bit32u compare_with_sequence_array_E2A74(char* filename, Bit8u* adress, Bit32u a
 	return(i);
 };
 
-Bit32u compare_with_sequence_array_222BD3(char* filename, Bit8u* adress, Bit32u adressdos, Bit32u count, Bit32u size, Bit8u* origbyte, Bit8u* copybyte, int* posdiff) {
+Bit32u compare_with_sequence_array_222BD3(char* filename, Bit8u* adress, Bit32u  /*adressdos*/, Bit32u count, Bit32u size, Bit8u* origbyte, Bit8u* copybyte, int* posdiff) {
 	char findnamec[500];
 	Bit8u* buffer = (Bit8u*)malloc(size);
 	FILE* fptestepc;
@@ -1201,7 +1201,7 @@ Bit32u compare_with_sequence_array_222BD3(char* filename, Bit8u* adress, Bit32u 
 	return(i);
 };
 
-Bit32u compare_with_sequence(char* filename, Bit8u* adress, Bit32u adressdos, long count, long size1, Bit32u size2, Bit8u* origbyte, Bit8u* copybyte, long offset) {
+Bit32u compare_with_sequence(char* filename, Bit8u* adress, Bit32u  /*adressdos*/, long count, long size1, Bit32u size2, Bit8u* origbyte, Bit8u* copybyte, long offset) {
 	char findnamec[500];
 	Bit8u* buffer = (Bit8u*)malloc(size2);
 	FILE* fptestepc;
@@ -1540,7 +1540,7 @@ const int bytesPerPixel = 4; /// red, green, blue
 const int fileHeaderSize = 14;
 const int infoHeaderSize = 40;
 
-unsigned char* createBitmapFileHeader(int height, int width, int pitch, int paddingSize) {
+unsigned char* createBitmapFileHeader(int height, int  /*width*/, int pitch, int paddingSize) {
 	int fileSize = fileHeaderSize + infoHeaderSize + (/*bytesPerPixel*width*/pitch + paddingSize) * height;
 
 	static unsigned char fileHeader[] = {

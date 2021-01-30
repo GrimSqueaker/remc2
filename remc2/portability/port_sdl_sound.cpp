@@ -53,7 +53,7 @@ Bit8u sound_buffer[4][20000];
  2
 
 */
-void test_midi_play(Bit8u* data, Bit8u* header, Bit32s track_number)
+void test_midi_play(Bit8u*  /*data*/, Bit8u* header, Bit32s track_number)
 {
 	Bit8u* acttrack = &header[32 + track_number * 32];
 	//int testsize = *(Bit32u*)(&header[32 + (track_number + 1) * 32] + 18) - *(Bit32u*)(acttrack + 18);
@@ -101,18 +101,18 @@ void SOUND_start_sequence(Bit32s sequence_num) {
 #endif//SOUND_SDLMIXER
 };
 
-void SOUND_pause_sequence(Bit32s sequence_num) {
+void SOUND_pause_sequence(Bit32s  /*sequence_num*/) {
 #ifdef SOUND_SDLMIXER
 	Mix_PauseMusic();
 #endif//SOUND_SDLMIXER
 };
 
-void SOUND_stop_sequence(Bit32s sequence_num) {
+void SOUND_stop_sequence(Bit32s  /*sequence_num*/) {
 #ifdef SOUND_SDLMIXER
 	Mix_HaltMusic();
 #endif//SOUND_SDLMIXER
 };
-void SOUND_resume_sequence(Bit32s sequence_num) {
+void SOUND_resume_sequence(Bit32s  /*sequence_num*/) {
 #ifdef SOUND_SDLMIXER
 	Mix_ResumeMusic();
 #endif//SOUND_SDLMIXER
@@ -124,7 +124,7 @@ void SOUND_set_sequence_volume(Bit32s volume) {
 #endif//SOUND_SDLMIXER
 };
 
-void SOUND_init_MIDI_sequence(Bit8u* data, Bit8u* header, Bit32s track_number)
+void SOUND_init_MIDI_sequence(Bit8u*  /*data*/, Bit8u* header, Bit32s track_number)
 {
 	Bit8u* acttrack = &header[32 + track_number * 32];
 	//int testsize = *(Bit32u*)(&header[32 + (track_number + 1) * 32] + 18) - *(Bit32u*)(acttrack + 18);
@@ -361,7 +361,7 @@ int num_IO_configurations = 3;
 int service_rate = -1;
 //HSAMPLE last_sample;
 
-Bit32s ac_sound_call_driver(AIL_DRIVER* drvr, Bit32s fn, VDI_CALL* in, VDI_CALL* out)/*AIL_DRIVER *drvr,S32 fn, VDI_CALL*in,VDI_CALL *out)*/ {
+Bit32s ac_sound_call_driver(AIL_DRIVER* drvr, Bit32s fn, VDI_CALL*  /*in*/, VDI_CALL* out)/*AIL_DRIVER *drvr,S32 fn, VDI_CALL*in,VDI_CALL *out)*/ {
 	switch (fn) {
 	case 0x300: {//AIL_API_install_driver
 		drvr->VHDR_4->VDI_HDR_var10 = (void*)&common_IO_configurations;
@@ -526,7 +526,7 @@ Bit32u SOUND_sample_status(HSAMPLE S) {
 	return 0;
 }
 
-void SOUND_end_sample(HSAMPLE S) {
+void SOUND_end_sample(HSAMPLE  /*S*/) {
 #ifdef SOUND_SDLMIXER
 	Mix_HaltChannel(-1);
 #endif//SOUND_SDLMIXER
@@ -598,7 +598,7 @@ Mix_HookMusicFinished(void (SDLCALL *music_finished)(void));
 	return true;
 }
 
-AIL_DRIVER* ac_AIL_API_install_driver(int a1, Bit8u* a2, int a3)/*driver_image,n_bytes*///27f720
+AIL_DRIVER* ac_AIL_API_install_driver(int  /*a1*/, Bit8u*  /*a2*/, int  /*a3*/)/*driver_image,n_bytes*///27f720
 {
 
 

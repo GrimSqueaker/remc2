@@ -102,7 +102,7 @@ bool file_exists(const char * filename) {
 	return false;
 }
 
-FILE* mycreate(char* path, Bit32u flags) {
+FILE* mycreate(char* path, Bit32u  /*flags*/) {
 	FILE *fp;
 	fp = fopen(path, "wb+");
 	#ifdef DEBUG_START
@@ -142,7 +142,7 @@ void debug_printf(const char* format, ...) {
 	#endif
 }
 
-Bit32s myaccess(char* path, Bit32u flags) {
+Bit32s myaccess(char* path, Bit32u  /*flags*/) {
 	DIR *dir;
 	//char path2[2048] = "\0";
 	#ifdef DEBUG_FILEOPS
