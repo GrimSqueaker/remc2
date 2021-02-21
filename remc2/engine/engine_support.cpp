@@ -486,7 +486,7 @@ posistruct_t* xy_DWORD_17DEC0_spritestr_orig;
 doublebyte doublebyte_conv(uint16_t a2) {
 	doublebyte result;
 	result.byte1 = a2 & 0xff;
-	result.byte2 = a2 & 0xff00;
+	result.byte2 = (a2 & 0xff00) >> 8;
 	return result;
 };
 
