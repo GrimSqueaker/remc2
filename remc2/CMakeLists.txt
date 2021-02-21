@@ -2,6 +2,7 @@ project(remc2 C CXX)
 
 if (USE_CLANG_TIDY)
     #set(CMAKE_CXX_CLANG_TIDY "clang-tidy;-checks=*")
+    #set(CMAKE_CXX_CLANG_TIDY "clang-tidy;-checks=misc-unused-parameters;-fix")
     set(CMAKE_CXX_CLANG_TIDY "clang-tidy;-checks=misc-unused-parameters")
 endif ()
 
@@ -34,8 +35,6 @@ source_group("Source Files" FILES ${SOURCE_FILES})
 set(SOURCE_FILES_ENGINE
     "engine/ail_sound.h"
     "engine/defs.h"
-#    "engine/editor.cpp"
-#    "engine/editor.h"
     "engine/engine_support.cpp"
     "engine/engine_support.h"
     "engine/engine_support_converts.cpp"

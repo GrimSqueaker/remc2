@@ -56,7 +56,7 @@ void _strupr(char* s)
 
 #ifdef INTERVAL_SAVE
 int save_debugcounter = 0;
-#endif INTERVAL_SAVE
+#endif //INTERVAL_SAVE
 
 //#define DEBUG_GRAPHICS
 
@@ -878,15 +878,15 @@ int sub_B2468() { stub_fix_it(); return 0; };
 int sub_B256E() { stub_fix_it(); return 0; };
 int sub_B2670() { stub_fix_it(); return 0; };
 int sub_B1FD4() { stub_fix_it(); return 0; };
-int sub_B278C(short a, short b, int c, int d, int e, int f, int g, int h, int i, int j, int k, int l, int m, int n, short o) { stub_fix_it(); return 0; };
+int sub_B278C(short  /*a*/, short  /*b*/, int  /*c*/, int  /*d*/, int  /*e*/, int  /*f*/, int  /*g*/, int  /*h*/, int  /*i*/, int  /*j*/, int  /*k*/, int  /*l*/, int  /*m*/, int  /*n*/, short  /*o*/) { stub_fix_it(); return 0; };
 int _null_int23_exit() { stub_fix_it(); return 0; };
 //int x_free(void* ptr) { free(ptr); return 0; };
 //int malloc(x_DWORD size) { stub_fix_it();return 0; };
 //void sub_A0EEC_s_plus2();
 
 //void sub_9BA00() { stub_fix_it(); };
-int nullsub_3(x_DWORD number) { stub_fix_it(); return 0; };
-int _no_support_loaded(x_DWORD number1, x_DWORD number2) { stub_fix_it(); return 0; };
+int nullsub_3(x_DWORD  /*number*/) { stub_fix_it(); return 0; };
+int _no_support_loaded(x_DWORD  /*number1*/, x_DWORD  /*number2*/) { stub_fix_it(); return 0; };
 
 void SetCDFilePaths(char* cdDataPath, Pathstruct pstr[])
 {
@@ -922,7 +922,7 @@ void SetCDFilePaths(char* cdDataPath, Pathstruct pstr[])
 char x_BYTE_E4CB2 = 0; // weak
 // Function declarations -weak
 //int /*__noreturn*/ sub_10000() { stub_fix_it();return 0; }; // weak
-void sub_9A1B6(int a1, void* a2, void* a3)
+void sub_9A1B6(int  /*a1*/, void* a2, void* a3)
 {
 	if (x_BYTE_E4CB2 == 9)
 	{
@@ -931,7 +931,7 @@ void sub_9A1B6(int a1, void* a2, void* a3)
 	}
 }
 
-long unknown_libname_2_findfirst(char* path, uint16_t a2, _finddata_t* c_file) {//findfirst
+long unknown_libname_2_findfirst(char* path, uint16_t  /*a2*/, _finddata_t* c_file) {//findfirst
 	long hFile;
 	//char path2[2048] = "\0";
 	//pathfix(path, path2);//only for DOSBOX version
@@ -1017,18 +1017,18 @@ long unknown_libname_3_findnext(_finddata_t* c_file, long hFile) {//258193
 	return result;*/
 	return 0;
 };// weak
-int unknown_libname_4_find_close(struct _finddata_t* c_file, long hFile) {//27b1b3
+int unknown_libname_4_find_close(struct _finddata_t*  /*c_file*/, long hFile) {//27b1b3
 	my_findclose(hFile);
 	return 0;
 };// weak
-int _wcpp_1_unwind_leave__120(/*x_DWORD a, */x_DWORD b, x_DWORD c) { /*stub_fix_it();*/return 0; };// weak // fix this
-void JUMPOUT(int* adr) {
+int _wcpp_1_unwind_leave__120(/*x_DWORD a, */x_DWORD  /*b*/, x_DWORD  /*c*/) { /*stub_fix_it();*/return 0; };// weak // fix this
+void JUMPOUT(int*  /*adr*/) {
 	stub_fix_it(); exit(0);
 };//error must fix this
-void JUMPOUT(x_WORD cs, int* adr) {
+void JUMPOUT(x_WORD  /*cs*/, int*  /*adr*/) {
 	stub_fix_it(); exit(0);
 };//error must fix this
-void JUMPOUT(x_WORD cs, int a, int* adr) {
+void JUMPOUT(x_WORD  /*cs*/, int  /*a*/, int*  /*adr*/) {
 	stub_fix_it(); exit(0);
 };//error must fix this
 /*void qmemcpy(void* a, void* b, size_t c) {
@@ -1135,7 +1135,7 @@ x_DWORD signal(x_DWORD, x_DWORD) { stub_fix_it(); return 0; };// weak
 //void _enable() { stub_fix_it(); };
 int /*__fastcall*/ _wcpp_1_unwind_leave__93(x_DWORD, x_DWORD, x_DWORD, x_DWORD, x_DWORD, x_DWORD) { stub_fix_it(); return 0; };// weak
 int _wcpp_1_unwind_leave__100(x_DWORD, x_DWORD) { /*stub_fix_it();*/return 0; };// weak
-long x_InterlockedExchange(long volatile* Target, long Value) { stub_fix_it(); return 0; };
+long x_InterlockedExchange(long volatile*  /*Target*/, long  /*Value*/) { stub_fix_it(); return 0; };
 int _wcpp_1_unwind_leave__98(x_DWORD) { /*stub_fix_it();*/return 0; };// weak
 /*void(*dos_key_vect_9)();
 void(*dos_getvect(x_DWORD number))() {
@@ -1334,7 +1334,7 @@ void x_BitScanReverse(uint32_t* Destination, uint32_t Source) {
 //uint8_t** pointersdat_buffer; // ebx
 
 //x_DWORD int386x(x_DWORD, x_DWORD, x_DWORD, x_DWORD) { stub_fix_it();return 0; };// weak
-uint32 sub_AB59E(SREGS* a1, REGS* a2, int intvar)
+uint32 sub_AB59E(SREGS* a1, REGS* a2, int  /*intvar*/)
 {
 	uint32 v2; // bp
 	uint32 result; // eax
@@ -1403,29 +1403,29 @@ void* x_expand(void* memblock, size_t size) {
 int /*__fastcall*/ _wcpp_1_unwind_leave__132(x_DWORD) { /*stub_fix_it();*/ return 0; };// weak
 double /*__fastcall*/ _CHP(x_DWORD) { stub_fix_it(); return 0; };// weak
 double IF_DPOW(double, double) { stub_fix_it(); return 0; };// weak
-x_DWORD x_dos_setdrive(int32_t a, int32_t* b) {
+x_DWORD x_dos_setdrive(int32_t  /*a*/, int32_t* b) {
 	*b = 0x1a;
 	return 0;
 };// weak
 /*x_DWORD x_outp(x_DWORD, char) { stub_fix_it(); return 0; };// weak
 x_DWORD x_inp(x_DWORD) { stub_fix_it(); return 0; };// weak*/
 
-x_DWORD x_setmode(FILE* path, int mode) { stub_fix_it(); return 0; };// weak
-unsigned __CFRCR__(__int16 a, unsigned __int8 b) { stub_fix_it(); return 0; };
-unsigned __CFRCL__(__int16 a, unsigned __int8 b) { stub_fix_it(); return 0; };
+x_DWORD x_setmode(FILE*  /*path*/, int  /*mode*/) { stub_fix_it(); return 0; };// weak
+unsigned __CFRCR__(__int16  /*a*/, unsigned __int8  /*b*/) { stub_fix_it(); return 0; };
+unsigned __CFRCL__(__int16  /*a*/, unsigned __int8  /*b*/) { stub_fix_it(); return 0; };
 size_t x_write2(FILE* descriptor, uint8_t* buffer, uint32_t size) {
 	return fwrite(buffer, 1, size, descriptor);
 };// weak
 
 //x_DWORD dos_read(FILE*, char, x_DWORD, x_DWORD, x_DWORD) { stub_fix_it(); return 0; };// weak
 //unsigned long __readgsx_DWORD(unsigned long Offset) { stub_fix_it(); return 0; };
-void __inx_BYTEstring(unsigned short Port, unsigned char* Buffer, unsigned long Count) { stub_fix_it(); };
-int* MK_FP(unsigned int segment, unsigned int offset) { stub_fix_it(); return 0; };
+void __inx_BYTEstring(unsigned short  /*Port*/, unsigned char*  /*Buffer*/, unsigned long  /*Count*/) { stub_fix_it(); };
+int* MK_FP(unsigned int  /*segment*/, unsigned int  /*offset*/) { stub_fix_it(); return 0; };
 //unsigned int x__getcallerseflags(void) { stub_fix_it(); return 0; };
 int /*__fastcall*/ _hook387(x_DWORD, x_DWORD, x_DWORD) { stub_fix_it(); return 0; };// weak
-void x__sidt(void* Destination) { stub_fix_it(); };
+void x__sidt(void*  /*Destination*/) { stub_fix_it(); };
 unsigned long x__readcr0(void) { stub_fix_it(); return 0; };
-void x__writecr0(unsigned __int32 Data) { stub_fix_it(); };
+void x__writecr0(unsigned __int32  /*Data*/) { stub_fix_it(); };
 int _FDFS(void) { stub_fix_it(); return 0; };// weak
 int _sigfpe_handler() { stub_fix_it(); return 0; };// weak
 int _DOS4G_hook_init(void) { stub_fix_it(); return 0; };// weak
@@ -1448,7 +1448,7 @@ int _wcpp_1_unwind_leave__99(uint8_t*) { /*stub_fix_it();*/return 0; };// weak
 //int sub_752C0() { stub_fix_it();return 0; }; // weak
 //int sub_76F40() { stub_fix_it();return 0; }; // weak
 int sub_8E0D0() { stub_fix_it(); return 0; }; // weak
-void sub_8F4B0(HMDIDRIVER user) { stub_fix_it(); }; // weak
+void sub_8F4B0(HMDIDRIVER  /*user*/) { stub_fix_it(); }; // weak
 int dword_1820E0 = 0;
 long clock_value()
 {
@@ -1484,7 +1484,7 @@ long _clock()
 long /*__fastcall*/ j___clock() {
 	return _clock();
 }; // weak
-void sub_99830(HMDIDRIVER user) { stub_fix_it(); }; // weak
+void sub_99830(HMDIDRIVER  /*user*/) { stub_fix_it(); }; // weak
 void j___delay(x_DWORD x) { mydelay(x);}; // weak
 int /*__fastcall*/ j_j___clock(x_DWORD, x_DWORD, x_DWORD) { stub_fix_it(); return 0; }; // weak
 //int x_DWORD_E3E38 = 0; // weak
@@ -20110,7 +20110,7 @@ type_str_0x6E8E* sub_10780(type_str_0x6E8E* a1x)//1f1780
 	v1 = a1x->array_0x52_82.xshift + 255;
 	v9 = (a1x->array_0x4C_76.y + 128) >> 8;
 	//v2 = sub_10080(0, (v1 - (__CFSHL__(v1 >> 31, 8) + (v1 >> 31 << 8))) >> 8);
-	v2 = sub_10080(0, (v1 - (my_sign32(v1) * 255) >> 8));
+	v2 = sub_10080(0, ((v1 - (my_sign32(v1) * 255)) >> 8));
 	if (v2)
 	{
 		while (sub_10130(v2, &v7, &v6) == 1)
@@ -20161,7 +20161,7 @@ type_str_0x6E8E* sub_108B0(type_str_0x6E8E* a1x)//1f18b0
 	v1 = a1x->array_0x52_82.xshift + 255;
 	v12 = (a1x->array_0x4C_76.y + 128) >> 8;
 	//v2 = sub_10080(0, (v1 - (__CFSHL__(v1 >> 31, 8) + (v1 >> 31 << 8))) >> 8);
-	v2 = sub_10080(0, (v1 - (my_sign32(v1) * 255) >> 8));
+	v2 = sub_10080(0, ((v1 - (my_sign32(v1) * 255)) >> 8));
 	if (v2)
 	{
 	LABEL_29:
@@ -20250,7 +20250,7 @@ type_str_0x6E8E* sub_10A50(type_str_0x6E8E* a1x)//1f1a50
 	v1 = a1x->array_0x52_82.xshift + 255;
 	v9 = (a1x->array_0x4C_76.y + 128) >> 8;
 	//v2 = sub_10080(0, (v1 - (__CFSHL__(v1 >> 31, 8) + (v1 >> 31 << 8))) >> 8);
-	v2 = sub_10080(0, (v1 - (my_sign32(v1) * 255) >> 8));
+	v2 = sub_10080(0, ((v1 - (my_sign32(v1) * 255)) >> 8));
 	if (v2)
 	{
 		while (sub_10130(v2, &v7, &v6) == 1)
@@ -20359,7 +20359,7 @@ int sub_10C80(type_str_0x6E8E* a1x, unsigned __int8 a2, unsigned __int16 a3)//1f
 
 #ifdef DEBUG_SEQUENCES
 	//add_compare(0x1F1C80, debugafterload);
-#endif DEBUG_SEQUENCES
+#endif //DEBUG_SEQUENCES
 
 	//adress 1f1c84
 
@@ -21648,7 +21648,7 @@ void sub_12500(type_str_0x6E8E* a1x)//1f3500
 
 #ifdef DEBUG_SEQUENCES
 	//add_compare(0x1f3504, debugafterload, 0xd7);
-#endif DEBUG_SEQUENCES
+#endif //DEBUG_SEQUENCES
 
 	//LOBYTE(v1) = a1x->byte_0x45_69 & 7;
 	v2 = 0;
@@ -21800,7 +21800,7 @@ void sub_12780()//1f3780
 	//adress 1f3783
 #ifdef DEBUG_SEQUENCES
 		//add_compare(0x1F3783, debugafterload);
-#endif DEBUG_SEQUENCES
+#endif //DEBUG_SEQUENCES
 
 	v0 = 1;
 	//result = &x_D41A0_BYTEARRAY_0[0x365FC];
@@ -21919,7 +21919,7 @@ signed int sub_12910(type_str_0x6E8E* a1x)//1f3910
 
 #ifdef DEBUG_SEQUENCES
 	//add_compare(0x1f3912, debugafterload,0x19);
-#endif DEBUG_SEQUENCES
+#endif //DEBUG_SEQUENCES
 
 	sub_12A70(a1x);
 	switch (a1x->dword_0xA4_164x->byte_0x1C1_449)
@@ -23463,7 +23463,7 @@ signed int sub_14E10(type_str_0x6E8E* a1x, unsigned __int8 a2)//1f5e10
 		}
 		debugcounter_1f5e10++;
 	}*/
-#endif DEBUG_SEQUENCES
+#endif //DEBUG_SEQUENCES
 
 	if (!sub_15170(a1x, a2))
 		return 0;
@@ -23882,7 +23882,7 @@ char sub_15790(type_str_0x6E8E* a1x)//1f6790
 		}
 		debugcounter_1f6790++;
 	}*/
-#endif DEBUG_SEQUENCES
+#endif //DEBUG_SEQUENCES
 
 	v12x = x_DWORD_EA3E4[a1x->word_0x96_150];
 	//v1 = (a1x->dword_0x8C_140 - (__CFSHL__(a1x->dword_0x8C_140 >> 31, 2) + 4 * (a1x->dword_0x8C_140 >> 31))) >> 2;
@@ -24057,7 +24057,7 @@ void sub_159E0()//1f69e0
 			//comp20 = compare_with_sequence((char*)"0022860F-003AA0A4", pdwScreenBuffer, 0x3aa0a4, debugcounter_47560, 320 * 200, 320 * 20, &origbyte20, &remakebyte20);
 		}*/
 
-#endif DEBUG_SEQUENCES
+#endif //DEBUG_SEQUENCES
 		debugcounter_1f69e0++;
 	}
 
@@ -24886,7 +24886,7 @@ char sub_169C0(type_str_0x6E8E* a1x)//1f79c0
 
 #ifdef DEBUG_SEQUENCES
 	//add_compare(0x1f79c3, debugafterload,0x77);
-#endif DEBUG_SEQUENCES
+#endif //DEBUG_SEQUENCES
 
 	//LOBYTE(*(int32_t*)&v9x[6]) = a1x->array_0x4C_76.x >> 8;
 	//BYTE1(*(int32_t*)&v9x[6]) = a1x->array_0x4C_76.y >> 8;
@@ -27128,7 +27128,7 @@ void sub_19D60(signed int a1/*, type_str_0x2BDE* a2x*/)//1fad60
 
 #ifdef DEBUG_SEQUENCES
 	add_compare(0x1fad63, debugafterload);
-#endif DEBUG_SEQUENCES
+#endif //DEBUG_SEQUENCES
 
 	v2 = x_D41A0_BYTEARRAY_4_struct.byte_38591;
 	if (v2 == 1u)
@@ -27782,12 +27782,12 @@ void sub_1A7A0_fly_asistant()//1fb7a0 // fly asistant
 		}
 		debugcounter_1fb7a0++;
 	}
-#endif FIX_MOUSE
+#endif //FIX_MOUSE
 
 #ifdef FIX_FLYASISTANT
 	if (x_D41A0_BYTEARRAY_4_struct.setting_byte3_24 & 1)
 		return;
-#endif FIX_FLYASISTANT
+#endif //FIX_FLYASISTANT
 
 	//result = x_D41A0_BYTEARRAY_0;
 	if (D41A0_BYTESTR_0.byte_0x36DEA_fly_asistant)
@@ -28832,7 +28832,7 @@ signed int sub_1B8C0(type_str_0x6E8E* a1x)//1fc8c0
 
 #ifdef DEBUG_SEQUENCES
 	//add_compare(0x1fc8c4, debugafterload);
-#endif DEBUG_SEQUENCES
+#endif //DEBUG_SEQUENCES
 
 	//v1 = a1x->struct_byte_0xc_12_15.byte[1];
 	if (a1x->struct_byte_0xc_12_15.byte[1] & 8)
@@ -29421,7 +29421,7 @@ void sub_1C560(type_str_0x6E8E* a1x, unsigned __int16 a2)//1fd560
 
 #ifdef DEBUG_SEQUENCES
 	//add_compare(0x1fd564, debugafterload);
-#endif DEBUG_SEQUENCES
+#endif //DEBUG_SEQUENCES
 
 	//fix
 	v3x = 0;
@@ -30442,7 +30442,7 @@ void sub_1DDA0(type_str_0x6E8E* a1x, __int16 a2)//1feda0
 		comp20 = compare_with_sequence_D41A0((char*)"001FEDA0-00356038", (uint8_t*)& D41A0_BYTESTR_0, 0x356038, debugcounter_1DEDA0, 224790, &origbyte20, &remakebyte20);
 		debugcounter_1DEDA0++;
 	}*/
-#endif DEBUG_SEQUENCES
+#endif //DEBUG_SEQUENCES
 	v2x = 0;
 	if (a1x->str_0x5E_94.word_0x62_98)
 	{
@@ -34376,7 +34376,7 @@ void sub_22E60(type_str_0x6E8E* a1x)//203e60
 
 #ifdef DEBUG_SEQUENCES
 	//add_compare(0x203e64, debugafterload,0x2e);
-#endif DEBUG_SEQUENCES
+#endif //DEBUG_SEQUENCES
 
 	v1 = 0;
 	if (a1x->str_0x5E_94.word_0x62_98)
@@ -37189,7 +37189,7 @@ void sub_265A0(type_str_0x6E8E* a1x)//2075a0
 		debugcounter_2075a0++;*/
 	}
 
-#endif DEBUG_SEQUENCES
+#endif //DEBUG_SEQUENCES
 
 	v12 = 0;
 	v13 = 1;
@@ -39976,7 +39976,7 @@ void sub_29A90(type_str_0x6E8E* a1x)//20aa90
 	{
 #ifdef DEBUG_SEQUENCES
 		//add_compare(0x20aab8, debugafterload);
-#endif DEBUG_SEQUENCES
+#endif //DEBUG_SEQUENCES
 
 		if (ix->byte_0x45_69 == 233)
 		{
@@ -41786,7 +41786,7 @@ int DrawGameFrame()//20CE30
 		}
 		debugcounter_20ce30++;*/
 	}
-#endif DEBUG_SEQUENCES
+#endif //DEBUG_SEQUENCES
 
 	v0 = x_D41A0_BYTEARRAY_4_struct.setting_byte1_22;
 	x_DWORD_D41C8 = 0;
@@ -43339,7 +43339,7 @@ int sub_2E790(__int16 a1, int a2, int a3, int a4, unsigned __int8 a5)//20f790
 // 180660: using guessed type __int16 x_WORD_180660_VGA_type_resolution;
 
 //----- (0002E850) --------------------------------------------------------
-int sub_2E850(__int16 a1, int a2, int a3, int a4, unsigned __int8 a5)//20f850
+int sub_2E850(__int16 a1, int a2, int a3, int a4, unsigned __int8  /*a5*/)//20f850
 {
 	__int16 v5; // bx
 	int v6; // ecx
@@ -45507,7 +45507,7 @@ void sub_31F00(type_str_0x6E8E* a1x, __int16 a2, __int16 a3)//212f00
 
 #ifdef DEBUG_SEQUENCES
 	//add_compare(0x212f04, debugafterload,0x218);
-#endif DEBUG_SEQUENCES
+#endif //DEBUG_SEQUENCES
 
 	LOWORD(v3) = a3;
 	v4 = (a1x->array_0x4C_76.x + 128) >> 8;
@@ -48521,7 +48521,7 @@ void sub_35FB0(type_str_0x6E8E* a1x)//216FB0
 
 #ifdef DEBUG_SEQUENCES
 	//add_compare(0x216FB4, debugafterload);
-#endif DEBUG_SEQUENCES
+#endif //DEBUG_SEQUENCES
 
 	v1 = a1x->struct_byte_0xc_12_15.byte[1];
 	v31 = 0;
@@ -49259,7 +49259,7 @@ void sub_36FC0(type_str_0x6E8E* a1x)//217fc0
 
 #ifdef DEBUG_SEQUENCES
 	//add_compare(0x217fc4, debugafterload,1);
-#endif DEBUG_SEQUENCES
+#endif //DEBUG_SEQUENCES
 
 	v29 = 0;
 	v26 = (unsigned __int16)(a1x->array_0x4C_76.x + 128) >> 8;
@@ -49433,7 +49433,7 @@ void sub_37240(type_str_0x6E8E* a1x)//218240
 
 #ifdef DEBUG_SEQUENCES
 	//add_compare(0x218244, debugafterload,0xb8);
-#endif DEBUG_SEQUENCES
+#endif //DEBUG_SEQUENCES
 
 	v50 = 0;
 	if (a1x->dword_0x4 == a1x->dword_0x8)
@@ -52155,7 +52155,7 @@ void sub_3A8B0(type_str_0x6E8E* a1x)//21b8b0
 
 #ifdef DEBUG_SEQUENCES
 	add_compare(0x21b8b4, debugafterload);
-#endif DEBUG_SEQUENCES
+#endif //DEBUG_SEQUENCES
 
 	v2x = x_DWORD_EA3E4[a1x->word_0x32_50];
 	v31x = 0;
@@ -57361,7 +57361,7 @@ if (debugafterload)
 		comp20 = compare_with_sequence_D41A0((char*)"0021f360-00356038", (uint8_t*)&D41A0_BYTESTR_0, 0x356038, debugcountersub_3E360, 224790, &origbyte20, &remakebyte20);
 	debugcountersub_3E360++;
 }*/
-#endif DEBUG_SEQUENCES
+#endif //DEBUG_SEQUENCES
 
 //fix
 	type_particle_str* a1y = NULL;
@@ -58225,7 +58225,7 @@ void sub_3E360_draw_particlesB(/*uint8_t* a1,*/ uint8_t* a2)//21f360
 			comp20 = compare_with_sequence_D41A0((char*)"0021f360-00356038", (uint8_t*)&D41A0_BYTESTR_0, 0x356038, debugcountersub_3E360, 224790, &origbyte20, &remakebyte20);
 		debugcountersub_3E360++;
 	}*/
-#endif DEBUG_SEQUENCES
+#endif //DEBUG_SEQUENCES
 
 	result = *(x_WORD*)(a2 + 36);
 	do
@@ -60281,7 +60281,7 @@ void sub_40F80()//221f80
 // 180660: using guessed type __int16 x_WORD_180660_VGA_type_resolution;
 
 //----- (000411A0) --------------------------------------------------------
-void DrawWorld(uint8_t* a1, int a2, int a3, __int16 a4, signed int a5, int a6, __int16 a7, int a8)//2221a0
+void DrawWorld(uint8_t*  /*a1*/, int a2, int a3, __int16 a4, signed int a5, int a6, __int16 a7, int a8)//2221a0
 {
 	unsigned __int16 v8; // ax
 	int v9; // ecx
@@ -62530,7 +62530,7 @@ void sub_45DC0(/*uint8_t a1, */uint8_t a2, uaxis_2d a3x, unsigned __int8 a4)//22
 
 #ifdef DEBUG_SEQUENCES
 	//add_compare(0x226dc4, debugafterload);//1cf0
-#endif DEBUG_SEQUENCES
+#endif //DEBUG_SEQUENCES
 
 	v4x._axis_2d.y = a3x._axis_2d.y;
 	v24 = 8 * ((a3x._axis_2d.y + a3x._axis_2d.x) & 1);
@@ -62791,7 +62791,7 @@ void sub_462A0(uaxis_2d a1x, uaxis_2d a2x)//2272a0
 
 #ifdef DEBUG_SEQUENCES
 	//add_compare(0x2272a3, debugafterload);
-#endif DEBUG_SEQUENCES
+#endif //DEBUG_SEQUENCES
 	//unsigned __int16 v29; // [esp+24h] [ebp+10h]
 
 	// fix if begin
@@ -63017,7 +63017,7 @@ void sub_46570(uaxis_2d a1x, uaxis_2d a2x)//227570
 
 #ifdef DEBUG_SEQUENCES
 	//add_compare(0x227573,debugafterload);
-#endif DEBUG_SEQUENCES
+#endif //DEBUG_SEQUENCES
 
 	// fix if begin
 	//v33 = a1;
@@ -63067,7 +63067,7 @@ void sub_46570(uaxis_2d a1x, uaxis_2d a2x)//227570
 	{
 #ifdef DEBUG_SEQUENCES
 		//add_compare(0x227607, debugafterload);
-#endif DEBUG_SEQUENCES
+#endif //DEBUG_SEQUENCES
 		v4x._axis_2d.x = v30;
 		for (i = v30; i; i--)
 		{
@@ -63163,7 +63163,7 @@ void sub_46570(uaxis_2d a1x, uaxis_2d a2x)//227570
 // 17B4E0: using guessed type __int16 x_WORD_17B4E0;
 
 //----- (00046820) --------------------------------------------------------
-void sub_46820_simple_timer(HMDIDRIVER user)//227820
+void sub_46820_simple_timer(HMDIDRIVER  /*user*/)//227820
 {
 	x_DWORD_17DB54_game_turn2++;
 	//return 0;
@@ -63234,7 +63234,7 @@ uint8_t testarraymain[168] = {
 #ifdef AUTO_CHANGE_RES
 int resindex_begin = 0;
 //int resindex_end = -1;
-#endif AUTO_CHANGE_RES
+#endif //AUTO_CHANGE_RES
 
 //----- (00046830) --------------------------------------------------------
 void sub_46830_main_loop(/*int16_t* a1, */signed int a2, unsigned __int16 a3)//227830
@@ -63262,7 +63262,7 @@ void sub_46830_main_loop(/*int16_t* a1, */signed int a2, unsigned __int16 a3)//2
 	int debugcounter11 = 0;
 	int comp20 = compare_with_sequence_D41A0((char*)"00227830-00356038", (uint8_t*)& D41A0_BYTESTR_0, 0x356038, debugcounter11, 224790, &origbyte20, &remakebyte20);
 */
-#endif DEBUG_SEQUENCES
+#endif //DEBUG_SEQUENCES
 
 	x_D41A0_BYTEARRAY_4_struct.setting_30 = 0;//2a51a4
 	D41A0_BYTESTR_0.array_0x2BDE[D41A0_BYTESTR_0.word_0xc].byte_0x004_2BE0_11234 = 0;
@@ -63305,7 +63305,7 @@ void sub_46830_main_loop(/*int16_t* a1, */signed int a2, unsigned __int16 a3)//2
 
 #ifdef AUTO_CHANGE_RES
 			resindex_begin = 0;
-#endif AUTO_CHANGE_RES
+#endif //AUTO_CHANGE_RES
 
 			//!!!!!!!!!!! debug fix it
 			//mouseturnoff = true;
@@ -63964,7 +63964,7 @@ void intervalsave(int index) {
 
 const int max_sprites = 600;
 const int max_sprites_frames = 30;
-typedef struct {
+typedef struct type_BIG_SPRITES_BUFFER {
 	int count = -1;
 	type_particle_str* actdatax;
 	uint8_t* frames[max_sprites_frames];
@@ -64078,7 +64078,7 @@ void sub_47560_draw_and_events_in_game(/*uint8_t* a1, int a2, */uint32_t a3, sig
 			}
 		}
 	}
-#endif AUTO_CHANGE_RES
+#endif //AUTO_CHANGE_RES
 
 	sub_17A00_mouse_and_keys_events(/*(uint8_t*)a3,*/ a4, a5);//fix it//nothing draw
 
@@ -64089,7 +64089,7 @@ void sub_47560_draw_and_events_in_game(/*uint8_t* a1, int a2, */uint32_t a3, sig
 		intervalsave(save_debugcounter / interval);
 	//save in interval
 	save_debugcounter++;
-#endif INTERVAL_SAVE
+#endif //INTERVAL_SAVE
 
 //adress 228583
 /*uint8_t origbyte21 = 0;
@@ -64111,7 +64111,7 @@ int comp21 = compare_with_sequence_D41A0((char*)"00228583", x_D41A0_BYTEARRAY_0,
 		comp23 = compare_with_sequence_D41A0((char*)"00228583-00356038", (uint8_t*)& D41A0_BYTESTR_0, 0x356038, debugcounter_47560_2, 224790, &origbyte23, &remakebyte23);
 		debugcounter_47560_2++;*/
 	}
-#endif DEBUG_SEQUENCES
+#endif //DEBUG_SEQUENCES
 	sub_51BB0_game_events(/*(uint8_t*)a4*/);//nothing draw
 
 	//adress 228588
@@ -64179,7 +64179,7 @@ int comp21 = compare_with_sequence_D41A0((char*)"00228583", x_D41A0_BYTEARRAY_0,
 		comp23 = compare_with_sequence_D41A0((char*)"002285ff-00356038", (uint8_t*)&D41A0_BYTESTR_0, 0x356038, debugcounter_47560_2, 224790, &origbyte23, &remakebyte23);
 		debugcounter_47560_2++;
 	}*/
-#endif DEBUG_SEQUENCES
+#endif //DEBUG_SEQUENCES
 
 	//if (debugcountersave_47560 > -1) { debugtestscreen(); /*exit(0);*/ }
 
@@ -64193,7 +64193,7 @@ int comp21 = compare_with_sequence_D41A0((char*)"00228583", x_D41A0_BYTEARRAY_0,
 	//add_compare(0x0022860F, debugafterload && (count_begin == 1), 0x1a);
 	VGA_Debug_Blit(320, 200, pdwScreenBuffer);
 	add_compare(0x0022860F, debugafterload);
-#endif DEBUG_SEQUENCES
+#endif //DEBUG_SEQUENCES
 
 	for (int iii = 1; iii < 0x3E9; iii++)
 		if (x_DWORD_EA3E4[iii]->word_0x16_22 == iii)
@@ -64206,7 +64206,7 @@ int comp21 = compare_with_sequence_D41A0((char*)"00228583", x_D41A0_BYTEARRAY_0,
 			if (D41A0_BYTESTR_0.str_0x3664C[jx].dword_A < D41A0_BYTESTR_0.struct_0x6E8E || D41A0_BYTESTR_0.str_0x3664C[jx].dword_A >= &D41A0_BYTESTR_0.struct_0x6E8E[0x3e8])
 				allert_error();
 	}
-#endif DETECT_DWORD_A
+#endif //DETECT_DWORD_A
 
 	if (debugafterload)
 	{
@@ -64254,7 +64254,7 @@ int comp21 = compare_with_sequence_D41A0((char*)"00228583", x_D41A0_BYTEARRAY_0,
 // 17DB54: using guessed type int x_DWORD_17DB54_game_turn2;
 
 //----- (00047650) --------------------------------------------------------
-void sub_47650(int a1/*, int a2*/)//228650
+void sub_47650(int  /*a1*//*, int a2*/)//228650
 {
 	unsigned __int8 v2; // al
 	signed int v3; // esi
@@ -64305,7 +64305,7 @@ void sub_47650(int a1/*, int a2*/)//228650
 // EA3D8: using guessed type int *xadatapald0dat2.var28_begin_buffer;
 
 //----- (00047760) --------------------------------------------------------
-void PaletteChanges_47760(/*int a1,*/uint32_t user/* int a2, int a3*/)//228760
+void PaletteChanges_47760(/*int a1,*/uint32_t  /*user*//* int a2, int a3*/)//228760
 {
 	//x_BYTE *v3; // eax
 	//unsigned __int8 v4; // dl
@@ -65498,7 +65498,7 @@ void sub_48B90(uaxis_2d a1x)//229b90
 	}
 	debugcounter_229b90++;
 	//add_compare(0x229B94, debugafterload);
-#endif DEBUG_SEQUENCES
+#endif //DEBUG_SEQUENCES
 
 	//LOWORD(i) = a1;
 	v2 = 0;
@@ -65902,11 +65902,11 @@ void sub_49270_generate_level_features(type_str_2FECE* a1x)//22a270
 	//adress 22A27D
 #ifdef DEBUG_SEQUENCES
 	add_compare(0x22A280, debugafterload);
-#endif DEBUG_SEQUENCES
+#endif //DEBUG_SEQUENCES
 	sub_49290(a1x, 1);
 #ifdef DEBUG_SEQUENCES
 	add_compare(0x22A288, debugafterload);
-#endif DEBUG_SEQUENCES
+#endif //DEBUG_SEQUENCES
 }
 
 //----- (00049290) --------------------------------------------------------
@@ -65962,7 +65962,7 @@ void sub_49290(type_str_2FECE* a1x, char a2)//22a290
 
 #ifdef DEBUG_SEQUENCES
 	//add_compare(0x22A2E3, debugafterload);
-#endif DEBUG_SEQUENCES
+#endif //DEBUG_SEQUENCES
 
 	//	compsize = compare_with_snapshot((char*)"0160-00256200-2", pdwScreenBuffer, 0x3aa0a4, 640 * height, &origbyte, &remakebyte);//4c
 //debug
@@ -66005,11 +66005,11 @@ void sub_49290(type_str_2FECE* a1x, char a2)//22a290
 	remakebyte = 0;
 #ifdef DEBUG_SEQUENCES
 	//add_compare(0x22A383, debugafterload);
-#endif DEBUG_SEQUENCES
+#endif //DEBUG_SEQUENCES
 	sub_498A0();//22a383
 #ifdef DEBUG_SEQUENCES
 	//add_compare(0x22A388, debugafterload);
-#endif DEBUG_SEQUENCES
+#endif //DEBUG_SEQUENCES
 	//for (k = (uint16_t*)(a1 + 1111); (uint8_t*)k < a1 + 25091; k += 10)
 	for (kx = 1; kx < 0x4b0; kx++)
 	{
@@ -66029,7 +66029,7 @@ void sub_49290(type_str_2FECE* a1x, char a2)//22a290
 	}
 #ifdef DEBUG_SEQUENCES
 	//add_compare(0x22A3D7, debugafterload);
-#endif DEBUG_SEQUENCES
+#endif //DEBUG_SEQUENCES
 	sub_498A0();//adress 22a3d7
 	//for (l = (uint16_t*)(a1 + 1111); (uint8_t*)l < a1 + 25091; l += 10)
 	for (lx = 1; lx < 0x4b0; lx++)
@@ -66046,11 +66046,11 @@ void sub_49290(type_str_2FECE* a1x, char a2)//22a290
 	}
 #ifdef DEBUG_SEQUENCES
 	//add_compare(0x22A422, debugafterload);
-#endif DEBUG_SEQUENCES
+#endif //DEBUG_SEQUENCES
 	sub_498A0();//22a422
 #ifdef DEBUG_SEQUENCES
 	//add_compare(0x22A427, debugafterload);
-#endif DEBUG_SEQUENCES
+#endif //DEBUG_SEQUENCES
 
 	//for (m = (uint16_t*)(a1 + 1111); (uint8_t*)m < a1 + 25091; m += 10)
 	for (mx = 1; mx < 0x4b0; mx++)
@@ -66086,7 +66086,7 @@ void sub_49290(type_str_2FECE* a1x, char a2)//22a290
 	sub_498A0();//adress 22a4d1
 #ifdef DEBUG_SEQUENCES
 	//add_compare(0x22A4D6, debugafterload);
-#endif DEBUG_SEQUENCES
+#endif //DEBUG_SEQUENCES
 
 	//	compsize = compare_with_snapshot((char*)"0160-00256200-2", pdwScreenBuffer, 0x3aa0a4, 640 * height, &origbyte, &remakebyte);//4c
 //debug
@@ -66105,7 +66105,7 @@ void sub_49290(type_str_2FECE* a1x, char a2)//22a290
 	}
 #ifdef DEBUG_SEQUENCES
 	//add_compare(0x22A52C, debugafterload);
-#endif DEBUG_SEQUENCES
+#endif //DEBUG_SEQUENCES
 	sub_498A0();//adress 22a52c
 }
 /*
@@ -66146,7 +66146,7 @@ void sub_49540(type_str_2FECE* a1x, type_str_0x30311* a2x)//22a540
 
 #ifdef DEBUG_SEQUENCES
 	//add_compare(0x22a543, debugafterload,0x53);
-#endif DEBUG_SEQUENCES
+#endif //DEBUG_SEQUENCES
 
 	if (a2x->str_0x30311_type < 0xAu)
 		return;
@@ -66457,7 +66457,7 @@ LABEL_2:
 				{//adress 22a976
 #ifdef DEBUG_SEQUENCES
 					//add_compare(0x22A977, debugafterload,0x878);
-#endif DEBUG_SEQUENCES
+#endif //DEBUG_SEQUENCES
 					pre_sub_4A190_0x6E8E(v8x, &D41A0_BYTESTR_0.struct_0x6E8E[iy], 2);
 				}
 				goto LABEL_27;
@@ -66934,7 +66934,7 @@ void test_pre_sub_4a190(uint32_t adress)//for debug
 	}
 }
 
-type_str_0x6E8E* pre_sub_4A190_axis_3d(uint32_t adress, axis_3d* a1_axis3d, int type)//pre 22b190
+type_str_0x6E8E* pre_sub_4A190_axis_3d(uint32_t adress, axis_3d* a1_axis3d, int  /*type*/)//pre 22b190
 {
 	switch (adress)
 	{
@@ -67918,7 +67918,7 @@ type_str_0x6E8E* pre_sub_4A190_axis_3d(uint32_t adress, axis_3d* a1_axis3d, int 
 	//bad end
 	return 0;
 }
-void pre_sub_4A190_0x6E8E(uint32_t adress, type_str_0x6E8E* a1_6E8E, int type)//pre 22b190
+void pre_sub_4A190_0x6E8E(uint32_t adress, type_str_0x6E8E* a1_6E8E, int  /*type*/)//pre 22b190
 {
 #ifndef RELEASE_GAME
 	test_pre_sub_4a190(adress);//for debug
@@ -71671,7 +71671,7 @@ void sub_4A1E0(int a1, char a2)//22b1e0
 			//adress 22b21a
 #ifdef DEBUG_SEQUENCES
 			//add_compare(0x22b21a, debugafterload);//0x9ac
-#endif DEBUG_SEQUENCES
+#endif //DEBUG_SEQUENCES
 
 			v4 = D41A0_BYTESTR_0.str_2FECE.array_0x30311[v3x].str_0x30311_subtype;
 			v5 = D41A0_BYTESTR_0.str_2FECE.array_0x30311[v3x].str_0x30311_type;
@@ -71711,7 +71711,7 @@ void sub_4A1E0(int a1, char a2)//22b1e0
 		//adress 22b26e
 #ifdef DEBUG_SEQUENCES
 		//add_compare(0x22b268, debugafterload,0xc4);//0x9ac
-#endif DEBUG_SEQUENCES
+#endif //DEBUG_SEQUENCES
 		if (D41A0_BYTESTR_0.str_2FECE.array_0x30311[iy].str_0x30311_type && D41A0_BYTESTR_0.str_2FECE.array_0x30311[iy].DisId == a1)
 		{//adress 22b278
 			sub_4A310(&D41A0_BYTESTR_0.str_2FECE.array_0x30311[iy]);
@@ -71776,7 +71776,7 @@ if (debugcounter_22b310 >= 0x49)
 }
 debugcounter_22b310++;*/
 
-#endif DEBUG_SEQUENCES
+#endif //DEBUG_SEQUENCES
 
 //indexy = &x_DWORD_D4C52ar[4+18 * a1x->str_0x30311_type];
 //indexy = &str_D4C48ar[a1x->str_0x30311_type].dword_14;
@@ -77969,7 +77969,7 @@ void sub_51BB0_game_events(/*uint8_t* a1*/)//232bb0
 		//adress 233d56
 #ifdef DEBUG_SEQUENCES
 		//add_compare(0x233d56, debugafterload,6);
-#endif DEBUG_SEQUENCES
+#endif //DEBUG_SEQUENCES
 
 		//index = (int)x_D41A0_BYTEARRAY_0;
 		if ((unsigned __int16)v116 >= D41A0_BYTESTR_0.word_0xe)
@@ -80303,7 +80303,7 @@ void sub_55100(char a1)//236100
 		}
 		debugcounter_236100++;*/
 	}
-#endif DEBUG_SEQUENCES
+#endif //DEBUG_SEQUENCES
 
 	//v1 = (int)x_D41A0_BYTEARRAY_0;
 	if (a1 == 1)
@@ -80768,7 +80768,7 @@ char LoadLevelSLEV_55A10(unsigned __int8 a1)//236a10
 // D41A4: using guessed type int x_DWORD_D41A4;
 
 //----- (00055AB0) --------------------------------------------------------
-void sub_55AB0(int a1, type_str_0x2BDE* a2x)//236ab0
+void sub_55AB0(int  /*a1*/, type_str_0x2BDE* a2x)//236ab0
 {
 	type_str_0x6E8E* resultx; // eax
 	signed int v3; // esi
@@ -81274,7 +81274,7 @@ type_SPELLS_BEGIN_BUFFER_str;
 }
 
 //----- (00055F70) --------------------------------------------------------
-int sub_main(int argc, char** argv, char** envp)//236F70
+int sub_main(int argc, char** argv, char**  /*envp*/)//236F70
 {
 	begin_plugin();
 
@@ -81379,7 +81379,7 @@ int sub_main(int argc, char** argv, char** envp)//236F70
 	//-init 0x2a51a4 je nekde tu
 #ifdef COPY_SKIP_CONFIG
 	x_BYTE_D41AD_skip_screen = config_skip_screen;
-#endif COPY_SKIP_CONFIG
+#endif //COPY_SKIP_CONFIG
 	Initialize();//236FDC - 23C8D0//rozdil 1E1000
 
 	sub_46830_main_loop(/*0, */v3, v4);//227830
@@ -81814,7 +81814,7 @@ void sub_56A30_init_game_level(unsigned int a1)//237a30
 			fread(&D41A0_BYTESTR_0.str_2FECE, sizeof(D41A0_BYTESTR_0.str_2FECE), 1, file);
 		fclose;
 	}
-#endif LOAD_EDITED_LEVEL
+#endif //LOAD_EDITED_LEVEL
 	//if exist editor generated level
 
 	//237ab3
@@ -81841,7 +81841,7 @@ void sub_56A30_init_game_level(unsigned int a1)//237a30
 	//237B05
 #ifdef DEBUG_SEQUENCES
 	//add_compare(0x237B05, debugafterload);
-#endif DEBUG_SEQUENCES
+#endif //DEBUG_SEQUENCES
 
 	PrintTextMessage_70910((char*)"Generate features\0");
 	if (!(x_D41A0_BYTEARRAY_4_struct.setting_byte1_22 & 4))
@@ -81853,7 +81853,7 @@ void sub_56A30_init_game_level(unsigned int a1)//237a30
 	//adress 237B55
 #ifdef DEBUG_SEQUENCES
 	add_compare(0x237B55, debugafterload);
-#endif DEBUG_SEQUENCES
+#endif //DEBUG_SEQUENCES
 
 	D41A0_BYTESTR_0.dword_0x11e6 = -1;
 	sub_71A70_setTmaps(D41A0_BYTESTR_0.str_2FECE.MapType);
@@ -81867,7 +81867,7 @@ void sub_56A30_init_game_level(unsigned int a1)//237a30
 	//adress 237BB0
 #ifdef DEBUG_SEQUENCES
 	add_compare(0x237BB0, debugafterload);
-#endif DEBUG_SEQUENCES
+#endif //DEBUG_SEQUENCES
 
 #ifdef SET_OBJECTIVE
 	D41A0_BYTESTR_0.struct_0x3659C[0].array_0x3659C_byte[0 + 3] = 2;
@@ -81884,14 +81884,14 @@ void sub_56A30_init_game_level(unsigned int a1)//237a30
 	//adress 237bb9
 #ifdef DEBUG_SEQUENCES
 	add_compare(0x237bb9, debugafterload);
-#endif DEBUG_SEQUENCES
+#endif //DEBUG_SEQUENCES
 
 	x_BYTE_E3799_sound_card = temp_x_BYTE_E3799_sound_card;
 	sub_53160();
 	//adress 237bc7
 #ifdef DEBUG_SEQUENCES
 	add_compare(0x237BC7, debugafterload);
-#endif DEBUG_SEQUENCES
+#endif //DEBUG_SEQUENCES
 	//fixed v3 = x_DWORD_EA3E4[*(unsigned __int16 *)(2124 * D41A0_BYTESTR_0.word_0xc + x_D41A0_BYTEARRAY_0 + 11240)];
 	//adress 237beb
 
@@ -81899,7 +81899,7 @@ void sub_56A30_init_game_level(unsigned int a1)//237a30
 
 #ifdef DEBUG_SEQUENCES
 	add_compare(0x237BF0, debugafterload);
-#endif DEBUG_SEQUENCES
+#endif //DEBUG_SEQUENCES
 
 	//fix
 	//x_WORD_180660_VGA_type_resolution = saved_x_WORD_180660_VGA_type_resolution;
@@ -82059,7 +82059,7 @@ char sub_56F10(__int16 a1, __int16 a2, __int16 a3, char a4)//237f10
 
 #ifdef DEBUG_SEQUENCES
 	//add_compare(0x237f12,debugafterload,1);
-#endif DEBUG_SEQUENCES
+#endif //DEBUG_SEQUENCES
 
 	//LOBYTE(v12) = a1;
 	//HIBYTE(v12) = a2;
@@ -82178,7 +82178,7 @@ char sub_570F0(__int16 a1, __int16 a2, signed __int16 a3, char a4, char a5, char
 		}
 		debugcounter_2380f0++;
 	}*/
-#endif DEBUG_SEQUENCES
+#endif //DEBUG_SEQUENCES
 
 	//LOBYTE(v9) = a1;
 	//HIBYTE(v9) = a2;
@@ -82608,7 +82608,7 @@ void sub_57730()//238730
 
 #ifdef DEBUG_SEQUENCES
 	//add_compare(0x238734, debugafterload,6);
-#endif DEBUG_SEQUENCES
+#endif //DEBUG_SEQUENCES
 
 	//blit and fade and other
 
@@ -82620,7 +82620,7 @@ void sub_57730()//238730
 		//adress 238756
 #ifdef DEBUG_SEQUENCES
 		//add_compare(0x238756, debugafterload);
-#endif DEBUG_SEQUENCES
+#endif //DEBUG_SEQUENCES
 		if (ix->byte_0x3F_63 && ix->struct_byte_0xc_12_15.byte[1] & 4)
 			sub_57F20(ix);
 	}
@@ -82784,12 +82784,12 @@ void sub_57730()//238730
 		}
 #ifdef DEBUG_SEQUENCES
 		//add_compare(0x2389eb, debugafterload);
-#endif DEBUG_SEQUENCES
+#endif //DEBUG_SEQUENCES
 		if (!(x_D41A0_BYTEARRAY_4_struct.setting_byte1_22 & 0x10))
 			sub_68BF0();
 #ifdef DEBUG_SEQUENCES
 		//add_compare(0x2389f6, debugafterload);
-#endif DEBUG_SEQUENCES
+#endif //DEBUG_SEQUENCES
 		sub_159E0();//adress 2389f6
 		if (x_BYTE_D41B6)
 			sub_58630();
@@ -82833,7 +82833,7 @@ void sub_57730()//238730
 				}
 				debugcounter29++;*/
 			}
-#endif DEBUG_SEQUENCES
+#endif //DEBUG_SEQUENCES
 
 			v19 = mx->byte_0x3F_63;
 			if (v19)
@@ -82847,7 +82847,7 @@ void sub_57730()//238730
 					{
 #ifdef DEBUG_SEQUENCES
 						add_compare(0x238A8A, debugafterload, 0xaf2);//0x9ac
-#endif DEBUG_SEQUENCES
+#endif //DEBUG_SEQUENCES
 
 						//adress 238a8a zacina na 35cf6e 363bb6 =6c48/168=165=a5
 						pre_sub_4A190_0x6E8E(v20->dword_6, mx, 2);
@@ -82979,7 +82979,7 @@ void sub_57CF0(type_str_0x6E8E* a1x, axis_3d* a2x)//238cf0
 	//signed int result; // eax
 #ifdef DEBUG_SEQUENCES
 	//add_compare(0x238cf3, debugafterload,0x1d6);
-#endif DEBUG_SEQUENCES
+#endif //DEBUG_SEQUENCES
 
 	//if (a1x->array_0x4C_76.x>>8 == a2x->x>>8 && a1x->array_0x4C_76.y >> 8 == a2x->y >> 8)
 	if (((a1x->array_0x4C_76.x & 0xff00) == (a2x->x & 0xff00)) && ((a1x->array_0x4C_76.y & 0xff00) == (a2x->y & 0xff00)))
@@ -83142,7 +83142,7 @@ void sub_57FA0(axis_3d* a1, unsigned __int16 a2, __int16 a3, __int16 a4)//238fa0
 
 #ifdef DEBUG_SEQUENCES
 	//add_compare(0x238fa3, debugafterload,0xf44);
-#endif DEBUG_SEQUENCES
+#endif //DEBUG_SEQUENCES
 
 	result = a1;
 	v5 = a3;
@@ -83197,7 +83197,7 @@ void sub_58030(axis_3d* a1x, axis_3d* a2)//239030
 }
 
 //----- (000580E0) --------------------------------------------------------
-void sub_580E0(axis_3d* a1x, signed int a2, int a3, int a4, __int16 a5)//2390e0
+void sub_580E0(axis_3d* a1x, signed int a2, int a3, int  /*a4*/, __int16 a5)//2390e0
 {
 	signed int result; // eax
 
@@ -83281,7 +83281,7 @@ int sub_582F0(int a1, __int16 a2)//2392f0
 }
 
 //----- (00058350) --------------------------------------------------------
-int sub_58350(unsigned __int16 a1, __int16 a2, int a3, unsigned __int16 a4)//239350
+int sub_58350(unsigned __int16 a1, __int16 a2, int  /*a3*/, unsigned __int16 a4)//239350
 {
 	int v4; // ebx
 	int v5; // esi
@@ -83922,9 +83922,9 @@ void sub_58F00_game_objectives()//239f00
 							D41A0_BYTESTR_0.array_0x2BDE[v24].word_0x04d_2C2B_11307 = 60;
 							D41A0_BYTESTR_0.array_0x2BDE[v24].word_0x04f_2C2D_11309 = 4;
 							if (v14)
-								sprintf(D41A0_BYTESTR_0.array_0x2BDE[v24].array_0x01c_2BFA_11258, (char*)x_DWORD_E9C4C_langindexbuffer[431]);//Has Completed All Objectives.
+								sprintf(D41A0_BYTESTR_0.array_0x2BDE[v24].array_0x01c_2BFA_11258, "%s", (char*)x_DWORD_E9C4C_langindexbuffer[431]);//Has Completed All Objectives.
 							else
-								sprintf(D41A0_BYTESTR_0.array_0x2BDE[v24].array_0x01c_2BFA_11258, (char*)x_DWORD_E9C4C_langindexbuffer[430]);//Has Completed Objective.
+								sprintf(D41A0_BYTESTR_0.array_0x2BDE[v24].array_0x01c_2BFA_11258, "%s", (char*)x_DWORD_E9C4C_langindexbuffer[430]);//Has Completed Objective.
 						}
 						if ((x_WORD)v24 == D41A0_BYTESTR_0.word_0xc)
 							D41A0_BYTESTR_0.byte_0x36E02 = 1;
@@ -84262,7 +84262,7 @@ void sub_59AF0_sound_proc9()//23aaf0
 // 1803EC: using guessed type __int16 x_WORD_1803EC;
 
 //----- (00059B50) --------------------------------------------------------
-void sub_59B50_sound_proc10(HMDIDRIVER user)//23ab50
+void sub_59B50_sound_proc10(HMDIDRIVER  /*user*/)//23ab50
 {
 	__int16 v0; // bx
 	__int16 v1; // dx
@@ -84414,7 +84414,7 @@ char sub_59DC0(type_str_0x6E8E* a1x)//23adc0
 		//comp20 = compare_with_sequence((char*)"0023ADC4-003514B0", (uint8_t*)&str_unk_1804B0ar, 0x3514b0, debugcounter_23adc0, 0xab, 0xab, &origbyte20, &remakebyte20);
 		//comp20 = compare_with_sequence((char*)"0023d950-003AA0A4", pdwScreenBuffer, 0x3aa0a4, debugcounter_23d950, 320 * 200, 320 * 200, &origbyte20, &remakebyte20);
 	}
-#endif DEBUG_SEQUENCES
+#endif //DEBUG_SEQUENCES
 
 	if (debugcounter_23adc0 >= 5)
 	{
@@ -84681,7 +84681,7 @@ void sub_59F60(type_str_0x6E8E* a1x)//23af60
 
 #ifdef DEBUG_SEQUENCES
 	//add_compare(0x23af64, debugafterload,9);
-#endif DEBUG_SEQUENCES
+#endif //DEBUG_SEQUENCES
 
 	v1 = a1x->dword_0x8;
 	if (v1 < 1)
@@ -84747,7 +84747,7 @@ void sub_59F60(type_str_0x6E8E* a1x)//23af60
 					}
 #ifdef DEBUG_SEQUENCES
 					//add_compare(0x23b2a6, debugafterload);
-#endif DEBUG_SEQUENCES
+#endif //DEBUG_SEQUENCES
 					if (x_BYTE_D41B6)//23b2a9
 					{
 						v46x.word = v208x.word + 1;
@@ -84951,7 +84951,7 @@ void sub_59F60(type_str_0x6E8E* a1x)//23af60
 				v21x.word = v208x.word - 1;//12c
 #ifdef DEBUG_SEQUENCES
 		//add_compare(0x23b12c, debugafterload);
-#endif DEBUG_SEQUENCES
+#endif //DEBUG_SEQUENCES
 				while (v20 < a1x->dword_0x10_16)//23b194
 				{
 					//LOBYTE(v21)++;
@@ -87181,7 +87181,7 @@ void sub_5C330()//23D330
 // EA3E0: using guessed type int x_DWORD_EA3E0_copyto_x_DWORD_EA3E0[];
 
 //----- (0005C380) --------------------------------------------------------
-bool sub_5C380_test_vga_driver_header(uint16_t testlenght)//23D380
+bool sub_5C380_test_vga_driver_header(uint16_t  /*testlenght*/)//23D380
 {
 	/*
   //uint16_t i; // eax
@@ -87527,7 +87527,7 @@ void sub_5C950(type_str_0x2BDE* a1x, type_str_0x6E8E* a2x)//23d950
 
 #ifdef DEBUG_SEQUENCES
 	//add_compare(0x23d954, debugafterload,6);
-#endif DEBUG_SEQUENCES
+#endif //DEBUG_SEQUENCES
 
 	//fix it
 	v10 = 0;
@@ -88092,7 +88092,7 @@ void sub_5D530(type_str_0x6E8E* a1x)//*(x_DWORD *)(a1 + 160)//23e530
 			//v2 = sub_10080(0, (v1 - (my_sign(v10 * -v9) * 255) >> 8));
 
 			//a1x->dword_0xA4_164x->word_0x24_36 = (v10 * -v9 - (__CFSHL__(v10 * -v9 >> 31, 8) + (v10 * -v9 >> 31 << 8))) >> 8;
-			a1x->dword_0xA4_164x->word_0x24_36 = (v10 * -v9 - (my_sign32(v10 * -v9) * 255) >> 8);
+			a1x->dword_0xA4_164x->word_0x24_36 = ((v10 * -v9 - (my_sign32(v10 * -v9) * 255)) >> 8);
 			goto LABEL_27;
 		}
 		if (a1x->word_0x82_130 > 0 && v10 > 0)
@@ -88105,7 +88105,7 @@ void sub_5D530(type_str_0x6E8E* a1x)//*(x_DWORD *)(a1 + 160)//23e530
 	else
 	{
 		//a1x->dword_0xA4_164x->word_0x24_36 = (v10 * -v9 - (__CFSHL__(v10 * -v9 >> 31, 8) + (v10 * -v9 >> 31 << 8))) >> 8;
-		a1x->dword_0xA4_164x->word_0x24_36 = (v10 * -v9 - (my_sign32(v10 * -v9) * 255) >> 8);
+		a1x->dword_0xA4_164x->word_0x24_36 = ((v10 * -v9 - (my_sign32(v10 * -v9) * 255)) >> 8);
 	}
 LABEL_27:
 	//v11 = a1x->dword_0xA4_164;
@@ -90164,7 +90164,7 @@ LABEL_22:
 
 				debugcounter_240f50++;
 			}*/
-#endif DEBUG_SEQUENCES
+#endif //DEBUG_SEQUENCES
 
 			//v13 = 2 * (signed __int16)v20;
 			v14x = x_DWORD_EA3E4[v18x->dword_0xA4_164x->array_0x5C_92[v20]];
@@ -92602,7 +92602,7 @@ void sub_63600_draw_minimap(int a1, int a2, int a3, int a4, int a5, int a6, __in
 // D41A0: using guessed type int x_D41A0_BYTEARRAY_0;
 
 //----- (00063670) --------------------------------------------------------
-void sub_63670_draw_minimap_a(int a1, int a2, int a3, int a4, int a5, int a6, __int16 a7, int a8, int a9, int a10)//244670
+void sub_63670_draw_minimap_a(int a1, int a2, int a3, int a4, int a5, int a6, __int16 a7, int a8, int  /*a9*/, int a10)//244670
 {
 	int v10; // eax
 	int v11; // esi
@@ -92729,7 +92729,7 @@ void sub_63670_draw_minimap_a(int a1, int a2, int a3, int a4, int a5, int a6, __
 		v69 = 0x1000000 / (v13 >> 1);
 		while (v78)
 		{
-			v65 = v18 * (unsigned __int8)x_BYTE_F6EE0_tablesx[0x14300 + v73 >> 16] >> 8;
+			v65 = v18 * (unsigned __int8)x_BYTE_F6EE0_tablesx[(0x14300 + v73) >> 16] >> 8;
 			v19 = v18 + v65;
 			v20 = v79;
 			*v17 = v18 + v65;
@@ -92972,7 +92972,7 @@ void sub_63670_draw_minimap_a(int a1, int a2, int a3, int a4, int a5, int a6, __
 // 180660: using guessed type __int16 x_WORD_180660_VGA_type_resolution;
 
 //----- (00063C90) --------------------------------------------------------
-void sub_63C90_draw_minimap_b(int a1, int a2, int a3, int a4, int a5, int a6, __int16 a7, int a8, int a9, int a10)//244c90
+void sub_63C90_draw_minimap_b(int a1, int a2, int a3, int a4, int a5, int a6, __int16 a7, int a8, int  /*a9*/, int a10)//244c90
 {
 	int v10; // ebx
 	int v11; // edx
@@ -93982,7 +93982,7 @@ void sub_652C0(type_str_0x6E8E* a1x)//2462c0
 
 #ifdef DEBUG_SEQUENCES
 	//add_compare(0x2462c4,debugafterload,0x8f);
-#endif DEBUG_SEQUENCES
+#endif //DEBUG_SEQUENCES
 
 	v1 = a1x->struct_byte_0xc_12_15.byte[1];
 	if (v1 & 8)
@@ -95030,7 +95030,7 @@ void sub_66750(type_str_0x6E8E* a1x)//247750
 
 #ifdef DEBUG_SEQUENCES
 			//add_compare(0x247754, debugafterload,0x75);
-#endif DEBUG_SEQUENCES
+#endif //DEBUG_SEQUENCES
 
 	a1x->word_0x82_130 = a1x->word_0x84_132;
 	v18x = a1x->array_0x4C_76;
@@ -96857,7 +96857,7 @@ char sub_68AC0(type_str_0x6E8E* a1x, type_str_0x6E8E* a2x)//249ac0
 // EA3E4: using guessed type int x_DWORD_EA3E4[];
 
 //----- (00068BD0) --------------------------------------------------------
-char sub_68BD0(type_str_0x6E8E* a1x, type_str_0x6E8E* a2x)//249bd0
+char sub_68BD0(type_str_0x6E8E*  /*a1x*/, type_str_0x6E8E* a2x)//249bd0
 {
 	char result; // al
 
@@ -96888,7 +96888,7 @@ void sub_68BF0()//249bf0
 			{
 #ifdef DEBUG_SEQUENCES
 				//add_compare(0x249c1b, debugafterload);
-#endif DEBUG_SEQUENCES
+#endif //DEBUG_SEQUENCES
 				/*result = */sub_68C70(jx);
 			}
 			else
@@ -97373,7 +97373,7 @@ void sub_69640(type_str_0x6E8E* a1x)//24a640//spell posses
 
 #ifdef DEBUG_SEQUENCES
 	//add_compare(0x24a644, debugafterload,8);
-#endif DEBUG_SEQUENCES
+#endif //DEBUG_SEQUENCES
 
 	if (a1x->word_0x2E_46 > 0)
 	{
@@ -98029,7 +98029,7 @@ void sub_6A5C0(type_str_0x6E8E* a1x)//24b5c0
 
 #ifdef DEBUG_SEQUENCES
 	//add_compare(0x24b5c4, debugafterload,0xa4);
-#endif DEBUG_SEQUENCES
+#endif //DEBUG_SEQUENCES
 
 	v12x = 0;
 	v13x = 0;
@@ -100939,7 +100939,7 @@ bool sub_6EA90(int a1, int a2)//24fa90
 }
 
 //----- (0006EAB0) --------------------------------------------------------
-void sub_6EAB0(int a1, __int16 a2, __int16 a3)//24fab0
+void sub_6EAB0(int  /*a1*/, __int16 a2, __int16 a3)//24fab0
 {
 	if (!x_BYTE_E3799_sound_card || !x_BYTE_E3798_sound_active2)
 		return;
@@ -101647,7 +101647,7 @@ void sub_6FE20()//fix//250e20
 // F5334: using guessed type __int16 x_WORD_F5334;
 
 //----- (0006FE90) --------------------------------------------------------
-int sub_6FE90(unsigned __int8* a1, unsigned int a2)//250e90
+int sub_6FE90(unsigned __int8* a1, unsigned int  /*a2*/)//250e90
 {
 	unsigned __int8* v2; // eax
 	int v3; // edx
@@ -101827,7 +101827,7 @@ void sub_6FEC0()//250ec0
 		sprintf(printbuffer, "Thing %d, Active %d", 168, 1000 - v39);
 		sub_2BC10_draw_text(printbuffer, 320, v38, (*xadataclrd0dat.var28_begin_buffer)[0x0f]);
 		v40 = sub_6FC30_get34_height() + v38;
-		sprintf(printbuffer, "Carpet %d", sizeof(type_D41A0_BYTESTR_0));
+		sprintf(printbuffer, "Carpet %lu", sizeof(type_D41A0_BYTESTR_0));
 		sub_2BC10_draw_text(printbuffer, 320, v40, (*xadataclrd0dat.var28_begin_buffer)[0x0f]);
 		v41 = sub_6FC30_get34_height() + v40;
 		sprintf(printbuffer, "Tape %d", 38547);
@@ -101881,7 +101881,7 @@ void sub_6FEC0()//250ec0
 		v53 = sub_6FC30_get34_height() + v52;
 		sprintf(
 			printbuffer,
-			"%ld / %ld / %ld",
+			"%hhd / %hhd / %hhu",
 			x_D41A0_BYTEARRAY_4_struct.dwordindex_38396->byte_0x3F_63,
 			x_D41A0_BYTEARRAY_4_struct.dwordindex_38396->byte_0x40_64,
 			x_D41A0_BYTEARRAY_4_struct.dwordindex_38396->byte_0x45_69);
@@ -101891,7 +101891,7 @@ void sub_6FEC0()//250ec0
 		v55 = sub_6FC30_get34_height() + v54;
 		sprintf(
 			printbuffer,
-			"%ld / %ld",
+			"%d / %d",
 			x_D41A0_BYTEARRAY_4_struct.dwordindex_38396->dword_0x8,
 			x_D41A0_BYTEARRAY_4_struct.dwordindex_38396->dword_0x4);
 		sub_2BC10_draw_text(printbuffer, 10, v55, (*xadataclrd0dat.var28_begin_buffer)[0xff]);
@@ -101900,7 +101900,7 @@ void sub_6FEC0()//250ec0
 		v57 = sub_6FC30_get34_height() + v56;
 		sprintf(
 			printbuffer,
-			"%ld / %ld / %ld",
+			"%hd / %hd / %hd",
 			x_D41A0_BYTEARRAY_4_struct.dwordindex_38396->word_0x82_130,
 			x_D41A0_BYTEARRAY_4_struct.dwordindex_38396->word_0x84_132,
 			x_D41A0_BYTEARRAY_4_struct.dwordindex_38396->word_0x86_134);
@@ -101910,7 +101910,7 @@ void sub_6FEC0()//250ec0
 		v59 = sub_6FC30_get34_height() + v58;
 		sprintf(
 			printbuffer,
-			"%ld / %ld / %ld",
+			"%hu / %hu / %hu",
 			x_D41A0_BYTEARRAY_4_struct.dwordindex_38396->array_0x4C_76.x,
 			x_D41A0_BYTEARRAY_4_struct.dwordindex_38396->array_0x4C_76.y,
 			x_D41A0_BYTEARRAY_4_struct.dwordindex_38396->array_0x4C_76.z);
@@ -101920,7 +101920,7 @@ void sub_6FEC0()//250ec0
 		v61 = sub_6FC30_get34_height() + v60;
 		sprintf(
 			printbuffer,
-			"%ld / %ld",
+			"%hu / %hu",
 			x_D41A0_BYTEARRAY_4_struct.dwordindex_38396->word_0x1A_26,
 			x_D41A0_BYTEARRAY_4_struct.dwordindex_38396->word_0x28_40);
 		sub_2BC10_draw_text(printbuffer, 10, v61, (*xadataclrd0dat.var28_begin_buffer)[0xff]);
@@ -101929,7 +101929,7 @@ void sub_6FEC0()//250ec0
 		v63 = sub_6FC30_get34_height() + v62;
 		sprintf(
 			printbuffer,
-			"%ld / %ld",
+			"%d / %d",
 			x_D41A0_BYTEARRAY_4_struct.dwordindex_38396->dword_0x90_144,
 			x_D41A0_BYTEARRAY_4_struct.dwordindex_38396->dword_0x8C_140);
 		sub_2BC10_draw_text(printbuffer, 10, v63, (*xadataclrd0dat.var28_begin_buffer)[0xff]);
@@ -103662,7 +103662,7 @@ int sub_72DDE(signed __int16* a1, int a2)
 // E12A6: using guessed type __int16 x_WORD_E12A6;
 
 //----- (00072E70) --------------------------------------------------------
-int /*__fastcall*/ sub_72E70(int a1, int a2, signed __int16* a3)
+int /*__fastcall*/ sub_72E70(int  /*a1*/, int  /*a2*/, signed __int16* a3)
 {
 	int v3; // edx
 	char v5; // [esp+0h] [ebp-30h]
@@ -103721,7 +103721,7 @@ int /*__fastcall*/ sub_72E70(int a1, int a2, signed __int16* a3)
 // 72E70: using guessed type char var_18[8];
 
 //----- (00072FBB) --------------------------------------------------------
-signed int /*__fastcall*/ sub_72FBB(int a1/*, int a2*/, signed __int16* a3)
+signed int /*__fastcall*/ sub_72FBB(int  /*a1*//*, int a2*/, signed __int16* a3)
 {
 	int v3; // edx
 	int i; // [esp+4h] [ebp-4h]
@@ -104185,7 +104185,7 @@ unsigned __int16 sub_74006(unsigned __int16 a1, int a2, unsigned int a3)
 // E1274: using guessed type char x_BYTE_E1274;
 
 //----- (0007404E) --------------------------------------------------------
-void sub_7404E(unsigned __int16 a1, uint8_t* a2, unsigned int a3)
+void sub_7404E(unsigned __int16  /*a1*/, uint8_t*  /*a2*/, unsigned int  /*a3*/)
 {
 	//unsigned __int16 result; // ax
 
@@ -104585,7 +104585,7 @@ void sub_74D41(type_DWORD_E12AE* a1x, int a2, unsigned int a3)
 }
 
 //----- (00074DD4) --------------------------------------------------------
-signed int sub_74DD4(type_DWORD_E12AE* a1x, int a2, unsigned __int16 a3)
+signed int sub_74DD4(type_DWORD_E12AE* a1x, int  /*a2*/, unsigned __int16  /*a3*/)
 {
 	signed int v4; // [esp+0h] [ebp-4h]
 
@@ -104684,7 +104684,7 @@ signed int sub_74FE1(__int16 a1)
 // E1276: using guessed type __int16 x_WORD_E1276;
 
 //----- (00075044) --------------------------------------------------------
-int sub_75044(type_DWORD_E12AE* a1x)//256044
+int sub_75044(type_DWORD_E12AE*  /*a1x*/)//256044
 {
 	/* fix it
   char v2; // [esp+0h] [ebp-7Ch]
@@ -105869,7 +105869,7 @@ int sub_76840()
 // E2A20: using guessed type char x_BYTE_E2A20;
 
 //----- (00076930) --------------------------------------------------------
-void sub_76930_menus_and_intros(int a2, uint16_t a3)//257930
+void sub_76930_menus_and_intros(int  /*a2*/, uint16_t a3)//257930
 {
 	//int v3; // eax
 	int v4; // edx
@@ -106186,7 +106186,7 @@ void(*sub_76F40)() {
 };
 
 //----- (00076FA0) --------------------------------------------------------
-void /*__fastcall*/ sub_76FA0_main_menu(/*int a1, */int a2, uint16_t a3x)//257fa0
+void /*__fastcall*/ sub_76FA0_main_menu(/*int a1, */int  /*a2*/, uint16_t a3x)//257fa0
 {
 	//void (*v3)(); // eax
 	__int16 v4; // dx
@@ -106544,7 +106544,7 @@ char sub_77350_new_game_dialog(type_WORD_E1F84* a1x)//258350
 // 180660: using guessed type __int16 x_WORD_180660_VGA_type_resolution;
 
 //----- (00077680) --------------------------------------------------------
-char /*__fastcall*/ sub_77680(/*int a1, */int a2, signed __int16* a3)//258680
+char /*__fastcall*/ sub_77680(/*int a1, */int  /*a2*/, signed __int16* a3)//258680
 {
 	char result; // al
 	//int v4; // eax
@@ -109787,7 +109787,7 @@ char sub_7C200(unsigned __int8 a1)//25d200
 }
 
 //----- (0007C230) --------------------------------------------------------
-void sub_7C230(/*int a1,*/ int a2, signed __int16* a3)//25d230
+void sub_7C230(/*int a1,*/ int  /*a2*/, signed __int16* a3)//25d230
 {
 	//__int16 v3; // ax
 	int v4; // edx
@@ -110015,7 +110015,7 @@ void sub_7C710()//25d710
 // 17DF02: using guessed type __int16 x_WORD_17DF02;
 
 //----- (0007C720) --------------------------------------------------------
-int sub_7C720(unsigned __int8 a1, x_BYTE* a2)//25d720
+int sub_7C720(unsigned __int8 a1, x_BYTE*  /*a2*/)//25d720
 {
 	//void** v2; // eax
 	type_E1BAC_0x3c4* v2x;
@@ -110048,7 +110048,7 @@ int sub_7C720(unsigned __int8 a1, x_BYTE* a2)//25d720
 // E9C38: using guessed type int x_DWORD_E9C38_smalltit;
 
 //----- (0007C7C0) --------------------------------------------------------
-int sub_7C7C0(int a1, int a2)//25d7c0
+int sub_7C7C0(int  /*a1*/, int a2)//25d7c0
 {
 	return sub_85C42(a2, 208, 111, 200, 369, 0x9Fu);
 }
@@ -110617,7 +110617,7 @@ void sub_7D380()//25e380
 
 int debugcounter_7D400 = 0;
 //----- (0007D400) --------------------------------------------------------
-void sub_7D400_draw_texts_and_play_sounds(int a1, __int16 a2, __int16 a3, char a4)//25e400
+void sub_7D400_draw_texts_and_play_sounds(int  /*a1*/, __int16 a2, __int16 a3, char a4)//25e400
 {
 	//x_WORD *v4; // ebx
 	int v4x;
@@ -111145,7 +111145,7 @@ void sub_7DD70()//25ed70
 // E1970: using guessed type __int16 x_WORD_E1970;
 
 //----- (0007DE80) --------------------------------------------------------
-char sub_7DE80(int a1, type_WORD_E1F84* a2x)//25ee80
+char sub_7DE80(int  /*a1*/, type_WORD_E1F84* a2x)//25ee80
 {
 	int v2; // edx
 	int v3; // edi
@@ -111510,7 +111510,7 @@ signed int sub_7E320_draw_bitmaps_and_play_sounds(/*__int16 a1, int a2*/)//25f32
 // 17DEEE: using guessed type __int16 x_WORD_17DEEE_mouse_buttons;
 
 //----- (0007E5A0) --------------------------------------------------------
-signed int sub_7E5A0_pre_draw(int a1, int a2, __int16 a3, __int16 a4, uint8_t* a5, __int16 a6, __int16 a7)//25f5a0
+signed int sub_7E5A0_pre_draw(int  /*a1*/, int  /*a2*/, __int16 a3, __int16 a4, uint8_t* a5, __int16 a6, __int16 a7)//25f5a0
 {
 	int v7; // edx
 	signed int v8; // esi
@@ -111760,7 +111760,7 @@ void sub_7E8D0(x_WORD* a1, __int16 a2, __int16 a3, __int16 a4, __int16 a5, __int
 	else
 	{
 		//result = v10 >> 1;
-		a1[8] = v9 - v10 >> 1;
+		a1[8] = (v9 - v10) >> 1;
 	}
 	v12 = a1[6];
 	a1[9] = 0;
@@ -111947,7 +111947,7 @@ int sub_7EAE0_new_game_draw(int16_t* posx, int16_t* posy, __int16* a3, __int16* 
 		debugcounter_25fae0++;
 		*/
 	}
-#endif DEBUG_SEQUENCES
+#endif //DEBUG_SEQUENCES
 
 	//fix it
 	v22 = 0;
@@ -112545,7 +112545,7 @@ int sub_7EAE0_new_game_draw(int16_t* posx, int16_t* posy, __int16* a3, __int16* 
 // 180628: using guessed type int pdwScreenBuffer;
 
 //----- (0007F6A0) --------------------------------------------------------
-int sub_7F6A0(int a1, int a2, __int16 a3, __int16 a4, char* a5, int8_t* a6, unsigned __int8 a7)//2606a0
+int sub_7F6A0(int  /*a1*/, int  /*a2*/, __int16 a3, __int16 a4, char* a5, int8_t* a6, unsigned __int8 a7)//2606a0
 {
 	uint8_t v7; // al
 	__int16 v8; // si
@@ -113004,7 +113004,7 @@ bool sub_80D40_move_graphics_and_play_sounds(__int16 a2, __int16 a3, __int16 a4,
 // 17E09C: using guessed type char x_BYTE_17E09C;
 
 //----- (00081260) --------------------------------------------------------
-void sub_81260(int a1, int a2, int8_t* a3, __int16 a4, __int16 a5)//262260
+void sub_81260(int  /*a1*/, int  /*a2*/, int8_t* a3, __int16 a4, __int16 a5)//262260
 {
 	int v5; // ecx
 
@@ -113510,7 +113510,7 @@ void sub_81760_new_game_subdraw(/*type_unk_E17CC_str_0x194* a1x*/)//262760
 // 180648: using guessed type int x_DWORD_180648_map_resolution2_x;
 
 //----- (00081CA0) --------------------------------------------------------
-void sub_81CA0(int a1, int a2, __int16 a3, __int16 a4, type_x_BYTE_E25ED_db_str* a5x)//262ca0
+void sub_81CA0(int  /*a1*/, int  /*a2*/, __int16 a3, __int16 a4, type_x_BYTE_E25ED_db_str* a5x)//262ca0
 {
 	unsigned __int8 v6; // dl
 	int v8; // eax
@@ -114243,7 +114243,7 @@ void sub_82670()//263670
 
 					char cutScenePath[MAX_PATH];
 					sprintf(cutScenePath, "%s/INTRO/CUT%d.DAT", cdDataPath, str_E16E0[v3x].byte_6);
-					sprintf(printbuffer, cutScenePath);
+					sprintf(printbuffer, "%s", cutScenePath);
 					//PlayInfoFmv(0, 1, str_E16E0[v3x].dword_0 - 0x2b2328 + (uint8_t*)array_E1328, cutScenePath);//FIXME
 					
 					PlayInfoFmv(0, 1, 0/*ONLY HACK*/, cutScenePath);//FIXME
@@ -115484,7 +115484,7 @@ void sub_848A0()//2658a0
 
 #ifdef DEBUG_SEQUENCES
 	//add_compare(0x2658a4, debugafterload);
-#endif DEBUG_SEQUENCES
+#endif //DEBUG_SEQUENCES
 
 	//LOBYTE(v0) = D41A0_BYTESTR_0.str_2FECE.MapType;
 	if (D41A0_BYTESTR_0.str_2FECE.MapType >= 1u && D41A0_BYTESTR_0.str_2FECE.MapType <= 2u)
@@ -115638,7 +115638,7 @@ void sub_84B80()//265b80
 
 #ifdef DEBUG_SEQUENCES
 	//add_compare(0x265b84, debugafterload);
-#endif DEBUG_SEQUENCES
+#endif //DEBUG_SEQUENCES
 
 	//index = (int)x_D41A0_BYTEARRAY_0;
 	//v1 = D41A0_BYTESTR_0.str_2FECE.MapType;
@@ -115784,7 +115784,7 @@ void sub_84EA0(uaxis_2d a1x, type_str_0x3664C* a2x, char a3, __int16 a4)//265ea0
 
 #ifdef DEBUG_SEQUENCES
 	//add_compare(0x265ea4, debugafterload,0x19);
-#endif DEBUG_SEQUENCES
+#endif //DEBUG_SEQUENCES
 
 	v4 = 31;
 	v5 = (unsigned __int8)x_BYTE_12B4E0_shading[a1x.word];
@@ -116936,7 +116936,7 @@ void* sub_85EB0_alloc_memory(int32 a1)//266eb0 //malloc
 // 17FF24: using guessed type int x_DWORD_17FF24;
 
 //----- (00085F00) --------------------------------------------------------
-__int16 sub_85F00_free_memory(__int16 a1)//266f00
+__int16 sub_85F00_free_memory(__int16  /*a1*/)//266f00
 {
 	/*__int16 result; // ax
 
@@ -117126,7 +117126,7 @@ __int16 sub_86270(unsigned __int16 a1)//267270
 // 1803C3: using guessed type __int16 x_WORD_1803C3;
 
 //----- (00086370) --------------------------------------------------------
-__int16 sub_86370(unsigned __int16 a1, char a2)//267370
+__int16 sub_86370(unsigned __int16 a1, char  /*a2*/)//267370
 {
 	//int v2; // ecx
 	__int16 result; // ax
@@ -117267,7 +117267,7 @@ int sub_86550()//267550
 // 17FF44: using guessed type int x_DWORD_17FF44;
 
 //----- (00086780) --------------------------------------------------------
-char sub_86780(unsigned __int16 a1, int a2, int a3)//267780
+char sub_86780(unsigned __int16 a1, int  /*a2*/, int  /*a3*/)//267780
 {
 	/* char* v4; // esi
 
@@ -121681,7 +121681,7 @@ char sub_8B880(int* a1, char a2, signed int a3, int a4)//26c880
 // 9B513: using guessed type x_DWORD calloc(x_DWORD, x_DWORD);
 
 //----- (0008B980) --------------------------------------------------------
-char sub_8B980(int a1, int a2, x_DWORD** a3, int a4)//26c980
+char sub_8B980(int  /*a1*/, int  /*a2*/, x_DWORD** a3, int  /*a4*/)//26c980
 {
 	int v4; // edi
 	bool v5; // eax
@@ -121753,7 +121753,7 @@ char sub_8B980(int a1, int a2, x_DWORD** a3, int a4)//26c980
 // D1F10: using guessed type void *off_D1F10;
 
 //----- (0008BA10) --------------------------------------------------------
-char sub_8BA10(int a1, int a2, int* a3, char* a4, int a5)//26ca10
+char sub_8BA10(int  /*a1*/, int  /*a2*/, int* a3, char* a4, int  /*a5*/)//26ca10
 {
 	int v5; // esi
 	bool v6; // eax
@@ -122614,7 +122614,7 @@ int x_WORD_180748;
 int x_WORD_180740;
 
 //----- (0008CB3A) --------------------------------------------------------
-void sub_8CB3A(uint32_t mouse_states, int32_t mouse_posx, int32_t a3, int32_t mouse_posy)//26db3a
+void sub_8CB3A(uint32_t mouse_states, int32_t mouse_posx, int32_t  /*a3*/, int32_t mouse_posy)//26db3a
 {
 	//((void (*)(x_DWORD))_GETDS)((unsigned __int16)__DS__);
 	int16_t temp_mouse_x; // [esp+4h] [ebp-8h]
@@ -123401,7 +123401,7 @@ char sub_8E9EF()//26f9ef
 // 180628: using guessed type int pdwScreenBuffer;
 
 //----- (0008EA7B) --------------------------------------------------------
-void /*__fastcall*/ sub_8EA7B(int a1, unsigned __int16 a2)//26fa7b
+void /*__fastcall*/ sub_8EA7B(int  /*a1*/, unsigned __int16 a2)//26fa7b
 {
 	__int16 v2; // dx
 	__int16 v3; // cx
@@ -123990,7 +123990,7 @@ int16_t sub_90B27_VGA_pal_fadein_fadeout(TColor* newpalbufferx, uint8_t shadow_l
 	return x_WORD_181B44;
 }
 //----- (00090B27) --------------------------------------------------------
-__int16 sub_90B27_VGA_pal_fadein_fadeout_orig(char* a1, unsigned __int8 a2, char a3)
+__int16 sub_90B27_VGA_pal_fadein_fadeout_orig(char*  /*a1*/, unsigned __int8  /*a2*/, char  /*a3*/)
 {
 	/*
   char *v3; // eax
@@ -124569,7 +124569,7 @@ size_t sub_98CAA_write(FILE* filename, uint8_t* buffer, uint32_t num_bytes)//279
 // E379B: using guessed type char x_BYTE_E379B;
 
 //----- (0009937E) --------------------------------------------------------
-int sub_9937E_set_video_mode(__int16 a1)//27a37e
+int sub_9937E_set_video_mode(__int16  /*a1*/)//27a37e
 {
 	/*int result; // eax
 	int v2; // [esp+0h] [ebp-78h]
@@ -124616,7 +124616,7 @@ int sub_9937E_set_video_mode(__int16 a1)//27a37e
 // 181C44: using guessed type __int16 x_WORD_181C44;
 
 //----- (000994BA) --------------------------------------------------------
-int sub_994BA_cursor_move(__int16 a1)//27a4ba
+int sub_994BA_cursor_move(__int16  /*a1*/)//27a4ba
 {
 	/*char v2; // [esp+0h] [ebp-38h]
 	char v3; // [esp+1Ch] [ebp-1Ch]
@@ -124856,7 +124856,7 @@ int sub_9ADB4(int a1)//27Bdb4
 }
 
 //----- (0009AE04) --------------------------------------------------------
-bool sub_9AE04(/*int eax0,*/ int edx0, int a3, int a1, int a2)//27Be04
+bool sub_9AE04(/*int eax0,*/ int  /*edx0*/, int  /*a3*/, int a1, int a2)//27Be04
 {
 	return j___clock() - a1 >= a2;
 }
@@ -124944,7 +124944,7 @@ char sub_9AFC4(int a1, int a2, int a3, int* a4, int a5)//27Bfc4
 // E3DE8: using guessed type int x_DWORD_E3DE8;
 
 //----- (0009B038) --------------------------------------------------------
-char sub_9B038(int* a1, char* a2, int a3)//27C038
+char sub_9B038(int* a1, char* a2, int  /*a3*/)//27C038
 {
 	int v3; // eax
 	int v4; // edx
@@ -124990,7 +124990,7 @@ signed int sub_9B260(x_DWORD** a1)//27C260
 }
 
 //----- (0009B274) --------------------------------------------------------
-char sub_9B274(int* a1, int a2)//27C274
+char sub_9B274(int*  /*a1*/, int  /*a2*/)//27C274
 {
 	char result; // al
 	int v3; // ebp
@@ -126175,7 +126175,7 @@ int sub_AC24B()//28d24b
 }
 
 //----- (000AC250) --------------------------------------------------------
-signed int sub_AC250(int a1, int a2, int a3, int a4, int a5, x_DWORD* a6, x_DWORD* a7, signed int* a8)//28d250
+signed int sub_AC250(int a1, int a2, int a3, int a4, int a5, x_DWORD*  /*a6*/, x_DWORD*  /*a7*/, signed int* a8)//28d250
 {
 	signed int result; // eax
 	int v9; // ebx
@@ -128972,7 +128972,7 @@ __int16 sub_AFB28(int a1, x_WORD* a2, x_WORD* a3, signed int* a4)
 }
 
 //----- (000AFB7E) --------------------------------------------------------
-int sub_AFB7E(int result, x_DWORD* a2, x_BYTE* a3)
+int sub_AFB7E(int result, x_DWORD*  /*a2*/, x_BYTE*  /*a3*/)
 {
 #ifdef TEST_x64
 	allert_error();
@@ -128997,7 +128997,7 @@ int sub_AFB7E(int result, x_DWORD* a2, x_BYTE* a3)
 // E4E2C: using guessed type int x_DWORD_E4E2C;
 
 //----- (000AFB9F) --------------------------------------------------------
-int sub_AFB9F(int result, x_DWORD* a2, x_BYTE* a3)
+int sub_AFB9F(int result, x_DWORD*  /*a2*/, x_BYTE*  /*a3*/)
 {
 #ifdef TEST_x64
 	allert_error();
@@ -129023,7 +129023,7 @@ int sub_AFB9F(int result, x_DWORD* a2, x_BYTE* a3)
 // E4E2C: using guessed type int x_DWORD_E4E2C;
 
 //----- (000AFBC3) --------------------------------------------------------
-int sub_AFBC3(int result, __int16 a2, x_DWORD* a3, x_BYTE* a4)
+int sub_AFBC3(int result, __int16  /*a2*/, x_DWORD*  /*a3*/, x_BYTE*  /*a4*/)
 {
 #ifdef TEST_x64
 	allert_error();
@@ -129051,7 +129051,7 @@ int sub_AFBC3(int result, __int16 a2, x_DWORD* a3, x_BYTE* a4)
 // E4E2C: using guessed type int x_DWORD_E4E2C;
 
 //----- (000AFBF5) --------------------------------------------------------
-int sub_AFBF5(int result, __int16 a2, x_DWORD* a3, x_BYTE* a4)
+int sub_AFBF5(int result, __int16  /*a2*/, x_DWORD*  /*a3*/, x_BYTE*  /*a4*/)
 {
 #ifdef TEST_x64
 	allert_error();
@@ -129079,7 +129079,7 @@ int sub_AFBF5(int result, __int16 a2, x_DWORD* a3, x_BYTE* a4)
 // E4E2C: using guessed type int x_DWORD_E4E2C;
 
 //----- (000AFC27) --------------------------------------------------------
-__int16 sub_AFC27(x_DWORD* a1, x_WORD* a2)
+__int16 sub_AFC27(x_DWORD*  /*a1*/, x_WORD*  /*a2*/)
 {
 	__int16 result; // ax
 
@@ -129105,7 +129105,7 @@ __int16 sub_AFC27(x_DWORD* a1, x_WORD* a2)
 // E4E2C: using guessed type int x_DWORD_E4E2C;
 
 //----- (000AFC4B) --------------------------------------------------------
-__int16 sub_AFC4B(x_DWORD* a1, x_WORD* a2)
+__int16 sub_AFC4B(x_DWORD*  /*a1*/, x_WORD*  /*a2*/)
 {
 	__int16 result; // ax
 
@@ -129132,7 +129132,7 @@ __int16 sub_AFC4B(x_DWORD* a1, x_WORD* a2)
 // E4E2C: using guessed type int x_DWORD_E4E2C;
 
 //----- (000AFC72) --------------------------------------------------------
-__int16 sub_AFC72(x_DWORD* a1, x_WORD* a2)
+__int16 sub_AFC72(x_DWORD*  /*a1*/, x_WORD*  /*a2*/)
 {
 	__int16 result; // ax
 	__int16 v3; // bx
@@ -129161,7 +129161,7 @@ __int16 sub_AFC72(x_DWORD* a1, x_WORD* a2)
 // E4E2C: using guessed type int x_DWORD_E4E2C;
 
 //----- (000AFCA6) --------------------------------------------------------
-__int16 sub_AFCA6(x_DWORD* a1, x_WORD* a2)
+__int16 sub_AFCA6(x_DWORD*  /*a1*/, x_WORD*  /*a2*/)
 {
 	__int16 result; // ax
 	__int16 v3; // bx
@@ -129190,7 +129190,7 @@ __int16 sub_AFCA6(x_DWORD* a1, x_WORD* a2)
 // E4E2C: using guessed type int x_DWORD_E4E2C;
 
 //----- (000AFCDA) --------------------------------------------------------
-__int16 sub_AFCDA(__int16 result, x_DWORD* a2, x_BYTE* a3)
+__int16 sub_AFCDA(__int16 result, x_DWORD*  /*a2*/, x_BYTE*  /*a3*/)
 {
 #ifdef TEST_x64
 	allert_error();
@@ -129213,7 +129213,7 @@ __int16 sub_AFCDA(__int16 result, x_DWORD* a2, x_BYTE* a3)
 // E4E2C: using guessed type int x_DWORD_E4E2C;
 
 //----- (000AFCF6) --------------------------------------------------------
-__int16 sub_AFCF6(__int16 result, x_DWORD* a2, x_BYTE* a3)
+__int16 sub_AFCF6(__int16 result, x_DWORD*  /*a2*/, x_BYTE*  /*a3*/)
 {
 #ifdef TEST_x64
 	allert_error();
@@ -129237,7 +129237,7 @@ __int16 sub_AFCF6(__int16 result, x_DWORD* a2, x_BYTE* a3)
 // E4E2C: using guessed type int x_DWORD_E4E2C;
 
 //----- (000AFD15) --------------------------------------------------------
-__int16 sub_AFD15(__int16 result, __int16 a2, x_DWORD* a3, x_BYTE* a4)
+__int16 sub_AFD15(__int16 result, __int16  /*a2*/, x_DWORD*  /*a3*/, x_BYTE*  /*a4*/)
 {
 #ifdef TEST_x64
 	allert_error();
@@ -129263,7 +129263,7 @@ __int16 sub_AFD15(__int16 result, __int16 a2, x_DWORD* a3, x_BYTE* a4)
 // E4E2C: using guessed type int x_DWORD_E4E2C;
 
 //----- (000AFD3C) --------------------------------------------------------
-__int16 sub_AFD3C(__int16 result, __int16 a2, x_DWORD* a3, x_BYTE* a4)
+__int16 sub_AFD3C(__int16 result, __int16  /*a2*/, x_DWORD*  /*a3*/, x_BYTE*  /*a4*/)
 {
 #ifdef TEST_x64
 	allert_error();
@@ -129289,7 +129289,7 @@ __int16 sub_AFD3C(__int16 result, __int16 a2, x_DWORD* a3, x_BYTE* a4)
 // E4E2C: using guessed type int x_DWORD_E4E2C;
 
 //----- (000AFD63) --------------------------------------------------------
-__int16 sub_AFD63(x_DWORD* a1, __int16* a2)
+__int16 sub_AFD63(x_DWORD*  /*a1*/, __int16*  /*a2*/)
 {
 	__int16 result; // ax
 
@@ -129315,7 +129315,7 @@ __int16 sub_AFD63(x_DWORD* a1, __int16* a2)
 // E4E2C: using guessed type int x_DWORD_E4E2C;
 
 //----- (000AFD82) --------------------------------------------------------
-__int16 sub_AFD82(x_DWORD* a1, __int16* a2)
+__int16 sub_AFD82(x_DWORD*  /*a1*/, __int16*  /*a2*/)
 {
 	__int16 result; // ax
 
@@ -129342,7 +129342,7 @@ __int16 sub_AFD82(x_DWORD* a1, __int16* a2)
 // E4E2C: using guessed type int x_DWORD_E4E2C;
 
 //----- (000AFDA4) --------------------------------------------------------
-__int16 sub_AFDA4(x_DWORD* a1, __int16* a2)
+__int16 sub_AFDA4(x_DWORD*  /*a1*/, __int16*  /*a2*/)
 {
 	__int16 result; // ax
 	__int16 v3; // bx
@@ -129371,7 +129371,7 @@ __int16 sub_AFDA4(x_DWORD* a1, __int16* a2)
 // E4E2C: using guessed type int x_DWORD_E4E2C;
 
 //----- (000AFDCD) --------------------------------------------------------
-__int16 sub_AFDCD(x_DWORD* a1, __int16* a2)
+__int16 sub_AFDCD(x_DWORD*  /*a1*/, __int16*  /*a2*/)
 {
 	__int16 v2; // bx
 	__int16 result; // ax
@@ -129400,7 +129400,7 @@ __int16 sub_AFDCD(x_DWORD* a1, __int16* a2)
 // E4E2C: using guessed type int x_DWORD_E4E2C;
 
 //----- (000AFDF6) --------------------------------------------------------
-int sub_AFDF6(int result, unsigned int a2, x_DWORD* a3, x_BYTE* a4)
+int sub_AFDF6(int result, unsigned int  /*a2*/, x_DWORD*  /*a3*/, x_BYTE*  /*a4*/)
 {
 #ifdef TEST_x64
 	allert_error();
@@ -129427,7 +129427,7 @@ int sub_AFDF6(int result, unsigned int a2, x_DWORD* a3, x_BYTE* a4)
 // E4E30: using guessed type __int64 qx_WORD_E4E30;
 
 //----- (000AFE22) --------------------------------------------------------
-int sub_AFE22(int result, unsigned int a2, x_DWORD* a3, x_BYTE* a4)
+int sub_AFE22(int result, unsigned int  /*a2*/, x_DWORD*  /*a3*/, x_BYTE*  /*a4*/)
 {
 #ifdef TEST_x64
 	allert_error();
@@ -129455,7 +129455,7 @@ int sub_AFE22(int result, unsigned int a2, x_DWORD* a3, x_BYTE* a4)
 // E4E30: using guessed type __int64 qx_WORD_E4E30;
 
 //----- (000AFE51) --------------------------------------------------------
-int sub_AFE51(int result, unsigned int a2, __int16 a3, x_DWORD* a4, x_BYTE* a5)
+int sub_AFE51(int result, unsigned int  /*a2*/, __int16  /*a3*/, x_DWORD*  /*a4*/, x_BYTE*  /*a5*/)
 {
 	int v5; // ebp
 
@@ -129488,7 +129488,7 @@ int sub_AFE51(int result, unsigned int a2, __int16 a3, x_DWORD* a4, x_BYTE* a5)
 // E4E30: using guessed type __int64 qx_WORD_E4E30;
 
 //----- (000AFE91) --------------------------------------------------------
-int sub_AFE91(int result, unsigned int a2, __int16 a3, x_DWORD* a4, x_BYTE* a5)
+int sub_AFE91(int result, unsigned int  /*a2*/, __int16  /*a3*/, x_DWORD*  /*a4*/, x_BYTE*  /*a5*/)
 {
 	int v5; // ebp
 
@@ -129521,7 +129521,7 @@ int sub_AFE91(int result, unsigned int a2, __int16 a3, x_DWORD* a4, x_BYTE* a5)
 // E4E30: using guessed type __int64 qx_WORD_E4E30;
 
 //----- (000AFED1) --------------------------------------------------------
-__int16 sub_AFED1(unsigned int a1, x_DWORD* a2, x_WORD* a3)
+__int16 sub_AFED1(unsigned int  /*a1*/, x_DWORD*  /*a2*/, x_WORD*  /*a3*/)
 {
 	__int16 result; // ax
 	int v4; // ebp
@@ -129551,7 +129551,7 @@ __int16 sub_AFED1(unsigned int a1, x_DWORD* a2, x_WORD* a3)
 // E4E30: using guessed type __int64 qx_WORD_E4E30;
 
 //----- (000AFF03) --------------------------------------------------------
-__int16 sub_AFF03(unsigned int a1, x_DWORD* a2, x_WORD* a3)
+__int16 sub_AFF03(unsigned int  /*a1*/, x_DWORD*  /*a2*/, x_WORD*  /*a3*/)
 {
 	__int16 result; // ax
 	int v4; // ebp
@@ -129582,7 +129582,7 @@ __int16 sub_AFF03(unsigned int a1, x_DWORD* a2, x_WORD* a3)
 // E4E30: using guessed type __int64 qx_WORD_E4E30;
 
 //----- (000AFF38) --------------------------------------------------------
-__int16 sub_AFF38(unsigned int a1, x_DWORD* a2, x_WORD* a3)
+__int16 sub_AFF38(unsigned int  /*a1*/, x_DWORD*  /*a2*/, x_WORD*  /*a3*/)
 {
 	__int16 result; // ax
 	__int16 v4; // bx
@@ -129615,7 +129615,7 @@ __int16 sub_AFF38(unsigned int a1, x_DWORD* a2, x_WORD* a3)
 // E4E30: using guessed type __int64 qx_WORD_E4E30;
 
 //----- (000AFF7A) --------------------------------------------------------
-__int16 sub_AFF7A(unsigned int a1, x_DWORD* a2, x_WORD* a3)
+__int16 sub_AFF7A(unsigned int  /*a1*/, x_DWORD*  /*a2*/, x_WORD*  /*a3*/)
 {
 	__int16 result; // ax
 	__int16 v4; // bx
@@ -129648,7 +129648,7 @@ __int16 sub_AFF7A(unsigned int a1, x_DWORD* a2, x_WORD* a3)
 // E4E30: using guessed type __int64 qx_WORD_E4E30;
 
 //----- (000AFFBC) --------------------------------------------------------
-__int16 sub_AFFBC(__int16 result, unsigned int a2, x_DWORD* a3, x_BYTE* a4)
+__int16 sub_AFFBC(__int16 result, unsigned int  /*a2*/, x_DWORD*  /*a3*/, x_BYTE*  /*a4*/)
 {
 #ifdef TEST_x64
 	allert_error();
@@ -129674,7 +129674,7 @@ __int16 sub_AFFBC(__int16 result, unsigned int a2, x_DWORD* a3, x_BYTE* a4)
 // E4E30: using guessed type __int64 qx_WORD_E4E30;
 
 //----- (000AFFE3) --------------------------------------------------------
-__int16 sub_AFFE3(__int16 result, unsigned int a2, x_DWORD* a3, x_BYTE* a4)
+__int16 sub_AFFE3(__int16 result, unsigned int  /*a2*/, x_DWORD*  /*a3*/, x_BYTE*  /*a4*/)
 {
 #ifdef TEST_x64
 	allert_error();
@@ -129701,7 +129701,7 @@ __int16 sub_AFFE3(__int16 result, unsigned int a2, x_DWORD* a3, x_BYTE* a4)
 // E4E30: using guessed type __int64 qx_WORD_E4E30;
 
 //----- (000B000D) --------------------------------------------------------
-__int16 sub_B000D(__int16 result, unsigned int a2, __int16 a3, x_DWORD* a4, x_BYTE* a5)
+__int16 sub_B000D(__int16 result, unsigned int  /*a2*/, __int16  /*a3*/, x_DWORD*  /*a4*/, x_BYTE*  /*a5*/)
 {
 	int v5; // ebp
 
@@ -129732,7 +129732,7 @@ __int16 sub_B000D(__int16 result, unsigned int a2, __int16 a3, x_DWORD* a4, x_BY
 // E4E30: using guessed type __int64 qx_WORD_E4E30;
 
 //----- (000B0042) --------------------------------------------------------
-__int16 sub_B0042(__int16 result, unsigned int a2, __int16 a3, x_DWORD* a4, x_BYTE* a5)
+__int16 sub_B0042(__int16 result, unsigned int  /*a2*/, __int16  /*a3*/, x_DWORD*  /*a4*/, x_BYTE*  /*a5*/)
 {
 	int v5; // ebp
 
@@ -129763,7 +129763,7 @@ __int16 sub_B0042(__int16 result, unsigned int a2, __int16 a3, x_DWORD* a4, x_BY
 // E4E30: using guessed type __int64 qx_WORD_E4E30;
 
 //----- (000B0077) --------------------------------------------------------
-__int16 sub_B0077(unsigned int a1, x_DWORD* a2, __int16* a3)
+__int16 sub_B0077(unsigned int  /*a1*/, x_DWORD*  /*a2*/, __int16*  /*a3*/)
 {
 	__int16 result; // ax
 	int v4; // ebp
@@ -129793,7 +129793,7 @@ __int16 sub_B0077(unsigned int a1, x_DWORD* a2, __int16* a3)
 // E4E30: using guessed type __int64 qx_WORD_E4E30;
 
 //----- (000B00A4) --------------------------------------------------------
-__int16 sub_B00A4(unsigned int a1, x_DWORD* a2, __int16* a3)
+__int16 sub_B00A4(unsigned int  /*a1*/, x_DWORD*  /*a2*/, __int16*  /*a3*/)
 {
 	__int16 result; // ax
 	int v4; // ebp
@@ -129824,7 +129824,7 @@ __int16 sub_B00A4(unsigned int a1, x_DWORD* a2, __int16* a3)
 // E4E30: using guessed type __int64 qx_WORD_E4E30;
 
 //----- (000B00D4) --------------------------------------------------------
-__int16 sub_B00D4(unsigned int a1, x_DWORD* a2, __int16* a3)
+__int16 sub_B00D4(unsigned int  /*a1*/, x_DWORD*  /*a2*/, __int16*  /*a3*/)
 {
 	__int16 result; // ax
 	__int16 v4; // bx
@@ -129857,7 +129857,7 @@ __int16 sub_B00D4(unsigned int a1, x_DWORD* a2, __int16* a3)
 // E4E30: using guessed type __int64 qx_WORD_E4E30;
 
 //----- (000B010B) --------------------------------------------------------
-__int16 sub_B010B(unsigned int a1, x_DWORD* a2, __int16* a3)
+__int16 sub_B010B(unsigned int  /*a1*/, x_DWORD*  /*a2*/, __int16*  /*a3*/)
 {
 	__int16 v3; // bx
 	__int16 result; // ax
@@ -129890,7 +129890,7 @@ __int16 sub_B010B(unsigned int a1, x_DWORD* a2, __int16* a3)
 // E4E30: using guessed type __int64 qx_WORD_E4E30;
 
 //----- (000B0142) --------------------------------------------------------
-char sub_B0142(int a1, int a2, x_DWORD* a3, x_BYTE* a4)
+char sub_B0142(int a1, int  /*a2*/, x_DWORD*  /*a3*/, x_BYTE*  /*a4*/)
 {
 #ifdef TEST_x64
 	allert_error();
@@ -129913,7 +129913,7 @@ char sub_B0142(int a1, int a2, x_DWORD* a3, x_BYTE* a4)
 // E4E2C: using guessed type int x_DWORD_E4E2C;
 
 //----- (000B015E) --------------------------------------------------------
-char sub_B015E(int a1, int a2, x_DWORD* a3, x_BYTE* a4)
+char sub_B015E(int a1, int  /*a2*/, x_DWORD*  /*a3*/, x_BYTE*  /*a4*/)
 {
 #ifdef TEST_x64
 	allert_error();
@@ -129937,7 +129937,7 @@ char sub_B015E(int a1, int a2, x_DWORD* a3, x_BYTE* a4)
 // E4E2C: using guessed type int x_DWORD_E4E2C;
 
 //----- (000B0184) --------------------------------------------------------
-char sub_B0184(int a1, int a2, int a3, x_DWORD* a4, x_BYTE* a5)
+char sub_B0184(int a1, int  /*a2*/, int  /*a3*/, x_DWORD*  /*a4*/, x_BYTE*  /*a5*/)
 {
 #ifdef TEST_x64
 	allert_error();
@@ -129963,7 +129963,7 @@ char sub_B0184(int a1, int a2, int a3, x_DWORD* a4, x_BYTE* a5)
 // E4E2C: using guessed type int x_DWORD_E4E2C;
 
 //----- (000B01AE) --------------------------------------------------------
-char sub_B01AE(int a1, int a2, int a3, x_DWORD* a4, x_BYTE* a5)
+char sub_B01AE(int a1, int  /*a2*/, int  /*a3*/, x_DWORD*  /*a4*/, x_BYTE*  /*a5*/)
 {
 #ifdef TEST_x64
 	allert_error();
@@ -129989,7 +129989,7 @@ char sub_B01AE(int a1, int a2, int a3, x_DWORD* a4, x_BYTE* a5)
 // E4E2C: using guessed type int x_DWORD_E4E2C;
 
 //----- (000B01D9) --------------------------------------------------------
-char sub_B01D9(int a1, int a2, int a3, x_DWORD* a4, x_BYTE* a5)
+char sub_B01D9(int a1, int  /*a2*/, int  /*a3*/, x_DWORD*  /*a4*/, x_BYTE*  /*a5*/)
 {
 #ifdef TEST_x64
 	allert_error();
@@ -130015,7 +130015,7 @@ char sub_B01D9(int a1, int a2, int a3, x_DWORD* a4, x_BYTE* a5)
 // E4E2C: using guessed type int x_DWORD_E4E2C;
 
 //----- (000B0203) --------------------------------------------------------
-char sub_B0203(int a1, int a2, int a3, x_DWORD* a4, x_BYTE* a5)
+char sub_B0203(int a1, int  /*a2*/, int  /*a3*/, x_DWORD*  /*a4*/, x_BYTE*  /*a5*/)
 {
 #ifdef TEST_x64
 	allert_error();
@@ -130041,7 +130041,7 @@ char sub_B0203(int a1, int a2, int a3, x_DWORD* a4, x_BYTE* a5)
 // E4E2C: using guessed type int x_DWORD_E4E2C;
 
 //----- (000B022E) --------------------------------------------------------
-int sub_B022E(int result, x_DWORD* a2, x_DWORD* a3, x_WORD* a4)
+int sub_B022E(int result, x_DWORD*  /*a2*/, x_DWORD*  /*a3*/, x_WORD*  /*a4*/)
 {
 #ifdef TEST_x64
 	allert_error();
@@ -130066,7 +130066,7 @@ int sub_B022E(int result, x_DWORD* a2, x_DWORD* a3, x_WORD* a4)
 // E4E2C: using guessed type int x_DWORD_E4E2C;
 
 //----- (000B0258) --------------------------------------------------------
-int sub_B0258(int result, x_DWORD* a2, x_DWORD* a3, x_WORD* a4)
+int sub_B0258(int result, x_DWORD*  /*a2*/, x_DWORD*  /*a3*/, x_WORD*  /*a4*/)
 {
 #ifdef TEST_x64
 	allert_error();
@@ -130092,7 +130092,7 @@ int sub_B0258(int result, x_DWORD* a2, x_DWORD* a3, x_WORD* a4)
 // E4E2C: using guessed type int x_DWORD_E4E2C;
 
 //----- (000B0292) --------------------------------------------------------
-int sub_B0292(int result, x_DWORD* a2, x_DWORD* a3, x_WORD* a4)
+int sub_B0292(int result, x_DWORD*  /*a2*/, x_DWORD*  /*a3*/, x_WORD*  /*a4*/)
 {
 	__int16 v4; // bx
 
@@ -130121,7 +130121,7 @@ int sub_B0292(int result, x_DWORD* a2, x_DWORD* a3, x_WORD* a4)
 // E4E2C: using guessed type int x_DWORD_E4E2C;
 
 //----- (000B02D5) --------------------------------------------------------
-int sub_B02D5(int result, x_DWORD* a2, x_DWORD* a3, x_WORD* a4)
+int sub_B02D5(int result, x_DWORD*  /*a2*/, x_DWORD*  /*a3*/, x_WORD*  /*a4*/)
 {
 	__int16 v4; // bx
 
@@ -130150,7 +130150,7 @@ int sub_B02D5(int result, x_DWORD* a2, x_DWORD* a3, x_WORD* a4)
 // E4E2C: using guessed type int x_DWORD_E4E2C;
 
 //----- (000B0319) --------------------------------------------------------
-int sub_B0319(int result, x_DWORD* a2, x_DWORD* a3, x_WORD* a4)
+int sub_B0319(int result, x_DWORD*  /*a2*/, x_DWORD*  /*a3*/, x_WORD*  /*a4*/)
 {
 	__int16 v4; // bx
 
@@ -130179,7 +130179,7 @@ int sub_B0319(int result, x_DWORD* a2, x_DWORD* a3, x_WORD* a4)
 // E4E2C: using guessed type int x_DWORD_E4E2C;
 
 //----- (000B035C) --------------------------------------------------------
-int sub_B035C(int result, x_DWORD* a2, x_DWORD* a3, x_WORD* a4)
+int sub_B035C(int result, x_DWORD*  /*a2*/, x_DWORD*  /*a3*/, x_WORD*  /*a4*/)
 {
 	__int16 v4; // bx
 
@@ -130208,7 +130208,7 @@ int sub_B035C(int result, x_DWORD* a2, x_DWORD* a3, x_WORD* a4)
 // E4E2C: using guessed type int x_DWORD_E4E2C;
 
 //----- (000B03A0) --------------------------------------------------------
-__int16 sub_B03A0(x_DWORD* a1, x_DWORD* a2, __int16* a3)
+__int16 sub_B03A0(x_DWORD*  /*a1*/, x_DWORD*  /*a2*/, __int16*  /*a3*/)
 {
 	__int16 result; // ax
 
@@ -130234,7 +130234,7 @@ __int16 sub_B03A0(x_DWORD* a1, x_DWORD* a2, __int16* a3)
 // E4E2C: using guessed type int x_DWORD_E4E2C;
 
 //----- (000B03C5) --------------------------------------------------------
-__int16 sub_B03C5(x_DWORD* a1, x_DWORD* a2, __int16* a3)
+__int16 sub_B03C5(x_DWORD*  /*a1*/, x_DWORD*  /*a2*/, __int16*  /*a3*/)
 {
 	__int16 result; // ax
 
@@ -130261,7 +130261,7 @@ __int16 sub_B03C5(x_DWORD* a1, x_DWORD* a2, __int16* a3)
 // E4E2C: using guessed type int x_DWORD_E4E2C;
 
 //----- (000B03FA) --------------------------------------------------------
-__int16 sub_B03FA(x_DWORD* a1, x_DWORD* a2, __int16* a3)
+__int16 sub_B03FA(x_DWORD*  /*a1*/, x_DWORD*  /*a2*/, __int16*  /*a3*/)
 {
 	__int16 result; // ax
 	__int16 v4; // bx
@@ -130290,7 +130290,7 @@ __int16 sub_B03FA(x_DWORD* a1, x_DWORD* a2, __int16* a3)
 // E4E2C: using guessed type int x_DWORD_E4E2C;
 
 //----- (000B0432) --------------------------------------------------------
-__int16 sub_B0432(x_DWORD* a1, x_DWORD* a2, __int16* a3)
+__int16 sub_B0432(x_DWORD*  /*a1*/, x_DWORD*  /*a2*/, __int16*  /*a3*/)
 {
 	__int16 result; // ax
 	__int16 v4; // bx
@@ -130319,7 +130319,7 @@ __int16 sub_B0432(x_DWORD* a1, x_DWORD* a2, __int16* a3)
 // E4E2C: using guessed type int x_DWORD_E4E2C;
 
 //----- (000B046B) --------------------------------------------------------
-__int16 sub_B046B(x_DWORD* a1, x_DWORD* a2, __int16* a3)
+__int16 sub_B046B(x_DWORD*  /*a1*/, x_DWORD*  /*a2*/, __int16*  /*a3*/)
 {
 	__int16 v3; // bx
 	__int16 result; // ax
@@ -130348,7 +130348,7 @@ __int16 sub_B046B(x_DWORD* a1, x_DWORD* a2, __int16* a3)
 // E4E2C: using guessed type int x_DWORD_E4E2C;
 
 //----- (000B04A3) --------------------------------------------------------
-__int16 sub_B04A3(x_DWORD* a1, x_DWORD* a2, __int16* a3)
+__int16 sub_B04A3(x_DWORD*  /*a1*/, x_DWORD*  /*a2*/, __int16*  /*a3*/)
 {
 	__int16 v3; // bx
 	__int16 result; // ax
@@ -130377,7 +130377,7 @@ __int16 sub_B04A3(x_DWORD* a1, x_DWORD* a2, __int16* a3)
 // E4E2C: using guessed type int x_DWORD_E4E2C;
 
 //----- (000B04DC) --------------------------------------------------------
-char sub_B04DC(int a1, int a2, unsigned int a3, x_DWORD* a4, x_BYTE* a5)
+char sub_B04DC(int a1, int  /*a2*/, unsigned int  /*a3*/, x_DWORD*  /*a4*/, x_BYTE*  /*a5*/)
 {
 #ifdef TEST_x64
 	allert_error();
@@ -130403,7 +130403,7 @@ char sub_B04DC(int a1, int a2, unsigned int a3, x_DWORD* a4, x_BYTE* a5)
 // E4E30: using guessed type __int64 qx_WORD_E4E30;
 
 //----- (000B0503) --------------------------------------------------------
-char sub_B0503(int a1, int a2, unsigned int a3, x_DWORD* a4, x_BYTE* a5)
+char sub_B0503(int a1, int  /*a2*/, unsigned int  /*a3*/, x_DWORD*  /*a4*/, x_BYTE*  /*a5*/)
 {
 #ifdef TEST_x64
 	allert_error();
@@ -130430,7 +130430,7 @@ char sub_B0503(int a1, int a2, unsigned int a3, x_DWORD* a4, x_BYTE* a5)
 // E4E30: using guessed type __int64 qx_WORD_E4E30;
 
 //----- (000B0534) --------------------------------------------------------
-char sub_B0534(int a1, int a2, unsigned int a3, int a4, x_DWORD* a5, x_BYTE* a6)
+char sub_B0534(int a1, int  /*a2*/, unsigned int  /*a3*/, int  /*a4*/, x_DWORD*  /*a5*/, x_BYTE*  /*a6*/)
 {
 	int v6; // ebp
 
@@ -130461,7 +130461,7 @@ char sub_B0534(int a1, int a2, unsigned int a3, int a4, x_DWORD* a5, x_BYTE* a6)
 // E4E30: using guessed type __int64 qx_WORD_E4E30;
 
 //----- (000B056C) --------------------------------------------------------
-char sub_B056C(int a1, int a2, unsigned int a3, int a4, x_DWORD* a5, x_BYTE* a6)
+char sub_B056C(int a1, int  /*a2*/, unsigned int  /*a3*/, int  /*a4*/, x_DWORD*  /*a5*/, x_BYTE*  /*a6*/)
 {
 	int v6; // ebp
 
@@ -130492,7 +130492,7 @@ char sub_B056C(int a1, int a2, unsigned int a3, int a4, x_DWORD* a5, x_BYTE* a6)
 // E4E30: using guessed type __int64 qx_WORD_E4E30;
 
 //----- (000B05A5) --------------------------------------------------------
-char sub_B05A5(int a1, int a2, unsigned int a3, int a4, x_DWORD* a5, x_BYTE* a6)
+char sub_B05A5(int a1, int  /*a2*/, unsigned int  /*a3*/, int  /*a4*/, x_DWORD*  /*a5*/, x_BYTE*  /*a6*/)
 {
 	int v6; // ebp
 
@@ -130523,7 +130523,7 @@ char sub_B05A5(int a1, int a2, unsigned int a3, int a4, x_DWORD* a5, x_BYTE* a6)
 // E4E30: using guessed type __int64 qx_WORD_E4E30;
 
 //----- (000B05DD) --------------------------------------------------------
-char sub_B05DD(int a1, int a2, unsigned int a3, int a4, x_DWORD* a5, x_BYTE* a6)
+char sub_B05DD(int a1, int  /*a2*/, unsigned int  /*a3*/, int  /*a4*/, x_DWORD*  /*a5*/, x_BYTE*  /*a6*/)
 {
 	int v6; // ebp
 
@@ -130554,7 +130554,7 @@ char sub_B05DD(int a1, int a2, unsigned int a3, int a4, x_DWORD* a5, x_BYTE* a6)
 // E4E30: using guessed type __int64 qx_WORD_E4E30;
 
 //----- (000B0616) --------------------------------------------------------
-int sub_B0616(int result, x_DWORD* a2, unsigned int a3, x_DWORD* a4, x_WORD* a5)
+int sub_B0616(int result, x_DWORD*  /*a2*/, unsigned int  /*a3*/, x_DWORD*  /*a4*/, x_WORD*  /*a5*/)
 {
 	int v5; // ebp
 
@@ -130584,7 +130584,7 @@ int sub_B0616(int result, x_DWORD* a2, unsigned int a3, x_DWORD* a4, x_WORD* a5)
 // E4E30: using guessed type __int64 qx_WORD_E4E30;
 
 //----- (000B064E) --------------------------------------------------------
-int sub_B064E(int result, x_DWORD* a2, unsigned int a3, x_DWORD* a4, x_WORD* a5)
+int sub_B064E(int result, x_DWORD*  /*a2*/, unsigned int  /*a3*/, x_DWORD*  /*a4*/, x_WORD*  /*a5*/)
 {
 	int v5; // ebp
 
@@ -130615,7 +130615,7 @@ int sub_B064E(int result, x_DWORD* a2, unsigned int a3, x_DWORD* a4, x_WORD* a5)
 // E4E30: using guessed type __int64 qx_WORD_E4E30;
 
 //----- (000B0696) --------------------------------------------------------
-int sub_B0696(int result, x_DWORD* a2, unsigned int a3, x_DWORD* a4, x_WORD* a5)
+int sub_B0696(int result, x_DWORD*  /*a2*/, unsigned int  /*a3*/, x_DWORD*  /*a4*/, x_WORD*  /*a5*/)
 {
 	__int16 v5; // bx
 	int v6; // ebp
@@ -130648,7 +130648,7 @@ int sub_B0696(int result, x_DWORD* a2, unsigned int a3, x_DWORD* a4, x_WORD* a5)
 // E4E30: using guessed type __int64 qx_WORD_E4E30;
 
 //----- (000B06E7) --------------------------------------------------------
-int sub_B06E7(int result, x_DWORD* a2, unsigned int a3, x_DWORD* a4, x_WORD* a5)
+int sub_B06E7(int result, x_DWORD*  /*a2*/, unsigned int  /*a3*/, x_DWORD*  /*a4*/, x_WORD*  /*a5*/)
 {
 	__int16 v5; // bx
 	int v6; // ebp
@@ -130681,7 +130681,7 @@ int sub_B06E7(int result, x_DWORD* a2, unsigned int a3, x_DWORD* a4, x_WORD* a5)
 // E4E30: using guessed type __int64 qx_WORD_E4E30;
 
 //----- (000B0739) --------------------------------------------------------
-int sub_B0739(int result, x_DWORD* a2, unsigned int a3, x_DWORD* a4, x_WORD* a5)
+int sub_B0739(int result, x_DWORD*  /*a2*/, unsigned int  /*a3*/, x_DWORD*  /*a4*/, x_WORD*  /*a5*/)
 {
 	__int16 v5; // bx
 	int v6; // ebp
@@ -130714,7 +130714,7 @@ int sub_B0739(int result, x_DWORD* a2, unsigned int a3, x_DWORD* a4, x_WORD* a5)
 // E4E30: using guessed type __int64 qx_WORD_E4E30;
 
 //----- (000B078A) --------------------------------------------------------
-int sub_B078A(int result, x_DWORD* a2, unsigned int a3, x_DWORD* a4, x_WORD* a5)
+int sub_B078A(int result, x_DWORD*  /*a2*/, unsigned int  /*a3*/, x_DWORD*  /*a4*/, x_WORD*  /*a5*/)
 {
 	__int16 v5; // bx
 	int v6; // ebp
@@ -130747,7 +130747,7 @@ int sub_B078A(int result, x_DWORD* a2, unsigned int a3, x_DWORD* a4, x_WORD* a5)
 // E4E30: using guessed type __int64 qx_WORD_E4E30;
 
 //----- (000B07DC) --------------------------------------------------------
-__int16 sub_B07DC(x_DWORD* a1, unsigned int a2, x_DWORD* a3, __int16* a4)
+__int16 sub_B07DC(x_DWORD*  /*a1*/, unsigned int  /*a2*/, x_DWORD*  /*a3*/, __int16*  /*a4*/)
 {
 	__int16 result; // ax
 	int v5; // ebp
@@ -130777,7 +130777,7 @@ __int16 sub_B07DC(x_DWORD* a1, unsigned int a2, x_DWORD* a3, __int16* a4)
 // E4E30: using guessed type __int64 qx_WORD_E4E30;
 
 //----- (000B080F) --------------------------------------------------------
-__int16 sub_B080F(x_DWORD* a1, unsigned int a2, x_DWORD* a3, __int16* a4)
+__int16 sub_B080F(x_DWORD*  /*a1*/, unsigned int  /*a2*/, x_DWORD*  /*a3*/, __int16*  /*a4*/)
 {
 	__int16 result; // ax
 	int v5; // ebp
@@ -130808,7 +130808,7 @@ __int16 sub_B080F(x_DWORD* a1, unsigned int a2, x_DWORD* a3, __int16* a4)
 // E4E30: using guessed type __int64 qx_WORD_E4E30;
 
 //----- (000B0852) --------------------------------------------------------
-__int16 sub_B0852(x_DWORD* a1, unsigned int a2, x_DWORD* a3, __int16* a4)
+__int16 sub_B0852(x_DWORD*  /*a1*/, unsigned int  /*a2*/, x_DWORD*  /*a3*/, __int16*  /*a4*/)
 {
 	__int16 result; // ax
 	__int16 v5; // bx
@@ -130841,7 +130841,7 @@ __int16 sub_B0852(x_DWORD* a1, unsigned int a2, x_DWORD* a3, __int16* a4)
 // E4E30: using guessed type __int64 qx_WORD_E4E30;
 
 //----- (000B0898) --------------------------------------------------------
-__int16 sub_B0898(x_DWORD* a1, unsigned int a2, x_DWORD* a3, __int16* a4)
+__int16 sub_B0898(x_DWORD*  /*a1*/, unsigned int  /*a2*/, x_DWORD*  /*a3*/, __int16*  /*a4*/)
 {
 	__int16 result; // ax
 	__int16 v5; // bx
@@ -130874,7 +130874,7 @@ __int16 sub_B0898(x_DWORD* a1, unsigned int a2, x_DWORD* a3, __int16* a4)
 // E4E30: using guessed type __int64 qx_WORD_E4E30;
 
 //----- (000B08DF) --------------------------------------------------------
-__int16 sub_B08DF(x_DWORD* a1, unsigned int a2, x_DWORD* a3, __int16* a4)
+__int16 sub_B08DF(x_DWORD*  /*a1*/, unsigned int  /*a2*/, x_DWORD*  /*a3*/, __int16*  /*a4*/)
 {
 	__int16 v4; // bx
 	__int16 result; // ax
@@ -130907,7 +130907,7 @@ __int16 sub_B08DF(x_DWORD* a1, unsigned int a2, x_DWORD* a3, __int16* a4)
 // E4E30: using guessed type __int64 qx_WORD_E4E30;
 
 //----- (000B0925) --------------------------------------------------------
-__int16 sub_B0925(x_DWORD* a1, unsigned int a2, x_DWORD* a3, __int16* a4)
+__int16 sub_B0925(x_DWORD*  /*a1*/, unsigned int  /*a2*/, x_DWORD*  /*a3*/, __int16*  /*a4*/)
 {
 	__int16 v4; // bx
 	__int16 result; // ax
@@ -131448,7 +131448,7 @@ int sub_B14F8(int* a1, int a2)
 // B1904: using guessed type int (*off_B1904[57])();
 
 //----- (000B1D8C) --------------------------------------------------------
-char sub_B1D8C(int a1, int a2, int a3, __int16 a4, int a5, int a6, int a7, int a8, int a9, int a10, int a11, int a12, int a13, int a14, int a15, int a16, __int16 a17)
+char sub_B1D8C(int a1, int a2, int  /*a3*/, __int16  /*a4*/, int  /*a5*/, int  /*a6*/, int  /*a7*/, int  /*a8*/, int  /*a9*/, int  /*a10*/, int  /*a11*/, int  /*a12*/, int  /*a13*/, int  /*a14*/, int  /*a15*/, int  /*a16*/, __int16  /*a17*/)
 {
 	x_DWORD* v17; // ebx
 	signed int v18; // edx
@@ -131480,7 +131480,7 @@ char sub_B1D8C(int a1, int a2, int a3, __int16 a4, int a5, int a6, int a7, int a
 }
 
 //----- (000B1E11) --------------------------------------------------------
-char sub_B1E11(int a1, int a2, int a3, __int16 a4, int a5, int a6, int a7, int a8, int a9, int a10, int a11, int a12, int a13, int a14, int a15, int a16, __int16 a17)
+char sub_B1E11(int a1, int a2, int  /*a3*/, __int16  /*a4*/, int  /*a5*/, int  /*a6*/, int  /*a7*/, int  /*a8*/, int  /*a9*/, int  /*a10*/, int  /*a11*/, int  /*a12*/, int  /*a13*/, int  /*a14*/, int  /*a15*/, int  /*a16*/, __int16  /*a17*/)
 {
 	__int16 v17; // bx
 
@@ -131781,7 +131781,7 @@ int sub_B1FD4(int a1, int a2, signed int* a3)
 }
 
 //----- (000B1FF3) --------------------------------------------------------
-char sub_B1FF3(int a1, int a2, signed int* a3, __int16 bx0, int a4, __int16 a5, int a6, int a7, int a8, int a9, int a10, int a11, int a12, int a13, int a14, int a15, int a16, int a17, __int16 a18)
+char sub_B1FF3(int a1, int a2, signed int* a3, __int16  /*bx0*/, int  /*a4*/, __int16  /*a5*/, int  /*a6*/, int  /*a7*/, int  /*a8*/, int  /*a9*/, int  /*a10*/, int  /*a11*/, int  /*a12*/, int  /*a13*/, int  /*a14*/, int  /*a15*/, int  /*a16*/, int  /*a17*/, __int16  /*a18*/)
 {
 	__int16 v19; // dx
 	int v21; // eax
@@ -131888,7 +131888,7 @@ int sub_B2088(int a1, int a2, signed int* a3)
 }
 
 //----- (000B20A7) --------------------------------------------------------
-char sub_B20A7(int a1, int a2, signed int* a3, int a4, __int16 a5, int a6, int a7, int a8, int a9, int a10, int a11, int a12, int a13, int a14, int a15, int a16, int a17, __int16 a18)
+char sub_B20A7(int a1, int a2, signed int* a3, int  /*a4*/, __int16  /*a5*/, int  /*a6*/, int  /*a7*/, int  /*a8*/, int  /*a9*/, int  /*a10*/, int  /*a11*/, int  /*a12*/, int  /*a13*/, int  /*a14*/, int  /*a15*/, int  /*a16*/, int  /*a17*/, __int16  /*a18*/)
 {
 	int v18; // edi
 	__int16 v19; // bx
@@ -131908,7 +131908,7 @@ char sub_B20A7(int a1, int a2, signed int* a3, int a4, __int16 a5, int a6, int a
 // B1860: using guessed type int x_DWORD_B1860[41];
 
 //----- (000B20E1) --------------------------------------------------------
-char sub_B20E1(int a1, int a2, int* a3, __int16 bx0, int a4, __int16 a5, int a6, int a7, int a8, int a9, int a10, int a11, int a12, int a13, int a14, int a15, int a16, int a17, __int16 a18)
+char sub_B20E1(int a1, int a2, int* a3, __int16  /*bx0*/, int  /*a4*/, __int16  /*a5*/, int  /*a6*/, int  /*a7*/, int  /*a8*/, int  /*a9*/, int  /*a10*/, int  /*a11*/, int  /*a12*/, int  /*a13*/, int  /*a14*/, int  /*a15*/, int  /*a16*/, int  /*a17*/, __int16  /*a18*/)
 {
 	*a3 = sub_B3A60(a2 + a1 + 28);
 	//return sub_B1C58(bx0, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13, a14, a15, a16, a17, a18);
@@ -131916,7 +131916,7 @@ char sub_B20E1(int a1, int a2, int* a3, __int16 bx0, int a4, __int16 a5, int a6,
 }
 
 //----- (000B20F2) --------------------------------------------------------
-char sub_B20F2(int a1, int a2, int* esi0, int a3, __int16 a4, int a5, int a6, int a7, int a8, int a9, int a10, int a11, int a12, int a13, int a14, int a15, int a16, __int16 a17)
+char sub_B20F2(int a1, int a2, int* esi0, int  /*a3*/, __int16  /*a4*/, int  /*a5*/, int  /*a6*/, int  /*a7*/, int  /*a8*/, int  /*a9*/, int  /*a10*/, int  /*a11*/, int  /*a12*/, int  /*a13*/, int  /*a14*/, int  /*a15*/, int  /*a16*/, __int16  /*a17*/)
 {
 	*esi0 = sub_B3A60(a2 + a1 + 28);
 	//return sub_B1E11(a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13, a14, a15, a16, a17);
@@ -131924,7 +131924,7 @@ char sub_B20F2(int a1, int a2, int* esi0, int a3, __int16 a4, int a5, int a6, in
 }
 
 //----- (000B2103) --------------------------------------------------------
-char sub_B2103(void* a1, const void* a2, __int16 bx0, int a3, __int16 a4, int a5, int a6, int a7, int a8, int a9, int a10, int a11, int a12, int a13, int a14, int a15, int a16, __int16 a17)
+char sub_B2103(void* a1, const void* a2, __int16  /*bx0*/, int  /*a3*/, __int16  /*a4*/, int  /*a5*/, int  /*a6*/, int  /*a7*/, int  /*a8*/, int  /*a9*/, int  /*a10*/, int  /*a11*/, int  /*a12*/, int  /*a13*/, int  /*a14*/, int  /*a15*/, int  /*a16*/, __int16  /*a17*/)
 {
 	qmemcpy(a1, (void*)a2, 0x1Cu);
 	//return sub_B1C58(bx0, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13, a14, a15, a16, a17);
@@ -131932,7 +131932,7 @@ char sub_B2103(void* a1, const void* a2, __int16 bx0, int a3, __int16 a4, int a5
 }
 
 //----- (000B2121) --------------------------------------------------------
-char sub_B2121(int a1, __int16* a2, __int16 bx0, int a3, __int16 a4, int a5, int a6, int a7, int a8, int a9, int a10, int a11, int a12, int a13, int a14, int a15, int a16, __int16 a17)
+char sub_B2121(int a1, __int16* a2, __int16  /*bx0*/, int  /*a3*/, __int16  /*a4*/, int  /*a5*/, int  /*a6*/, int  /*a7*/, int  /*a8*/, int  /*a9*/, int  /*a10*/, int  /*a11*/, int  /*a12*/, int  /*a13*/, int  /*a14*/, int  /*a15*/, int  /*a16*/, __int16  /*a17*/)
 {
 	__int16 v18; // ax
 	__int16 v19; // ax
@@ -131972,7 +131972,7 @@ char sub_B2121(int a1, __int16* a2, __int16 bx0, int a3, __int16 a4, int a5, int
 // B1DC8: using guessed type int sub_B1DC8();
 
 //----- (000B2161) --------------------------------------------------------
-char sub_B2161(const void* a1, void* a2, __int16 di0, int a3, __int16 a4, int a5, int a6, int a7, int a8, int a9, int a10, int a11, int a12, int a13, int a14, int a15, int a16, __int16 a17)
+char sub_B2161(const void* a1, void* a2, __int16  /*di0*/, int  /*a3*/, __int16  /*a4*/, int  /*a5*/, int  /*a6*/, int  /*a7*/, int  /*a8*/, int  /*a9*/, int  /*a10*/, int  /*a11*/, int  /*a12*/, int  /*a13*/, int  /*a14*/, int  /*a15*/, int  /*a16*/, __int16  /*a17*/)
 {
 	qmemcpy(a2, (void*)a1, 0x1Cu);
 	//return sub_B1C58(di0, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13, a14, a15, a16, a17);
@@ -131980,7 +131980,7 @@ char sub_B2161(const void* a1, void* a2, __int16 di0, int a3, __int16 a4, int a5
 }
 
 //----- (000B2175) --------------------------------------------------------
-char sub_B2175(x_WORD* a1, x_WORD* a2, __int16 bx0, int a3, __int16 a4, int a5, int a6, int a7, int a8, int a9, int a10, int a11, int a12, int a13, int a14, int a15, int a16, __int16 a17)
+char sub_B2175(x_WORD* a1, x_WORD* a2, __int16  /*bx0*/, int  /*a3*/, __int16  /*a4*/, int  /*a5*/, int  /*a6*/, int  /*a7*/, int  /*a8*/, int  /*a9*/, int  /*a10*/, int  /*a11*/, int  /*a12*/, int  /*a13*/, int  /*a14*/, int  /*a15*/, int  /*a16*/, __int16  /*a17*/)
 {
 	*a2 = *a1;
 	//return sub_B1C58(bx0, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13, a14, a15, a16, a17);
@@ -132032,7 +132032,7 @@ int sub_B21A2(int a1, int a2, int* a3)
 }
 
 //----- (000B21C1) --------------------------------------------------------
-char sub_B21C1(int a1, int a2, int* a3, __int16 bx0, int a4, __int16 a5, int a6, int a7, int a8, int a9, int a10, int a11, int a12, int a13, int a14, int a15, int a16, int a17, __int16 a18)
+char sub_B21C1(int a1, int a2, int* a3, __int16  /*bx0*/, int  /*a4*/, __int16  /*a5*/, int  /*a6*/, int  /*a7*/, int  /*a8*/, int  /*a9*/, int  /*a10*/, int  /*a11*/, int  /*a12*/, int  /*a13*/, int  /*a14*/, int  /*a15*/, int  /*a16*/, int  /*a17*/, __int16  /*a18*/)
 {
 	__int16 v19; // dx
 	int v21; // eax
@@ -132125,7 +132125,7 @@ char sub_B21DD(int a1, int a2, int* esi0, int a3, __int16 a4, int a5, int a6, in
 }*/
 
 //----- (000B2275) --------------------------------------------------------
-char sub_B2275(int a1, int a2, int* a3, int a4, __int16 a5, int a6, int a7, int a8, int a9, int a10, int a11, int a12, int a13, int a14, int a15, int a16, int a17, __int16 a18)
+char sub_B2275(int a1, int a2, int* a3, int  /*a4*/, __int16  /*a5*/, int  /*a6*/, int  /*a7*/, int  /*a8*/, int  /*a9*/, int  /*a10*/, int  /*a11*/, int  /*a12*/, int  /*a13*/, int  /*a14*/, int  /*a15*/, int  /*a16*/, int  /*a17*/, __int16  /*a18*/)
 {
 	int v18; // edi
 	__int16 v19; // bx
@@ -132145,7 +132145,7 @@ char sub_B2275(int a1, int a2, int* a3, int a4, __int16 a5, int a6, int a7, int 
 // B1860: using guessed type int x_DWORD_B1860[41];
 
 //----- (000B22AF) --------------------------------------------------------
-char sub_B22AF(x_WORD* a1, int a2, x_DWORD* a3, int a4, __int16 a5, int a6, int a7, int a8, int a9, int a10, int a11, int a12, int a13, int a14, int a15, int a16, int a17, __int16 a18)
+char sub_B22AF(x_WORD* a1, int a2, x_DWORD* a3, int  /*a4*/, __int16  /*a5*/, int  /*a6*/, int  /*a7*/, int  /*a8*/, int  /*a9*/, int  /*a10*/, int  /*a11*/, int  /*a12*/, int  /*a13*/, int  /*a14*/, int  /*a15*/, int  /*a16*/, int  /*a17*/, __int16  /*a18*/)
 {
 	int v18; // ST08_4
 	int v19; // ST04_4
@@ -132238,7 +132238,7 @@ int sub_B2332(int a1, int a2, __int64* a3)
 }
 
 //----- (000B2355) --------------------------------------------------------
-char sub_B2355(int a1, int a2, __int64* a3, int a4, __int16 a5, int a6, int a7, int a8, int a9, int a10, int a11, int a12, int a13, int a14, int a15, int a16, int a17, __int16 a18)
+char sub_B2355(int a1, int a2, __int64* a3, int  /*a4*/, __int16  /*a5*/, int  /*a6*/, int  /*a7*/, int  /*a8*/, int  /*a9*/, int  /*a10*/, int  /*a11*/, int  /*a12*/, int  /*a13*/, int  /*a14*/, int  /*a15*/, int  /*a16*/, int  /*a17*/, __int16  /*a18*/)
 {
 	__int16 v18; // dx
 	int v20; // eax
@@ -132331,7 +132331,7 @@ char sub_B2375(int a1, int a2, __int64* esi0, int a3, __int16 a4, int a5, int a6
 }*/
 
 //----- (000B2421) --------------------------------------------------------
-char sub_B2421(int a1, int a2, int a3, int a4, __int16 a5, int a6, int a7, int a8, int a9, int a10, int a11, int a12, int a13, int a14, int a15, int a16, int a17, __int16 a18)
+char sub_B2421(int a1, int a2, int a3, int  /*a4*/, __int16  /*a5*/, int  /*a6*/, int  /*a7*/, int  /*a8*/, int  /*a9*/, int  /*a10*/, int  /*a11*/, int  /*a12*/, int  /*a13*/, int  /*a14*/, int  /*a15*/, int  /*a16*/, int  /*a17*/, __int16  /*a18*/)
 {
 	int v18; // edi
 	__int16 v19; // bx
@@ -132353,7 +132353,7 @@ char sub_B2421(int a1, int a2, int a3, int a4, __int16 a5, int a6, int a7, int a
 // B1860: using guessed type int x_DWORD_B1860[41];
 
 //----- (000B2468) --------------------------------------------------------
-char sub_B2468(int a1, int a2, __int64* a3, int a4, __int16 a5, int a6, int a7, int a8, int a9, int a10, int a11, int a12, int a13, int a14, int a15, int a16, int a17, __int16 a18)
+char sub_B2468(int a1, int a2, __int64* a3, int  /*a4*/, __int16  /*a5*/, int  /*a6*/, int  /*a7*/, int  /*a8*/, int  /*a9*/, int  /*a10*/, int  /*a11*/, int  /*a12*/, int  /*a13*/, int  /*a14*/, int  /*a15*/, int  /*a16*/, int  /*a17*/, __int16  /*a18*/)
 {
 	int v18; // edi
 	__int16 v19; // bx
@@ -132373,7 +132373,7 @@ char sub_B2468(int a1, int a2, __int64* a3, int a4, __int16 a5, int a6, int a7, 
 // B1860: using guessed type int x_DWORD_B1860[41];
 
 //----- (000B24A6) --------------------------------------------------------
-char sub_B24A6(x_BYTE* a1, int a2, int* a3, __int16 bx0, int a4, __int16 a5, int a6, int a7, int a8, int a9, int a10, int a11, int a12, int a13, int a14, int a15, int a16, int a17, __int16 a18)
+char sub_B24A6(x_BYTE* a1, int a2, int* a3, __int16  /*bx0*/, int  /*a4*/, __int16  /*a5*/, int  /*a6*/, int  /*a7*/, int  /*a8*/, int  /*a9*/, int  /*a10*/, int  /*a11*/, int  /*a12*/, int  /*a13*/, int  /*a14*/, int  /*a15*/, int  /*a16*/, int  /*a17*/, __int16  /*a18*/)
 {
 	int v19; // edx
 
@@ -132411,7 +132411,7 @@ char sub_B24D9(int a1, int a2, int* esi0, int a3, __int16 a4, int a5, int a6, in
 }
 
 //----- (000B24EE) --------------------------------------------------------
-char sub_B24EE(x_DWORD* a1, x_DWORD* a2, int a3, __int16 a4, int a5, int a6, int a7, int a8, int a9, int a10, int a11, int a12, int a13, int a14, int a15, int a16, __int16 a17)
+char sub_B24EE(x_DWORD* a1, x_DWORD* a2, int  /*a3*/, __int16  /*a4*/, int  /*a5*/, int  /*a6*/, int  /*a7*/, int  /*a8*/, int  /*a9*/, int  /*a10*/, int  /*a11*/, int  /*a12*/, int  /*a13*/, int  /*a14*/, int  /*a15*/, int  /*a16*/, __int16  /*a17*/)
 {
 	x_DWORD* v17; // esi
 	unsigned int v18; // ebx
@@ -132466,7 +132466,7 @@ char sub_B24EE(x_DWORD* a1, x_DWORD* a2, int a3, __int16 a4, int a5, int a6, int
 // B1854: using guessed type void *off_B1854;
 
 //----- (000B2560) --------------------------------------------------------
-char sub_B2560(int a1, x_WORD* a2, __int16 bx0, int a3, __int16 a4, int a5, int a6, int a7, int a8, int a9, int a10, int a11, int a12, int a13, int a14, int a15, int a16, __int16 a17)
+char sub_B2560(int a1, x_WORD* a2, __int16  /*bx0*/, int  /*a3*/, __int16  /*a4*/, int  /*a5*/, int  /*a6*/, int  /*a7*/, int  /*a8*/, int  /*a9*/, int  /*a10*/, int  /*a11*/, int  /*a12*/, int  /*a13*/, int  /*a14*/, int  /*a15*/, int  /*a16*/, __int16  /*a17*/)
 {
 	*a2 = *(x_WORD*)(a1 + 4);
 	//return sub_B1C58(bx0, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13, a14, a15, a16, a17);
@@ -132518,7 +132518,7 @@ int sub_B258F(int a1, int a2, signed __int16* a3)
 }
 
 //----- (000B25B0) --------------------------------------------------------
-char sub_B25B0(int a1, int a2, signed __int16* a3, __int16 bx0, int a4, __int16 a5, int a6, int a7, int a8, int a9, int a10, int a11, int a12, int a13, int a14, int a15, int a16, int a17, __int16 a18)
+char sub_B25B0(int a1, int a2, signed __int16* a3, __int16  /*bx0*/, int  /*a4*/, __int16  /*a5*/, int  /*a6*/, int  /*a7*/, int  /*a8*/, int  /*a9*/, int  /*a10*/, int  /*a11*/, int  /*a12*/, int  /*a13*/, int  /*a14*/, int  /*a15*/, int  /*a16*/, int  /*a17*/, __int16  /*a18*/)
 {
 	__int16 v19; // dx
 	int v21; // eax
@@ -132611,7 +132611,7 @@ char sub_B25CE(int a1, int a2, signed __int16* esi0, int a3, __int16 a4, int a5,
 }*/
 
 //----- (000B2670) --------------------------------------------------------
-char sub_B2670(int a1, int a2, signed __int16* a3, int a4, __int16 a5, int a6, int a7, int a8, int a9, int a10, int a11, int a12, int a13, int a14, int a15, int a16, int a17, __int16 a18)
+char sub_B2670(int a1, int a2, signed __int16* a3, int  /*a4*/, __int16  /*a5*/, int  /*a6*/, int  /*a7*/, int  /*a8*/, int  /*a9*/, int  /*a10*/, int  /*a11*/, int  /*a12*/, int  /*a13*/, int  /*a14*/, int  /*a15*/, int  /*a16*/, int  /*a17*/, __int16  /*a18*/)
 {
 	int v18; // edi
 	__int16 v19; // bx
@@ -132631,7 +132631,7 @@ char sub_B2670(int a1, int a2, signed __int16* a3, int a4, __int16 a5, int a6, i
 // B1860: using guessed type int x_DWORD_B1860[41];
 
 //----- (000B26AC) --------------------------------------------------------
-char sub_B26AC(x_WORD* a1, int a2, x_WORD* a3, int a4, __int16 a5, int a6, int a7, int a8, int a9, int a10, int a11, int a12, int a13, int a14, int a15, int a16, int a17, __int16 a18)
+char sub_B26AC(x_WORD* a1, int a2, x_WORD* a3, int  /*a4*/, __int16  /*a5*/, int  /*a6*/, int  /*a7*/, int  /*a8*/, int  /*a9*/, int  /*a10*/, int  /*a11*/, int  /*a12*/, int  /*a13*/, int  /*a14*/, int  /*a15*/, int  /*a16*/, int  /*a17*/, __int16  /*a18*/)
 {
 	int v18; // eax
 	x_DWORD* v19; // ebx
@@ -132684,7 +132684,7 @@ char sub_B26F4(int a1, int a2, x_WORD* esi0, int a3, __int16 a4, int a5, int a6,
 }
 
 //----- (000B2729) --------------------------------------------------------
-char sub_B2729(int a1, int a2, unsigned int* a3, int a4, __int16 a5, int a6, int a7, int a8, int a9, int a10, int a11, int a12, int a13, int a14, int a15, int a16, int a17, __int16 a18)
+char sub_B2729(int a1, int a2, unsigned int* a3, int  /*a4*/, __int16  /*a5*/, int  /*a6*/, int  /*a7*/, int  /*a8*/, int  /*a9*/, int  /*a10*/, int  /*a11*/, int  /*a12*/, int  /*a13*/, int  /*a14*/, int  /*a15*/, int  /*a16*/, int  /*a17*/, __int16  /*a18*/)
 {
 	int v18; // edi
 	__int16 v19; // bx
@@ -132746,7 +132746,7 @@ int sub_B27D3(int a1, int a2, int a3)
 }
 
 //----- (000B27E8) --------------------------------------------------------
-char sub_B27E8(int a1, int a2, int a3, __int16 bx0, int a4, __int16 a5, int a6, int a7, int a8, int a9, int a10, int a11, int a12, int a13, int a14, int a15, int a16, int a17, __int16 a18)
+char sub_B27E8(int a1, int a2, int a3, __int16  /*bx0*/, int  /*a4*/, __int16  /*a5*/, int  /*a6*/, int  /*a7*/, int  /*a8*/, int  /*a9*/, int  /*a10*/, int  /*a11*/, int  /*a12*/, int  /*a13*/, int  /*a14*/, int  /*a15*/, int  /*a16*/, int  /*a17*/, __int16  /*a18*/)
 {
 	__int16 v19; // dx
 	int v21; // eax
@@ -132833,7 +132833,7 @@ int sub_B284B(int a1, int a2, int a3)
 }
 
 //----- (000B2860) --------------------------------------------------------
-char sub_B2860(int a1, int a2, int a3, int a4, __int16 a5, int a6, int a7, int a8, int a9, int a10, int a11, int a12, int a13, int a14, int a15, int a16, int a17, __int16 a18)
+char sub_B2860(int a1, int a2, int a3, int  /*a4*/, __int16  /*a5*/, int  /*a6*/, int  /*a7*/, int  /*a8*/, int  /*a9*/, int  /*a10*/, int  /*a11*/, int  /*a12*/, int  /*a13*/, int  /*a14*/, int  /*a15*/, int  /*a16*/, int  /*a17*/, __int16  /*a18*/)
 {
 	int v18; // edi
 	__int16 v19; // bx
@@ -132855,7 +132855,7 @@ char sub_B2860(int a1, int a2, int a3, int a4, __int16 a5, int a6, int a7, int a
 // B1860: using guessed type int x_DWORD_B1860[41];
 
 //----- (000B28A8) --------------------------------------------------------
-char sub_B28A8(int a1, int a2, int a3, int a4, __int16 a5, int a6, int a7, int a8, int a9, int a10, int a11, int a12, int a13, int a14, int a15, int a16, int a17, __int16 a18)
+char sub_B28A8(int a1, int a2, int a3, int  /*a4*/, __int16  /*a5*/, int  /*a6*/, int  /*a7*/, int  /*a8*/, int  /*a9*/, int  /*a10*/, int  /*a11*/, int  /*a12*/, int  /*a13*/, int  /*a14*/, int  /*a15*/, int  /*a16*/, int  /*a17*/, __int16  /*a18*/)
 {
 	int v18; // ebx
 	int v19; // esi
@@ -132873,7 +132873,7 @@ char sub_B28A8(int a1, int a2, int a3, int a4, __int16 a5, int a6, int a7, int a
 }
 
 //----- (000B2912) --------------------------------------------------------
-char sub_B2912(int a1, int a2, __int16 bx0, int a3, __int16 a4, int a5, int a6, int a7, int a8, int a9, int a10, int a11, int a12, int a13, int a14, int a15, int a16, __int16 a17)
+char sub_B2912(int a1, int a2, __int16  /*bx0*/, int  /*a3*/, __int16  /*a4*/, int  /*a5*/, int  /*a6*/, int  /*a7*/, int  /*a8*/, int  /*a9*/, int  /*a10*/, int  /*a11*/, int  /*a12*/, int  /*a13*/, int  /*a14*/, int  /*a15*/, int  /*a16*/, __int16  /*a17*/)
 {
 	__int16 v18; // dx
 	int v20; // eax
@@ -132898,7 +132898,7 @@ char sub_B2912(int a1, int a2, __int16 bx0, int a3, __int16 a4, int a5, int a6, 
 // B1860: using guessed type int x_DWORD_B1860[41];
 
 //----- (000B2951) --------------------------------------------------------
-char sub_B2951(int a1, int a2, int a3, int a4, __int16 a5, int a6, int a7, int a8, int a9, int a10, int a11, int a12, int a13, int a14, int a15, int a16, int a17, __int16 a18)
+char sub_B2951(int a1, int a2, int a3, int  /*a4*/, __int16  /*a5*/, int  /*a6*/, int  /*a7*/, int  /*a8*/, int  /*a9*/, int  /*a10*/, int  /*a11*/, int  /*a12*/, int  /*a13*/, int  /*a14*/, int  /*a15*/, int  /*a16*/, int  /*a17*/, __int16  /*a18*/)
 {
 	int v18; // edi
 	__int16 v19; // bx
@@ -133033,7 +133033,7 @@ char sub_B2951(int a1, int a2, int a3, int a4, __int16 a5, int a6, int a7, int a
 // B1860: using guessed type int x_DWORD_B1860[41];
 
 //----- (000B2B6C) --------------------------------------------------------
-char sub_B2B6C(int a1, int a2, int a3, int a4, int a5, int a6, int a7, __int16 a8, int a9, int a10, int a11, int a12, int a13, int a14, int a15, int a16, int a17, int a18, int a19, int a20, __int16 a21)
+char sub_B2B6C(int a1, int a2, int a3, int a4, int a5, int a6, int  /*a7*/, __int16  /*a8*/, int  /*a9*/, int  /*a10*/, int  /*a11*/, int  /*a12*/, int  /*a13*/, int  /*a14*/, int  /*a15*/, int  /*a16*/, int  /*a17*/, int  /*a18*/, int  /*a19*/, int  /*a20*/, __int16  /*a21*/)
 {
 	int v21; // eax
 	char result; // al
@@ -133187,7 +133187,7 @@ int sub_B2EDA(int a1, int a2, int a3)
 }
 
 //----- (000B2EEF) --------------------------------------------------------
-char sub_B2EEF(int a1, int a2, int a3, __int16 a4, int a5, int a6, int a7, int a8, int a9, int a10, int a11, int a12, int a13, int a14, int a15, int a16, __int16 a17)
+char sub_B2EEF(int a1, int a2, int  /*a3*/, __int16  /*a4*/, int  /*a5*/, int  /*a6*/, int  /*a7*/, int  /*a8*/, int  /*a9*/, int  /*a10*/, int  /*a11*/, int  /*a12*/, int  /*a13*/, int  /*a14*/, int  /*a15*/, int  /*a16*/, __int16  /*a17*/)
 {
 	__int16 v17; // bx
 
@@ -133200,7 +133200,7 @@ char sub_B2EEF(int a1, int a2, int a3, __int16 a4, int a5, int a6, int a7, int a
 // B1860: using guessed type int x_DWORD_B1860[41];
 
 //----- (000B2F0E) --------------------------------------------------------
-char sub_B2F0E(int a1, int a2, int a3, int a4, __int16 a5, int a6, int a7, int a8, int a9, int a10, int a11, int a12, int a13, int a14, int a15, int a16, int a17, __int16 a18)
+char sub_B2F0E(int a1, int a2, int a3, int  /*a4*/, __int16  /*a5*/, int  /*a6*/, int  /*a7*/, int  /*a8*/, int  /*a9*/, int  /*a10*/, int  /*a11*/, int  /*a12*/, int  /*a13*/, int  /*a14*/, int  /*a15*/, int  /*a16*/, int  /*a17*/, __int16  /*a18*/)
 {
 	__int16 v18; // bx
 
@@ -133215,7 +133215,7 @@ char sub_B2F0E(int a1, int a2, int a3, int a4, __int16 a5, int a6, int a7, int a
 // B1860: using guessed type int x_DWORD_B1860[41];
 
 //----- (000B2F3A) --------------------------------------------------------
-char sub_B2F3A(int a1, int a2, int a3, __int16 bx0, int a4, __int16 a5, int a6, int a7, int a8, int a9, int a10, int a11, int a12, int a13, int a14, int a15, int a16, int a17, __int16 a18)
+char sub_B2F3A(int a1, int a2, int a3, __int16  /*bx0*/, int  /*a4*/, __int16  /*a5*/, int  /*a6*/, int  /*a7*/, int  /*a8*/, int  /*a9*/, int  /*a10*/, int  /*a11*/, int  /*a12*/, int  /*a13*/, int  /*a14*/, int  /*a15*/, int  /*a16*/, int  /*a17*/, __int16  /*a18*/)
 {
 	__int16 v19; // dx
 	int v21; // eax
@@ -133684,7 +133684,7 @@ int sub_B35DB(int a1, int a2, int8_t* a3, int a4)//2945db
 }
 
 //----- (000B3605) --------------------------------------------------------
-int sub_B3605(unsigned __int64 a1, int a2, unsigned int a3, int8_t* a4, int a5)//294605
+int sub_B3605(unsigned __int64 a1, int a2, unsigned int a3, int8_t*  /*a4*/, int a5)//294605
 {
 	bool v5; // cf
 	__int16 v6; // si
@@ -134100,7 +134100,7 @@ int /*__fastcall*/ sub_B39AB(unsigned int a1, int a2, uint32_t edx)//2949ab
 }
 
 //----- (000B39E0) --------------------------------------------------------
-int sub_B39E0(__int64 a1, int a2, int8_t* a3)//2949e0
+int sub_B39E0(__int64 a1, int a2, int8_t*  /*a3*/)//2949e0
 {
 	int v3; // ecx
 	signed __int64 v4; // rax
@@ -134232,7 +134232,7 @@ int /*__fastcall*/ sub_B3A60(int a1)//294a60
 }
 
 //----- (000B3ADF) --------------------------------------------------------
-int sub_B3ADF(__int64* a1, int8_t* a2)//294adf
+int sub_B3ADF(__int64* a1, int8_t*  /*a2*/)//294adf
 {
 	__int16 v2; // cx
 	unsigned __int64 v3; // rax
@@ -135108,7 +135108,7 @@ int /*__fastcall*/ sub_B46E2(int a1)//2956e2
 }
 
 //----- (000B4718) --------------------------------------------------------
-int /*__fastcall*/ sub_B4718(int a1, int a2, int a3, int a4)//295718
+int /*__fastcall*/ sub_B4718(int a1, int  /*a2*/, int  /*a3*/, int a4)//295718
 {
 	int v4; // edi
 	signed int v5; // esi
@@ -135662,7 +135662,7 @@ double sub_B5205(char a1, int a2, __int16 a3, double a4)//296205
 // E7C76: using guessed type float flt_E7C76;
 
 //----- (000B522B) --------------------------------------------------------
-__int64 sub_B522B(int a1, __int16 a2, int _ESI)//29622b
+__int64 sub_B522B(int a1, __int16 a2, int  /*_ESI*/)//29622b
 {
 	unsigned __int8 v3; // of
 	__int64 result; // rax
@@ -144937,7 +144937,7 @@ LABEL_129:
 // E126D: using guessed type char x_BYTE_E126D;
 
 //----- (000BCD45) --------------------------------------------------------
-void SetRenderViewPortSize(uint8_t* a1, int a2, int screenWidth, int viewPortWidth, int viewPortHeight)//29dd45
+void SetRenderViewPortSize(uint8_t* a1, int  /*a2*/, int screenWidth, int viewPortWidth, int viewPortHeight)//29dd45
 {
 	if (screenWidth)
 		iScreenWidth = screenWidth;
