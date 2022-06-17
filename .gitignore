@@ -41,7 +41,7 @@
 /build*
 flatpak/build-dir
 .flatpak*
-.cache
+.cache*
 
 !enhancedassets/*
 
