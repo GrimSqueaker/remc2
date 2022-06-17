@@ -51,6 +51,19 @@ else ()
     set(CMAKE_LIBRARY_ARCHITECTURE i686)
 endif ()
 
+# try to locate SDL2 libs vi pkg-config
+INCLUDE(FindPkgConfig)
+PKG_SEARCH_MODULE(SDL2pkg SDL2)
+PKG_SEARCH_MODULE(SDL2mixerpkg SDL2_mixer)
+PKG_SEARCH_MODULE(SDL2ttfpkg SDL2_ttf)
+PKG_SEARCH_MODULE(SDL2imagepkg SDL2_image)
+
+set(SDL2_PATH "${SDL2pkg_PREFIX}")
+set(SDL2_MIXER_PATH "${SDL2mixerpkg_PREFIX}")
+set(SDL2_TTF_PATH "${SDL2ttfpkg_PREFIX}")
+set(SDL2_IMAGE_PATH "${SDL2imagepkg_PREFIX}")
+
+# find libs and provide linker and compiler flags
 find_package(SDL2 REQUIRED)
 find_package(SDL2_mixer REQUIRED)
 find_package(SDL2_ttf REQUIRED)
