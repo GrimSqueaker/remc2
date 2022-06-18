@@ -21,7 +21,7 @@ endif ()
 
 # try to locate SDL2 libs vi pkg-config
 INCLUDE(FindPkgConfig)
-PKG_SEARCH_MODULE(SDL2pkg SDL2)
+PKG_SEARCH_MODULE(SDL2pkg sdl2)
 PKG_SEARCH_MODULE(SDL2mixerpkg SDL2_mixer)
 PKG_SEARCH_MODULE(SDL2imagepkg SDL2_image)
 PKG_SEARCH_MODULE(SDL2ttfpkg SDL2_ttf)
