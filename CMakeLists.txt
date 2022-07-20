@@ -31,6 +31,14 @@ set(SDL2_PATH "${SDL2pkg_PREFIX}")
 set(SDL2_TTF_PATH "${SDL2ttfpkg_PREFIX}")
 set(SDL2_IMAGE_PATH "${SDL2imagepkg_PREFIX}")
 
+set(SDL2_LIBRARY "${SDL2pkg_LIBRARIES}")
+set(SDL2_MIXER_LIBRARY "${SDL2mixerpkg_LIBRARIES}")
+set(SDL2_TTF_LIBRARY "${SDL2ttfpkg_LIBRARIES}")
+set(SDL2_IMAGE_LIBRARY "${SDL2imagepkg_LIBRARIES}")
+
+message(SDL2_LIBRARY "${SDL2pkg_LIBRARIES}")
+message(SDL2_TTF_LIBRARY "${SDL2ttfpkg_LIBRARIES}")
+
 # find libs and provide linker and compiler flags
 find_package(SDL2 REQUIRED)
 find_package(SDL2_mixer REQUIRED)
