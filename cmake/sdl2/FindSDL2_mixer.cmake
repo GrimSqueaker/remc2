@@ -109,8 +109,8 @@ Original FindSDL_mixer.cmake module:
 #]=======================================================================]
 
 # SDL2 Library required
-find_package(SDL2 QUIET)
 if(NOT SDL2_FOUND)
+  find_package(SDL2 QUIET)
   set(SDL2_MIXER_SDL2_NOT_FOUND "Could NOT find SDL2 (SDL2 is required by SDL2_mixer).")
   if(SDL2_mixer_FIND_REQUIRED)
     message(FATAL_ERROR ${SDL2_MIXER_SDL2_NOT_FOUND})

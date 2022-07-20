@@ -19,25 +19,17 @@ if (GITHUB_CI_COMPATIBILITY_PATH)
     set(CMAKE_LIBRARY_PATH "${GITHUB_CI_COMPATIBILITY_PATH}")
 endif ()
 
-# try to locate SDL2 libs vi pkg-config
+# try to locate SDL2 libs via pkg-config
 INCLUDE(FindPkgConfig)
 PKG_SEARCH_MODULE(SDL2pkg sdl2)
 PKG_SEARCH_MODULE(SDL2mixerpkg SDL2_mixer)
 PKG_SEARCH_MODULE(SDL2imagepkg SDL2_image)
 PKG_SEARCH_MODULE(SDL2ttfpkg SDL2_ttf)
 
-set(SDL2_MIXER_PATH "${SDL2mixerpkg_PREFIX}")
-set(SDL2_PATH "${SDL2pkg_PREFIX}")
-set(SDL2_TTF_PATH "${SDL2ttfpkg_PREFIX}")
-set(SDL2_IMAGE_PATH "${SDL2imagepkg_PREFIX}")
-
-set(SDL2_LIBRARY "${SDL2pkg_LIBRARIES}")
-set(SDL2_MIXER_LIBRARY "${SDL2mixerpkg_LIBRARIES}")
-set(SDL2_TTF_LIBRARY "${SDL2ttfpkg_LIBRARIES}")
-set(SDL2_IMAGE_LIBRARY "${SDL2imagepkg_LIBRARIES}")
-
-message(SDL2_LIBRARY "${SDL2pkg_LIBRARIES}")
-message(SDL2_TTF_LIBRARY "${SDL2ttfpkg_LIBRARIES}")
+#set(SDL2_LIBRARY "${SDL2pkg_LIBDIR}")
+#set(SDL2_MIXER_LIBRARY "${SDL2mixerpkg_LIBDIR}")
+#set(SDL2_TTF_LIBRARY "${SDL2ttfpkg_LIBDIR}")
+#set(SDL2_IMAGE_LIBRARY "${SDL2imagepkg_LIBDIR}")
 
 # find libs and provide linker and compiler flags
 find_package(SDL2 REQUIRED)
