@@ -6082,7 +6082,7 @@ int x_DWORD_E9C24_fps; // weak
 
 //uint8_t* x_DWORD_E9C28x; // weak
 
-uint8_t* pre_x_DWORD_E9C3C;
+std::vector<uint8_t> pre_x_DWORD_E9C3C;
 TColor x_DWORD_EA3B8x[256]; // weak?x_DWORD_E9C4C_langindexbuffer[475]
 
 axis_3d x_WORD_EB398ar; // weak
@@ -39615,12 +39615,7 @@ void sub_46B40()//227b40
 		memset((void*)*xadatapald0dat2.colorPalette_var28, 0, 768);
 		sub_41A90_VGA_Palette_install((TColor*)*xadatapald0dat2.colorPalette_var28);
 
-		if (pre_x_DWORD_E9C3C)
-		{
-			sub_83E80_freemem4(pre_x_DWORD_E9C3C);
-			pre_x_DWORD_E9C3C = 0;
-			x_DWORD_E9C3C = 0;
-		}
+		x_DWORD_E9C3C = nullptr;
 
 		sub_54600_mouse_reset();
 
@@ -39939,10 +39934,8 @@ void sub_47160()//228160
 			sub_83E80_freemem4(x_DWORD_E9C3C);
 		x_DWORD_E9C3C = (uint8_t*)sub_83CD0_malloc2(64000);
 		*/
-		//fix
-		if (pre_x_DWORD_E9C3C)
-			sub_83E80_freemem4(pre_x_DWORD_E9C3C);
-		pre_x_DWORD_E9C3C = (uint8_t*)sub_83CD0_malloc2(3000000);
+		//fie_x_DWORD_E9C3C)
+		pre_x_DWORD_E9C3C.assign(3000000, 0);
 		x_DWORD_E9C3C = &pre_x_DWORD_E9C3C[200000];
 		//sub_6EB90(&filearray_2aa18c[filearrayindex_FONTS0DATTAB]);//2aa1d4
 		help_VGA_type_resolution = 1;
@@ -39963,9 +39956,7 @@ void sub_47160()//228160
 		sub_6EB90(&filearray_2aa18c[filearrayindex_HFONT3DATTAB]);//2aa1d4
 		*/
 		//fix
-		if (pre_x_DWORD_E9C3C)
-			sub_83E80_freemem4(pre_x_DWORD_E9C3C);
-		pre_x_DWORD_E9C3C = (uint8_t*)sub_83CD0_malloc2(3000000);
+		pre_x_DWORD_E9C3C.assign(3000000, 0);
 		x_DWORD_E9C3C = &pre_x_DWORD_E9C3C[200000];
 		CreateIndexes_6EB90(&filearray_2aa18c[filearrayindex_HFONT3DATTAB]);//2aa1d4
 		help_VGA_type_resolution = 8;
@@ -80313,12 +80304,7 @@ void sub_7AC00_load_and_set_graphics_and_Palette()//25BC00
 			x_DWORD_E9C3C = 0;
 		}*/
 		//fix
-		if (pre_x_DWORD_E9C3C)
-		{
-			sub_83E80_freemem4(pre_x_DWORD_E9C3C);
-			pre_x_DWORD_E9C3C = 0;
-			x_DWORD_E9C3C = 0;
-		}
+		x_DWORD_E9C3C = nullptr;
 		//fix
 		sub_54600_mouse_reset();//235600 //mouse reset
 		sub_6EBF0(&filearray_2aa18c[filearrayindex_POINTERSDATTAB]);//24FBF0 - 2AA18C//?tab
@@ -80330,7 +80316,7 @@ void sub_7AC00_load_and_set_graphics_and_Palette()//25BC00
 			x_DWORD_E9C3C = (uint8_t*)sub_83CD0_malloc2(307200);
 			*/
 			//fix
-			pre_x_DWORD_E9C3C = (uint8_t*)sub_83CD0_malloc2(3000000);
+			pre_x_DWORD_E9C3C.assign(3000000, 0);
 			x_DWORD_E9C3C = &pre_x_DWORD_E9C3C[200000];
 			//fix
 			CreateIndexes_6EB90(&filearray_2aa18c[filearrayindex_POINTERSDATTAB]);
@@ -80381,12 +80367,7 @@ int sub_7ADE0(char a1)//25bde0
 		}
 		*/
 		//fix
-		if (pre_x_DWORD_E9C3C)
-		{
-			sub_83E80_freemem4(pre_x_DWORD_E9C3C);
-			pre_x_DWORD_E9C3C = 0;
-			x_DWORD_E9C3C = 0;
-		}
+		x_DWORD_E9C3C = nullptr;
 		//fix
 		sub_54600_mouse_reset();//mouse reset
 		sub_6EBF0(&filearray_2aa18c[filearrayindex_POINTERSDATTAB]);
@@ -80396,7 +80377,7 @@ int sub_7ADE0(char a1)//25bde0
 		x_DWORD_E9C3C = (uint8_t*)sub_83CD0_malloc2(64000);
 		*/
 		//fix
-		pre_x_DWORD_E9C3C = (uint8_t*)sub_83CD0_malloc2(3000000);
+		pre_x_DWORD_E9C3C.assign(3000000, 0);
 		x_DWORD_E9C3C = &pre_x_DWORD_E9C3C[2000000];
 		//fix
 		//sub_6EB90(&*filearray_2aa18c[0]);
