@@ -3780,7 +3780,8 @@ void GameRenderHD::DrawSprite_41BD3(uint32 a1)
 	int8_t* v51x; // ebx
 	x_BYTE* v52; // edx
 	x_DWORD* v53; // esi
-	type_unk_F0E20x* v54x; // edi
+	type_unk_F0E20x* pStrF0E20x;
+	//type_unk_F0E20x* v54x; // edi // replaced by pStrF0E20x;
 	int v55; // ecx
 	int v56; // ecx
 	int v57; // ecx
@@ -3792,49 +3793,49 @@ void GameRenderHD::DrawSprite_41BD3(uint32 a1)
 	int v63; // eax
 	int8_t* v64; // edx
 	x_DWORD* v65; // esi
-	type_unk_F0E20x* v66x; // edi
+	//type_unk_F0E20x* v66x; // edi // replaced by pStrF0E20x;
 	int v67; // ecx
 	int8_t* v68x; // ebx
 	x_BYTE* v69; // edx
 	x_DWORD* v70; // esi
-	type_unk_F0E20x* v71x; // edi
+	//type_unk_F0E20x* v71x; // edi // replaced by pStrF0E20x;
 	int v72; // eax
 	int v73; // ecx
 	int8_t* v74x; // ebx
 	x_BYTE* v75; // edx
 	x_DWORD* v76; // esi
-	type_unk_F0E20x* v77x; // edi
+	//type_unk_F0E20x* v77x; // edi // replaced by pStrF0E20x;
 	int v78; // eax
 	int v79; // ecx
 	int8_t* v80x; // ebx
 	x_BYTE* v81; // edx
 	x_DWORD* v82; // esi
-	type_unk_F0E20x* v83x; // edi
+	//type_unk_F0E20x* v83x; // edi // replaced by pStrF0E20x;
 	int v84; // eax
 	int v85; // ecx
 	int8_t* v86x; // ebx
 	int v87; // eax
 	x_BYTE* v88; // edx
 	x_DWORD* v89; // esi
-	type_unk_F0E20x* v90x; // edi
+	//type_unk_F0E20x* v90x; // edi // replaced by pStrF0E20x;
 	int v91; // ecx
 	int v92; // ecx
 	int8_t* v93x; // ebx
 	x_BYTE* v94; // edx
 	int v95; // eax
 	x_DWORD* v96; // esi
-	type_unk_F0E20x* v97x; // edi
+	//type_unk_F0E20x* v97x; // edi // replaced by pStrF0E20x;
 	int v98; // ecx
 	int8_t* v99x; // ebx
 	x_BYTE* v100; // edx
 	int v101; // eax
 	x_DWORD* v102; // esi
-	type_unk_F0E20x* v103x; // edi
+	//type_unk_F0E20x* v103x; // edi // replaced by pStrF0E20x;
 	int8_t* v104x; // ebx
 	int v105; // eax
 	x_BYTE* v106; // edx
 	x_DWORD* v107; // esi
-	type_unk_F0E20x* v108x; // edi
+	//type_unk_F0E20x* v108x; // edi // replaced by pStrF0E20x;
 	int v109; // ecx
 	char v110; // al
 	char v111; // al
@@ -4329,7 +4330,7 @@ void GameRenderHD::DrawSprite_41BD3(uint32 a1)
 											v51x = &v121x[*(x_DWORD*)(v155 + 4)];
 											v52 = (x_BYTE*)(v169x->dword_1 + v123);
 											v53 = (x_DWORD*)(8 * (v165[2] - v116) + &x_DWORD_E9C38_smalltit[36960]);
-											v54x = &m_str_F0E20x[*v165];
+											pStrF0E20x = &m_str_F0E20x[*v165];
 											v55 = v133 >> 1;
 											if (!(v133 & 1))
 											{
@@ -4339,11 +4340,11 @@ void GameRenderHD::DrawSprite_41BD3(uint32 a1)
 												{
 													v56++;
 													v53 = (x_DWORD*)(v155 - 8);
-													v54x = &v169x[-1];
+													pStrF0E20x = &v169x[-1];
 													goto LABEL_197;
 												}
 												v53 = (x_DWORD*)(v155 + 8);
-												v54x = &v169x[1];
+												pStrF0E20x = &v169x[1];
 												goto LABEL_191;
 											}
 											v57 = v55 + 2;
@@ -4352,7 +4353,7 @@ void GameRenderHD::DrawSprite_41BD3(uint32 a1)
 											if (!v6)
 											{
 												v53 = (x_DWORD*)(v155 - 16);
-												v54x = &v169x[-2];
+												pStrF0E20x = &v169x[-2];
 												goto LABEL_200;
 											}
 											while (1)
@@ -4361,21 +4362,21 @@ void GameRenderHD::DrawSprite_41BD3(uint32 a1)
 												v51x += v53[2];
 												if (v59)
 													*v52 = v59;
-												v52 += v54x[1].dword_0;
+												v52 += pStrF0E20x[1].dword_0;
 											LABEL_197:
 												v60 = v51x[0];
 												v51x += v53[4];
 												if (v60)
 													*v52 = v60;
-												v52 += v54x[2].dword_0;
+												v52 += pStrF0E20x[2].dword_0;
 											LABEL_200:
 												v61 = v51x[0];
 												v51x += v53[6];
 												if (v61)
 													*v52 = v61;
-												v52 += v54x[3].dword_0;
+												v52 += pStrF0E20x[3].dword_0;
 												v53 += 8;
-												v54x += 4;
+												pStrF0E20x += 4;
 												if (!--v56)
 													break;
 											LABEL_191:
@@ -4383,7 +4384,7 @@ void GameRenderHD::DrawSprite_41BD3(uint32 a1)
 												v51x += *v53;
 												if (v58)
 													*v52 = v58;
-												v52 += v54x[0].dword_0;
+												v52 += pStrF0E20x[0].dword_0;
 											}
 											break;
 										case 1:
@@ -4391,12 +4392,12 @@ void GameRenderHD::DrawSprite_41BD3(uint32 a1)
 											v63 = str_F2C20ar.dword0x00;
 											v64 = (int8_t*)(v169x->dword_1 + v123);
 											v65 = (x_DWORD*)(8 * (v165[2] - v116) + &x_DWORD_E9C38_smalltit[36960]);
-											v66x = &m_str_F0E20x[*v165];
+											pStrF0E20x = &m_str_F0E20x[*v165];
 											v67 = v133 >> 1;
 											if (!(v133 & 1))
 											{
 												v65 = (x_DWORD*)(v155 + 8);
-												v66x = &v169x[1];
+												pStrF0E20x = &v169x[1];
 												goto LABEL_207;
 											}
 											v67++;
@@ -4406,9 +4407,9 @@ void GameRenderHD::DrawSprite_41BD3(uint32 a1)
 												v62x += v65[2];
 												if ((x_BYTE)v63)
 													*v64 = x_BYTE_F6EE0_tablesx[v63];
-												v64 += v66x[1].dword_0;
+												v64 += pStrF0E20x[1].dword_0;
 												v65 += 4;
-												v66x += 2;
+												pStrF0E20x += 2;
 												if (!--v67)
 													break;
 											LABEL_207:
@@ -4416,20 +4417,20 @@ void GameRenderHD::DrawSprite_41BD3(uint32 a1)
 												v62x += *v65;
 												if ((x_BYTE)v63)
 													*v64 = x_BYTE_F6EE0_tablesx[v63];
-												v64 += v66x->dword_0;
+												v64 += pStrF0E20x->dword_0;
 											}
 											break;
 										case 2:
 											v68x = &v121x[*(x_DWORD*)(v155 + 4)];
 											v69 = (x_BYTE*)(v169x->dword_1 + v123);
 											v70 = (x_DWORD*)(8 * (v165[2] - v116) + &x_DWORD_E9C38_smalltit[36960]);
-											v71x = &m_str_F0E20x[*v165];
+											pStrF0E20x = &m_str_F0E20x[*v165];
 											HIWORD(v72) = 0;
 											v73 = v133 >> 1;
 											if (!(v133 & 1))
 											{
 												v70 = (x_DWORD*)(v155 + 8);
-												v71x = &v169x[1];
+												pStrF0E20x = &v169x[1];
 												goto LABEL_217;
 											}
 											v73++;
@@ -4442,9 +4443,9 @@ void GameRenderHD::DrawSprite_41BD3(uint32 a1)
 													LOBYTE(v72) = *v69;
 													*v69 = x_BYTE_F6EE0_tablesx[16384 + v72];
 												}
-												v69 += v71x[1].dword_0;
+												v69 += pStrF0E20x[1].dword_0;
 												v70 += 4;
-												v71x += 2;
+												pStrF0E20x += 2;
 												if (!--v73)
 													break;
 											LABEL_217:
@@ -4455,20 +4456,20 @@ void GameRenderHD::DrawSprite_41BD3(uint32 a1)
 													LOBYTE(v72) = *v69;
 													*v69 = x_BYTE_F6EE0_tablesx[16384 + v72];
 												}
-												v69 += v71x->dword_0;
+												v69 += pStrF0E20x->dword_0;
 											}
 											break;
 										case 3:
 											v74x = &v121x[*(x_DWORD*)(v155 + 4)];
 											v75 = (x_BYTE*)(v169x->dword_1 + v123);
 											v76 = (x_DWORD*)(8 * (v165[2] - v116) + &x_DWORD_E9C38_smalltit[36960]);//to position
-											v77x = &m_str_F0E20x[v165[0]];//from position
+											pStrF0E20x = &m_str_F0E20x[v165[0]];//from position
 											HIWORD(v78) = 0;
 											v79 = v133 >> 1;
 											if (!(v133 & 1))
 											{
 												v76 = (x_DWORD*)(v155 + 8);
-												v77x = &v169x[1];
+												pStrF0E20x = &v169x[1];
 												goto LABEL_227;
 											}
 											v79++;
@@ -4481,9 +4482,9 @@ void GameRenderHD::DrawSprite_41BD3(uint32 a1)
 													HIBYTE(v78) = *v75;
 													*v75 = x_BYTE_F6EE0_tablesx[16384 + v78];
 												}
-												v75 += v77x[1].dword_0;
+												v75 += pStrF0E20x[1].dword_0;
 												v76 += 4;
-												v77x += 2;
+												pStrF0E20x += 2;
 												if (!--v79)
 													break;
 											LABEL_227:
@@ -4494,7 +4495,7 @@ void GameRenderHD::DrawSprite_41BD3(uint32 a1)
 													HIBYTE(v78) = *v75;
 													*v75 = x_BYTE_F6EE0_tablesx[16384 + v78];
 												}
-												v75 += v77x->dword_0;
+												v75 += pStrF0E20x->dword_0;
 											}
 											break;
 										case 4:
@@ -4502,13 +4503,13 @@ void GameRenderHD::DrawSprite_41BD3(uint32 a1)
 											HIWORD(v84) = HIWORD(str_F2C20ar.dword0x07);
 											v81 = (x_BYTE*)(v169x->dword_1 + v123);
 											v82 = (x_DWORD*)(8 * (v165[2] - v116) + &x_DWORD_E9C38_smalltit[36960]);
-											v83x = &m_str_F0E20x[*v165];
+											pStrF0E20x = &m_str_F0E20x[*v165];
 											BYTE1(v84) = str_F2C20ar.dword0x07;
 											v85 = v133 >> 1;
 											if (!(v133 & 1))
 											{
 												v82 = (x_DWORD*)(v155 + 8);
-												v83x = &v169x[1];
+												pStrF0E20x = &v169x[1];
 												goto LABEL_237;
 											}
 											v85++;
@@ -4517,18 +4518,18 @@ void GameRenderHD::DrawSprite_41BD3(uint32 a1)
 												LOBYTE(v84) = v80x[0];
 												v80x += v82[2];
 												if ((x_BYTE)v84)
-													*v81 = x_BYTE_F6EE0_tablesx[16384 + v84];
-												v81 += v83x[1].dword_0;
+													*v81 = x_BYTE_F6EE0_tablesx[0x4000 + v84];
+												v81 += pStrF0E20x[1].dword_0;
 												v82 += 4;
-												v83x += 2;
+												pStrF0E20x += 2;
 												if (!--v85)
 													break;
 											LABEL_237:
 												LOBYTE(v84) = v80x[0];
 												v80x += *v82;
 												if ((x_BYTE)v84)
-													*v81 = x_BYTE_F6EE0_tablesx[16384 + v84];
-												v81 += v83x->dword_0;
+													*v81 = x_BYTE_F6EE0_tablesx[0x4000 + v84];
+												v81 += pStrF0E20x->dword_0;
 											}
 											break;
 										case 5:
@@ -4536,12 +4537,12 @@ void GameRenderHD::DrawSprite_41BD3(uint32 a1)
 											v87 = str_F2C20ar.dword0x07;
 											v88 = (x_BYTE*)(v169x->dword_1 + v123);
 											v89 = (x_DWORD*)(8 * (v165[2] - v116) + &x_DWORD_E9C38_smalltit[36960]);
-											v90x = &m_str_F0E20x[*v165];
+											pStrF0E20x = &m_str_F0E20x[*v165];
 											v91 = v133 >> 1;
 											if (!(v133 & 1))
 											{
 												v89 = (x_DWORD*)(v155 + 8);
-												v90x = &m_str_F0E20x[1];
+												pStrF0E20x = &m_str_F0E20x[1];
 												goto LABEL_247;
 											}
 											v91++;
@@ -4550,18 +4551,18 @@ void GameRenderHD::DrawSprite_41BD3(uint32 a1)
 												BYTE1(v87) = v86x[0];
 												v86x += v89[2];
 												if (BYTE1(v87))
-													*v88 = x_BYTE_F6EE0_tablesx[16384 + v87];
-												v88 += v90x[1].dword_0;
+													*v88 = x_BYTE_F6EE0_tablesx[0x4000 + v87];
+												v88 += pStrF0E20x[1].dword_0;
 												v89 += 4;
-												v90x += 2;
+												pStrF0E20x += 2;
 												if (!--v91)
 													break;
 											LABEL_247:
 												BYTE1(v87) = v86x[0];
 												v86x += *v89;
 												if (BYTE1(v87))
-													*v88 = x_BYTE_F6EE0_tablesx[16384 + v87];
-												v88 += v90x->dword_0;
+													*v88 = x_BYTE_F6EE0_tablesx[0x4000 + v87];
+												v88 += pStrF0E20x->dword_0;
 											}
 											break;
 										case 6:
@@ -4570,7 +4571,7 @@ void GameRenderHD::DrawSprite_41BD3(uint32 a1)
 											v94 = (x_BYTE*)(v169x->dword_1 + v123);
 											HIWORD(v95) = 0;
 											v96 = (x_DWORD*)(v155 + 8);
-											v97x = &v169x[1];
+											pStrF0E20x = &v169x[1];
 											do
 											{
 												BYTE1(v95) = v93x[0];
@@ -4581,9 +4582,9 @@ void GameRenderHD::DrawSprite_41BD3(uint32 a1)
 													LOBYTE(v92) = x_BYTE_F6EE0_tablesx[16384 + v95];
 													*v94 = x_BYTE_F6EE0_tablesx[v92];
 												}
-												v94 += v97x->dword_0;
+												v94 += pStrF0E20x->dword_0;
 												v96 += 2;
-												v97x++;
+												pStrF0E20x++;
 												v133--;
 											} while (v133);
 											break;
@@ -4593,7 +4594,7 @@ void GameRenderHD::DrawSprite_41BD3(uint32 a1)
 											v100 = (x_BYTE*)(v169x->dword_1 + v123);
 											HIWORD(v101) = 0;
 											v102 = (x_DWORD*)(v155 + 8);
-											v103x = &v169x[1];
+											pStrF0E20x = &v169x[1];
 											do
 											{
 												LOBYTE(v101) = v99x[0];
@@ -4604,9 +4605,9 @@ void GameRenderHD::DrawSprite_41BD3(uint32 a1)
 													LOBYTE(v98) = x_BYTE_F6EE0_tablesx[16384 + v101];
 													*v100 = x_BYTE_F6EE0_tablesx[v98];
 												}
-												v100 += v103x->dword_0;
+												v100 += pStrF0E20x->dword_0;
 												v102 += 2;
-												v103x++;
+												pStrF0E20x++;
 												v133--;
 											} while (v133);
 											break;
@@ -4615,12 +4616,12 @@ void GameRenderHD::DrawSprite_41BD3(uint32 a1)
 											v105 = str_F2C20ar.dword0x00;
 											v106 = (x_BYTE*)(v169x->dword_1 + v123);
 											v107 = (x_DWORD*)(8 * (v165[2] - v116) + &x_DWORD_E9C38_smalltit[36960]);
-											v108x = &m_str_F0E20x[*v165];
+											pStrF0E20x = &m_str_F0E20x[*v165];
 											v109 = v133 >> 1;
 											if (!(v133 & 1))
 											{
 												v107 = (x_DWORD*)(v155 + 8);
-												v108x = &v169x[1];
+												pStrF0E20x = &v169x[1];
 												goto LABEL_267;
 											}
 											v109++;
@@ -4633,9 +4634,9 @@ void GameRenderHD::DrawSprite_41BD3(uint32 a1)
 													LOBYTE(v105) = *v106;
 													*v106 = x_BYTE_F6EE0_tablesx[v105];
 												}
-												v106 += v108x[3].dword_0;
+												v106 += pStrF0E20x[3].dword_0;
 												v107 += 4;
-												v108x += 2;
+												pStrF0E20x += 2;
 												if (!--v109)
 													break;
 											LABEL_267:
@@ -4646,7 +4647,7 @@ void GameRenderHD::DrawSprite_41BD3(uint32 a1)
 													LOBYTE(v105) = *v106;
 													*v106 = x_BYTE_F6EE0_tablesx[v105];
 												}
-												v106 += v108x->dword_0;
+												v106 += pStrF0E20x->dword_0;
 											}
 											break;
 										}
