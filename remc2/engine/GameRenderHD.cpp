@@ -4314,7 +4314,7 @@ void GameRenderHD::DrawSprite_41BD3(uint32 a1)
 							v165 = (x_DWORD*)(&x_DWORD_E9C38_smalltit[45920]);
 							for (i = v159; i; i--)
 							{
-								v133 = v165[1];
+								v133 = v165[1]; // steps in inner-most loop
 								if (v133 > 0)
 								{
 									//adress 2237d3
@@ -4335,7 +4335,7 @@ void GameRenderHD::DrawSprite_41BD3(uint32 a1)
 											if (!(v133 & 1))
 											{
 												v6 = v55 & 1;
-												v56 = v133 >> 2;
+												v56 = v133 >> 2; // 4-element loop unrolling -> inner loop v133/4 iterations
 												if (v6)
 												{
 													v56++;
@@ -4393,7 +4393,7 @@ void GameRenderHD::DrawSprite_41BD3(uint32 a1)
 											v64 = (int8_t*)(v169x->dword_1 + v123);
 											v65 = (x_DWORD*)(8 * (v165[2] - v116) + &x_DWORD_E9C38_smalltit[36960]);
 											pStrF0E20x = &m_str_F0E20x[*v165];
-											v67 = v133 >> 1;
+											v67 = v133 >> 1;    // 2-element loop unrolling in inner-most loop -> v133/2 steps
 											if (!(v133 & 1))
 											{
 												v65 = (x_DWORD*)(v155 + 8);
@@ -4426,7 +4426,7 @@ void GameRenderHD::DrawSprite_41BD3(uint32 a1)
 											v70 = (x_DWORD*)(8 * (v165[2] - v116) + &x_DWORD_E9C38_smalltit[36960]);
 											pStrF0E20x = &m_str_F0E20x[*v165];
 											HIWORD(v72) = 0;
-											v73 = v133 >> 1;
+											v73 = v133 >> 1;    // 2-element loop unrolling in inner-most loop -> v133/2 steps
 											if (!(v133 & 1))
 											{
 												v70 = (x_DWORD*)(v155 + 8);
@@ -4465,7 +4465,7 @@ void GameRenderHD::DrawSprite_41BD3(uint32 a1)
 											v76 = (x_DWORD*)(8 * (v165[2] - v116) + &x_DWORD_E9C38_smalltit[36960]);//to position
 											pStrF0E20x = &m_str_F0E20x[v165[0]];//from position
 											HIWORD(v78) = 0;
-											v79 = v133 >> 1;
+											v79 = v133 >> 1;    // 2-element loop unrolling in inner-most loop -> v133/2 steps
 											if (!(v133 & 1))
 											{
 												v76 = (x_DWORD*)(v155 + 8);
@@ -4505,7 +4505,7 @@ void GameRenderHD::DrawSprite_41BD3(uint32 a1)
 											v82 = (x_DWORD*)(8 * (v165[2] - v116) + &x_DWORD_E9C38_smalltit[36960]);
 											pStrF0E20x = &m_str_F0E20x[*v165];
 											BYTE1(v84) = str_F2C20ar.dword0x07;
-											v85 = v133 >> 1;
+											v85 = v133 >> 1;    // 2-element loop unrolling in inner-most loop -> v133/2 steps
 											if (!(v133 & 1))
 											{
 												v82 = (x_DWORD*)(v155 + 8);
@@ -4538,7 +4538,7 @@ void GameRenderHD::DrawSprite_41BD3(uint32 a1)
 											v88 = (x_BYTE*)(v169x->dword_1 + v123);
 											v89 = (x_DWORD*)(8 * (v165[2] - v116) + &x_DWORD_E9C38_smalltit[36960]);
 											pStrF0E20x = &m_str_F0E20x[*v165];
-											v91 = v133 >> 1;
+											v91 = v133 >> 1;    // 2-element loop unrolling in inner-most loop -> v133/2 steps
 											if (!(v133 & 1))
 											{
 												v89 = (x_DWORD*)(v155 + 8);
@@ -4617,7 +4617,7 @@ void GameRenderHD::DrawSprite_41BD3(uint32 a1)
 											v106 = (x_BYTE*)(v169x->dword_1 + v123);
 											v107 = (x_DWORD*)(8 * (v165[2] - v116) + &x_DWORD_E9C38_smalltit[36960]);
 											pStrF0E20x = &m_str_F0E20x[*v165];
-											v109 = v133 >> 1;
+											v109 = v133 >> 1;    // 2-element loop unrolling in inner-most loop -> v133/2 steps
 											if (!(v133 & 1))
 											{
 												v107 = (x_DWORD*)(v155 + 8);
