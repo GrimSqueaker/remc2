@@ -3837,8 +3837,8 @@ void GameRenderHD::DrawSprite_41BD3(uint32 a1)
 	x_DWORD* v107; // esi
 	//type_unk_F0E20x* v108x; // edi // replaced by pStrF0E20x;
 	int v109; // ecx
-	char v110; // al
-	char v111; // al
+	//char v110; // al
+	//char v111; // al
 	int v112; // eax
 	int v113; // edx
 	int v114; // edx
@@ -3858,7 +3858,7 @@ void GameRenderHD::DrawSprite_41BD3(uint32 a1)
 	int v130; // [esp+24h] [ebp-40h]
 	int l; // [esp+28h] [ebp-3Ch]
 	int v132; // [esp+28h] [ebp-3Ch]
-	int v133; // [esp+28h] [ebp-3Ch]
+	//int v133; // [esp+28h] [ebp-3Ch]
 	int v134; // [esp+34h] [ebp-30h]
 	int v135; // [esp+34h] [ebp-30h]
 	int v136; // [esp+38h] [ebp-2Ch]
@@ -4314,8 +4314,8 @@ void GameRenderHD::DrawSprite_41BD3(uint32 a1)
 							v165 = (x_DWORD*)(&x_DWORD_E9C38_smalltit[45920]);
 							for (i = v159; i; i--)
 							{
-								v133 = v165[1]; // steps in inner-most loop
-								if (v133 > 0)
+								int num_steps_inner_loop = v165[1]; // steps in inner-most loop
+								if (num_steps_inner_loop > 0)
 								{
 									//adress 2237d3
 
@@ -4331,11 +4331,11 @@ void GameRenderHD::DrawSprite_41BD3(uint32 a1)
 											v52 = (x_BYTE*)(v169x->dword_1 + v123);
 											v53 = (x_DWORD*)(8 * (v165[2] - v116) + &x_DWORD_E9C38_smalltit[36960]);
 											pStrF0E20x = &m_str_F0E20x[*v165];
-											v55 = v133 >> 1;
-											if (!(v133 & 1))
+											v55 = num_steps_inner_loop >> 1;
+											if (!(num_steps_inner_loop & 1))
 											{
 												v6 = v55 & 1;
-												v56 = v133 >> 2; // 4-element loop unrolling -> inner loop v133/4 iterations
+												v56 = num_steps_inner_loop >> 2; // 4-element loop unrolling -> inner loop num_steps_inner_loop/4 iterations
 												if (v6)
 												{
 													v56++;
@@ -4375,13 +4375,14 @@ void GameRenderHD::DrawSprite_41BD3(uint32 a1)
 												if (v61)
 													*v52 = v61;
 												v52 += pStrF0E20x[3].dword_0;
+
 												v53 += 8;
 												pStrF0E20x += 4;
 												if (!--v56)
 													break;
 											LABEL_191:
 												v58 = v51x[0];
-												v51x += *v53;
+												v51x += v53[0];
 												if (v58)
 													*v52 = v58;
 												v52 += pStrF0E20x[0].dword_0;
@@ -4393,8 +4394,8 @@ void GameRenderHD::DrawSprite_41BD3(uint32 a1)
 											v64 = (int8_t*)(v169x->dword_1 + v123);
 											v65 = (x_DWORD*)(8 * (v165[2] - v116) + &x_DWORD_E9C38_smalltit[36960]);
 											pStrF0E20x = &m_str_F0E20x[*v165];
-											v67 = v133 >> 1;    // 2-element loop unrolling in inner-most loop -> v133/2 steps
-											if (!(v133 & 1))
+											v67 = num_steps_inner_loop >> 1;    // 2-element loop unrolling in inner-most loop -> num_steps_inner_loop/2 steps
+											if (!(num_steps_inner_loop & 1))
 											{
 												v65 = (x_DWORD*)(v155 + 8);
 												pStrF0E20x = &v169x[1];
@@ -4414,10 +4415,10 @@ void GameRenderHD::DrawSprite_41BD3(uint32 a1)
 													break;
 											LABEL_207:
 												LOBYTE(v63) = v62x[0];
-												v62x += *v65;
+												v62x += v65[0];
 												if ((x_BYTE)v63)
 													*v64 = x_BYTE_F6EE0_tablesx[v63];
-												v64 += pStrF0E20x->dword_0;
+												v64 += pStrF0E20x[0].dword_0;
 											}
 											break;
 										case 2:
@@ -4426,8 +4427,8 @@ void GameRenderHD::DrawSprite_41BD3(uint32 a1)
 											v70 = (x_DWORD*)(8 * (v165[2] - v116) + &x_DWORD_E9C38_smalltit[36960]);
 											pStrF0E20x = &m_str_F0E20x[*v165];
 											HIWORD(v72) = 0;
-											v73 = v133 >> 1;    // 2-element loop unrolling in inner-most loop -> v133/2 steps
-											if (!(v133 & 1))
+											v73 = num_steps_inner_loop >> 1;    // 2-element loop unrolling in inner-most loop -> num_steps_inner_loop/2 steps
+											if (!(num_steps_inner_loop & 1))
 											{
 												v70 = (x_DWORD*)(v155 + 8);
 												pStrF0E20x = &v169x[1];
@@ -4456,7 +4457,7 @@ void GameRenderHD::DrawSprite_41BD3(uint32 a1)
 													LOBYTE(v72) = *v69;
 													*v69 = x_BYTE_F6EE0_tablesx[16384 + v72];
 												}
-												v69 += pStrF0E20x->dword_0;
+												v69 += pStrF0E20x[0].dword_0;
 											}
 											break;
 										case 3:
@@ -4465,8 +4466,8 @@ void GameRenderHD::DrawSprite_41BD3(uint32 a1)
 											v76 = (x_DWORD*)(8 * (v165[2] - v116) + &x_DWORD_E9C38_smalltit[36960]);//to position
 											pStrF0E20x = &m_str_F0E20x[v165[0]];//from position
 											HIWORD(v78) = 0;
-											v79 = v133 >> 1;    // 2-element loop unrolling in inner-most loop -> v133/2 steps
-											if (!(v133 & 1))
+											v79 = num_steps_inner_loop >> 1;    // 2-element loop unrolling in inner-most loop -> num_steps_inner_loop/2 steps
+											if (!(num_steps_inner_loop & 1))
 											{
 												v76 = (x_DWORD*)(v155 + 8);
 												pStrF0E20x = &v169x[1];
@@ -4489,13 +4490,13 @@ void GameRenderHD::DrawSprite_41BD3(uint32 a1)
 													break;
 											LABEL_227:
 												LOBYTE(v78) = v74x[0];
-												v74x += *v76;
+												v74x += v76[0];
 												if ((x_BYTE)v78)
 												{
 													HIBYTE(v78) = *v75;
 													*v75 = x_BYTE_F6EE0_tablesx[16384 + v78];
 												}
-												v75 += pStrF0E20x->dword_0;
+												v75 += pStrF0E20x[0].dword_0;
 											}
 											break;
 										case 4:
@@ -4505,8 +4506,8 @@ void GameRenderHD::DrawSprite_41BD3(uint32 a1)
 											v82 = (x_DWORD*)(8 * (v165[2] - v116) + &x_DWORD_E9C38_smalltit[36960]);
 											pStrF0E20x = &m_str_F0E20x[*v165];
 											BYTE1(v84) = str_F2C20ar.dword0x07;
-											v85 = v133 >> 1;    // 2-element loop unrolling in inner-most loop -> v133/2 steps
-											if (!(v133 & 1))
+											v85 = num_steps_inner_loop >> 1;    // 2-element loop unrolling in inner-most loop -> num_steps_inner_loop/2 steps
+											if (!(num_steps_inner_loop & 1))
 											{
 												v82 = (x_DWORD*)(v155 + 8);
 												pStrF0E20x = &v169x[1];
@@ -4526,10 +4527,10 @@ void GameRenderHD::DrawSprite_41BD3(uint32 a1)
 													break;
 											LABEL_237:
 												LOBYTE(v84) = v80x[0];
-												v80x += *v82;
+												v80x += v82[0];
 												if ((x_BYTE)v84)
 													*v81 = x_BYTE_F6EE0_tablesx[0x4000 + v84];
-												v81 += pStrF0E20x->dword_0;
+												v81 += pStrF0E20x[0].dword_0;
 											}
 											break;
 										case 5:
@@ -4538,8 +4539,8 @@ void GameRenderHD::DrawSprite_41BD3(uint32 a1)
 											v88 = (x_BYTE*)(v169x->dword_1 + v123);
 											v89 = (x_DWORD*)(8 * (v165[2] - v116) + &x_DWORD_E9C38_smalltit[36960]);
 											pStrF0E20x = &m_str_F0E20x[*v165];
-											v91 = v133 >> 1;    // 2-element loop unrolling in inner-most loop -> v133/2 steps
-											if (!(v133 & 1))
+											v91 = num_steps_inner_loop >> 1;    // 2-element loop unrolling in inner-most loop -> num_steps_inner_loop/2 steps
+											if (!(num_steps_inner_loop & 1))
 											{
 												v89 = (x_DWORD*)(v155 + 8);
 												pStrF0E20x = &m_str_F0E20x[1];
@@ -4585,8 +4586,8 @@ void GameRenderHD::DrawSprite_41BD3(uint32 a1)
 												v94 += pStrF0E20x->dword_0;
 												v96 += 2;
 												pStrF0E20x++;
-												v133--;
-											} while (v133);
+												num_steps_inner_loop--;
+											} while (num_steps_inner_loop);
 											break;
 										case 7:
 											v98 = str_F2C20ar.dword0x00;
@@ -4608,17 +4609,18 @@ void GameRenderHD::DrawSprite_41BD3(uint32 a1)
 												v100 += pStrF0E20x->dword_0;
 												v102 += 2;
 												pStrF0E20x++;
-												v133--;
-											} while (v133);
+												num_steps_inner_loop--;
+											} while (num_steps_inner_loop);
 											break;
 										case 8:
+											// level 1 when flying towards the first waypoint
 											v104x = &v121x[*(x_DWORD*)(v155 + 4)];
 											v105 = str_F2C20ar.dword0x00;
 											v106 = (x_BYTE*)(v169x->dword_1 + v123);
 											v107 = (x_DWORD*)(8 * (v165[2] - v116) + &x_DWORD_E9C38_smalltit[36960]);
 											pStrF0E20x = &m_str_F0E20x[*v165];
-											v109 = v133 >> 1;    // 2-element loop unrolling in inner-most loop -> v133/2 steps
-											if (!(v133 & 1))
+											v109 = num_steps_inner_loop >> 1;    // 2-element loop unrolling in inner-most loop -> num_steps_inner_loop/2 steps
+											if (!(num_steps_inner_loop & 1))
 											{
 												v107 = (x_DWORD*)(v155 + 8);
 												pStrF0E20x = &v169x[1];
@@ -4627,27 +4629,26 @@ void GameRenderHD::DrawSprite_41BD3(uint32 a1)
 											v109++;
 											while (1)
 											{
-												v111 = v104x[0];
 												v104x += v107[2];
-												if (v111)
+												if (v104x[0])
 												{
 													LOBYTE(v105) = *v106;
 													*v106 = x_BYTE_F6EE0_tablesx[v105];
 												}
 												v106 += pStrF0E20x[3].dword_0;
+
 												v107 += 4;
 												pStrF0E20x += 2;
 												if (!--v109)
 													break;
 											LABEL_267:
-												v110 = v104x[0];
-												v104x += *v107;
-												if (v110)
+												v104x += v107[0];
+												if (v104x[0])
 												{
 													LOBYTE(v105) = *v106;
 													*v106 = x_BYTE_F6EE0_tablesx[v105];
 												}
-												v106 += pStrF0E20x->dword_0;
+												v106 += pStrF0E20x[0].dword_0;
 											}
 											break;
 										}
