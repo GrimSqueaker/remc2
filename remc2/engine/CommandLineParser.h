@@ -47,6 +47,7 @@ class CommandLineParser {
         bool DoSetObjective() const {return m_set_objective;};
         bool DoSetLevel() const {return m_set_level;};
         bool DoTestNetworkChng1() const {return m_test_network_chng1;};
+        bool DoDebugSprites() const {return m_debug_sprites;};
 
         // settings
         std::string GetMemimagesPath() const {return m_memimages_path;};
@@ -92,6 +93,7 @@ class CommandLineParser {
         bool m_set_objective;
         bool m_set_level;
         bool m_test_network_chng1;
+        bool m_debug_sprites;
         std::string m_memimages_path;
 };
 
