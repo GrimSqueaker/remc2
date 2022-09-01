@@ -3837,7 +3837,7 @@ void GameRenderHD::DrawSprite_41BD3(uint32 a1)
 	x_BYTE* v106; // edx
 	x_DWORD* v107; // esi
 	//type_unk_F0E20x* v108x; // edi // replaced by pStrF0E20x;
-	int v109; // ecx
+	//int v109; // ecx
 	//char v110; // al
 	//char v111; // al
 	int v112; // eax
@@ -4328,6 +4328,7 @@ void GameRenderHD::DrawSprite_41BD3(uint32 a1)
 										switch (str_F2C20ar.dword0x01_rotIdx)
 										{
 										case 0:
+											// close objects (closer than the fade-in/out-distance)
 											v51x = &v121x[*(x_DWORD*)(v155 + 4)];
 											v52 = (x_BYTE*)(v169x->dword_1 + sprite_base_position_in_screen_buffer);
 											v53 = (x_DWORD*)(8 * (v165[2] - v116) + &x_DWORD_E9C38_smalltit[36960]);
@@ -4363,7 +4364,7 @@ void GameRenderHD::DrawSprite_41BD3(uint32 a1)
 												color = v51x[0];
 												v51x += v53[2];
 												if (color)
-													*v52 = color;
+													*v52 = CommandLineParams.DoDebugSprites() ? 120 : color;
 												v52 += pStrF0E20x[1].dword_0;
 											LABEL_197:
 												color = v51x[0];
@@ -4375,7 +4376,7 @@ void GameRenderHD::DrawSprite_41BD3(uint32 a1)
 												color = v51x[0];
 												v51x += v53[6];
 												if (color)
-													*v52 = color;
+													*v52 = CommandLineParams.DoDebugSprites() ? 180 : color;
 												v52 += pStrF0E20x[3].dword_0;
 
 												v53 += 8;
@@ -4391,6 +4392,7 @@ void GameRenderHD::DrawSprite_41BD3(uint32 a1)
 											}
 											break;
 										case 1:
+											// distant objects (in the fade-in/out distance)
 											v62x = &v121x[*(x_DWORD*)(v155 + 4)];
 											v63 = str_F2C20ar.dword0x00;
 											v64 = (int8_t*)(v169x->dword_1 + sprite_base_position_in_screen_buffer);
@@ -4409,7 +4411,7 @@ void GameRenderHD::DrawSprite_41BD3(uint32 a1)
 												LOBYTE(v63) = v62x[0];
 												v62x += v65[2];
 												if ((x_BYTE)v63)
-													*v64 = x_BYTE_F6EE0_tablesx[v63];
+													*v64 = CommandLineParams.DoDebugSprites() ? 180 : x_BYTE_F6EE0_tablesx[v63];
 												v64 += pStrF0E20x[1].dword_0;
 												v65 += 4;
 												pStrF0E20x += 2;
@@ -4419,11 +4421,47 @@ void GameRenderHD::DrawSprite_41BD3(uint32 a1)
 												LOBYTE(v63) = v62x[0];
 												v62x += v65[0];
 												if ((x_BYTE)v63)
-													*v64 = x_BYTE_F6EE0_tablesx[v63];
+													*v64 = CommandLineParams.DoDebugSprites() ? 180 : x_BYTE_F6EE0_tablesx[v63];
 												v64 += pStrF0E20x[0].dword_0;
 											}
+
+											/*
+											v62x = &v121x[*(x_DWORD*)(v155 + 4)];
+											v63 = str_F2C20ar.dword0x00;
+											v64 = (int8_t*)(v169x->dword_1 + sprite_base_position_in_screen_buffer);
+											v65 = (x_DWORD*)(8 * (v165[2] - v116) + &x_DWORD_E9C38_smalltit[36960]);
+											pStrF0E20x = &m_str_F0E20x[*v165];
+											v67 = num_steps_inner_loop >> 1;    // 2-element loop unrolling in inner-most loop -> num_steps_inner_loop/2 steps
+											if (!(num_steps_inner_loop & 1))
+											{
+												v65 = (x_DWORD*)(v155 + 8);
+												pStrF0E20x = &v169x[1];
+												goto LABEL_207;
+											}
+											v67++;
+											while (1)
+											{
+												LOBYTE(v63) = v62x[0];
+												v62x += v65[2];
+												if ((x_BYTE)v63)
+													*v64 = CommandLineParams.DoDebugSprites() ? 180 : x_BYTE_F6EE0_tablesx[v63];
+												v64 += pStrF0E20x[1].dword_0;
+												v65 += 4;
+												pStrF0E20x += 2;
+												if (!--v67)
+													break;
+											LABEL_207:
+												LOBYTE(v63) = v62x[0];
+												v62x += v65[0];
+												if ((x_BYTE)v63)
+													*v64 = CommandLineParams.DoDebugSprites() ? 180 : x_BYTE_F6EE0_tablesx[v63];
+												v64 += pStrF0E20x[0].dword_0;
+											}
+											*/
+
 											break;
 										case 2:
+											// unused ?
 											v68x = &v121x[*(x_DWORD*)(v155 + 4)];
 											v69 = (x_BYTE*)(v169x->dword_1 + sprite_base_position_in_screen_buffer);
 											v70 = (x_DWORD*)(8 * (v165[2] - v116) + &x_DWORD_E9C38_smalltit[36960]);
@@ -4463,6 +4501,7 @@ void GameRenderHD::DrawSprite_41BD3(uint32 a1)
 											}
 											break;
 										case 3:
+											// unused ?
 											v74x = &v121x[*(x_DWORD*)(v155 + 4)];
 											v75 = (x_BYTE*)(v169x->dword_1 + sprite_base_position_in_screen_buffer);
 											v76 = (x_DWORD*)(8 * (v165[2] - v116) + &x_DWORD_E9C38_smalltit[36960]);//to position
@@ -4502,6 +4541,7 @@ void GameRenderHD::DrawSprite_41BD3(uint32 a1)
 											}
 											break;
 										case 4:
+											// unused ?
 											v80x = &v121x[*(x_DWORD*)(v155 + 4)];
 											HIWORD(v84) = HIWORD(str_F2C20ar.dword0x07);
 											v81 = (x_BYTE*)(v169x->dword_1 + sprite_base_position_in_screen_buffer);
@@ -4536,6 +4576,7 @@ void GameRenderHD::DrawSprite_41BD3(uint32 a1)
 											}
 											break;
 										case 5:
+											// unused ?
 											v86x = &v121x[*(x_DWORD*)(v155 + 4)];
 											v87 = str_F2C20ar.dword0x07;
 											v88 = (x_BYTE*)(v169x->dword_1 + sprite_base_position_in_screen_buffer);
@@ -4569,6 +4610,7 @@ void GameRenderHD::DrawSprite_41BD3(uint32 a1)
 											}
 											break;
 										case 6:
+											// unused ?
 											v92 = str_F2C20ar.dword0x00;
 											v93x = &v121x[*(x_DWORD*)(v155 + 4)];
 											v94 = (x_BYTE*)(v169x->dword_1 + sprite_base_position_in_screen_buffer);
@@ -4592,6 +4634,7 @@ void GameRenderHD::DrawSprite_41BD3(uint32 a1)
 											} while (num_steps_inner_loop);
 											break;
 										case 7:
+											// unused ?
 											v98 = str_F2C20ar.dword0x00;
 											v99x = &v121x[*(x_DWORD*)(v155 + 4)];
 											v100 = (x_BYTE*)(v169x->dword_1 + sprite_base_position_in_screen_buffer);
@@ -4616,6 +4659,8 @@ void GameRenderHD::DrawSprite_41BD3(uint32 a1)
 											break;
 										case 8:
 											// shadow on the ground
+											// the shadows do not render perfectly and can have stripes that do not get rendered - even in the original
+
 											/*
 											v104x = &v121x[*(x_DWORD*)(v155 + 4)];
 											v105 = str_F2C20ar.dword0x00;
