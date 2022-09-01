@@ -1,4 +1,5 @@
 #include "GameRenderHD.h"
+#include "CommandLineParser.h"
 
 GameRenderHD::GameRenderHD(uint8_t* ptrScreenBuffer, uint8_t* pColorPalette, uint16_t screenWidth, uint16_t screenHeight, uint8_t renderThreads, bool assignToSpecificCores) : 
 	m_ptrScreenBuffer_351628(ptrScreenBuffer), m_ptrColorPalette(pColorPalette), m_uiScreenWidth_18062C(screenWidth), m_uiScreenHeight_180624(screenHeight), 
@@ -3785,10 +3786,10 @@ void GameRenderHD::DrawSprite_41BD3(uint32 a1)
 	int v55; // ecx
 	int v56; // ecx
 	int v57; // ecx
-	char v58; // al
-	char v59; // al
-	char v60; // al
-	char v61; // al
+	//char v58; // al
+	//char v59; // al
+	//char v60; // al
+	//char v61; // al
 	int8_t* v62x; // ebx
 	int v63; // eax
 	int8_t* v64; // edx
@@ -3849,7 +3850,7 @@ void GameRenderHD::DrawSprite_41BD3(uint32 a1)
 	x_DWORD* v120; // [esp+14h] [ebp-50h]
 	int8_t* v121x; // [esp+1Ch] [ebp-48h]
 	uint8_t* v122x; // [esp+20h] [ebp-44h]
-	uint8_t* v123; // [esp+20h] [ebp-44h]
+	uint8_t* sprite_base_position_in_screen_buffer; // [esp+20h] [ebp-44h]
 	int v124; // [esp+24h] [ebp-40h]
 	int v125; // [esp+24h] [ebp-40h]
 	int i; // [esp+24h] [ebp-40h]
@@ -3968,7 +3969,7 @@ void GameRenderHD::DrawSprite_41BD3(uint32 a1)
 							v157 -= v139 * v160;
 							v170 = str_F2C20ar.dword0x21;
 						LABEL_136:
-							v123 = iScreenWidth_DE560 * v170 + ViewPortRenderBufferStart_DE558;
+							sprite_base_position_in_screen_buffer = iScreenWidth_DE560 * v170 + ViewPortRenderBufferStart_DE558;
 							goto LABEL_137;
 						}
 						break;
@@ -4008,7 +4009,7 @@ void GameRenderHD::DrawSprite_41BD3(uint32 a1)
 								v158 += v141 * v161;
 								v171 = str_F2C20ar.width0x25;
 							LABEL_284:
-								v123 = v171 + ViewPortRenderBufferStart_DE558;
+								sprite_base_position_in_screen_buffer = v171 + ViewPortRenderBufferStart_DE558;
 								goto LABEL_285;
 							}
 						}
@@ -4044,7 +4045,7 @@ void GameRenderHD::DrawSprite_41BD3(uint32 a1)
 						v157 -= v147 * v160;
 						v170 = str_F2C20ar.dword0x21;
 					LABEL_329:
-						v123 = str_F2C20ar.width0x25 + ViewPortRenderBufferStart_DE558 - 1 - v170;
+						sprite_base_position_in_screen_buffer = str_F2C20ar.width0x25 + ViewPortRenderBufferStart_DE558 - 1 - v170;
 						goto LABEL_137;
 					case 3:
 						v156 = str_F2C20ar.dword0x27 * str_F2C20ar.dword0x09_realWidth >> 16;
@@ -4082,7 +4083,7 @@ void GameRenderHD::DrawSprite_41BD3(uint32 a1)
 							v158 += v148 * v161;
 							v171 = str_F2C20ar.width0x25;
 						}
-						v123 = str_F2C20ar.height0x26 + iScreenWidth_DE560 * v171 - 1 + ViewPortRenderBufferStart_DE558;
+						sprite_base_position_in_screen_buffer = str_F2C20ar.height0x26 + iScreenWidth_DE560 * v171 - 1 + ViewPortRenderBufferStart_DE558;
 						goto LABEL_285;
 					case 4:
 						v156 = str_F2C20ar.dword0x1b * str_F2C20ar.dword0x09_realWidth >> 16;
@@ -4115,7 +4116,7 @@ void GameRenderHD::DrawSprite_41BD3(uint32 a1)
 						v157 -= v149 * v160;
 						v170 = str_F2C20ar.dword0x21;
 					LABEL_348:
-						v123 = str_F2C20ar.height0x26 + ViewPortRenderBufferStart_DE558 + iScreenWidth_DE560 * (str_F2C20ar.width0x25 - v170 - 1) - 1;
+						sprite_base_position_in_screen_buffer = str_F2C20ar.height0x26 + ViewPortRenderBufferStart_DE558 + iScreenWidth_DE560 * (str_F2C20ar.width0x25 - v170 - 1) - 1;
 						goto LABEL_137;
 					case 5:
 						v156 = str_F2C20ar.dword0x27 * str_F2C20ar.dword0x09_realWidth >> 16;
@@ -4154,7 +4155,7 @@ void GameRenderHD::DrawSprite_41BD3(uint32 a1)
 							v158 += v150 * v161;
 							v171 = str_F2C20ar.width0x25;
 						}
-						v123 = (str_F2C20ar.height0x26 - 1) * iScreenWidth_DE560 + str_F2C20ar.width0x25 + ViewPortRenderBufferStart_DE558 - 1 - v171;
+						sprite_base_position_in_screen_buffer = (str_F2C20ar.height0x26 - 1) * iScreenWidth_DE560 + str_F2C20ar.width0x25 + ViewPortRenderBufferStart_DE558 - 1 - v171;
 						goto LABEL_285;
 					case 6:
 						v156 = str_F2C20ar.dword0x1b * str_F2C20ar.dword0x09_realWidth >> 16;
@@ -4187,7 +4188,7 @@ void GameRenderHD::DrawSprite_41BD3(uint32 a1)
 						v157 -= v151 * v160;
 						v170 = str_F2C20ar.dword0x21;
 					LABEL_367:
-						v123 = ViewPortRenderBufferStart_DE558 + iScreenWidth_DE560 * (str_F2C20ar.height0x26 - 1) + v170;
+						sprite_base_position_in_screen_buffer = ViewPortRenderBufferStart_DE558 + iScreenWidth_DE560 * (str_F2C20ar.height0x26 - 1) + v170;
 					LABEL_137:
 						v140 = str_F2C20ar.width0x25 - str_F2C20ar.dword0x21;
 						if (v170 <= 0)
@@ -4328,7 +4329,7 @@ void GameRenderHD::DrawSprite_41BD3(uint32 a1)
 										{
 										case 0:
 											v51x = &v121x[*(x_DWORD*)(v155 + 4)];
-											v52 = (x_BYTE*)(v169x->dword_1 + v123);
+											v52 = (x_BYTE*)(v169x->dword_1 + sprite_base_position_in_screen_buffer);
 											v53 = (x_DWORD*)(8 * (v165[2] - v116) + &x_DWORD_E9C38_smalltit[36960]);
 											pStrF0E20x = &m_str_F0E20x[*v165];
 											v55 = num_steps_inner_loop >> 1;
@@ -4356,24 +4357,25 @@ void GameRenderHD::DrawSprite_41BD3(uint32 a1)
 												pStrF0E20x = &v169x[-2];
 												goto LABEL_200;
 											}
+											char color;
 											while (1)
 											{
-												v59 = v51x[0];
+												color = v51x[0];
 												v51x += v53[2];
-												if (v59)
-													*v52 = v59;
+												if (color)
+													*v52 = color;
 												v52 += pStrF0E20x[1].dword_0;
 											LABEL_197:
-												v60 = v51x[0];
+												color = v51x[0];
 												v51x += v53[4];
-												if (v60)
-													*v52 = v60;
+												if (color)
+													*v52 = color;
 												v52 += pStrF0E20x[2].dword_0;
 											LABEL_200:
-												v61 = v51x[0];
+												color = v51x[0];
 												v51x += v53[6];
-												if (v61)
-													*v52 = v61;
+												if (color)
+													*v52 = color;
 												v52 += pStrF0E20x[3].dword_0;
 
 												v53 += 8;
@@ -4381,17 +4383,17 @@ void GameRenderHD::DrawSprite_41BD3(uint32 a1)
 												if (!--v56)
 													break;
 											LABEL_191:
-												v58 = v51x[0];
+												color = v51x[0];
 												v51x += v53[0];
-												if (v58)
-													*v52 = v58;
+												if (color)
+													*v52 = color;
 												v52 += pStrF0E20x[0].dword_0;
 											}
 											break;
 										case 1:
 											v62x = &v121x[*(x_DWORD*)(v155 + 4)];
 											v63 = str_F2C20ar.dword0x00;
-											v64 = (int8_t*)(v169x->dword_1 + v123);
+											v64 = (int8_t*)(v169x->dword_1 + sprite_base_position_in_screen_buffer);
 											v65 = (x_DWORD*)(8 * (v165[2] - v116) + &x_DWORD_E9C38_smalltit[36960]);
 											pStrF0E20x = &m_str_F0E20x[*v165];
 											v67 = num_steps_inner_loop >> 1;    // 2-element loop unrolling in inner-most loop -> num_steps_inner_loop/2 steps
@@ -4423,7 +4425,7 @@ void GameRenderHD::DrawSprite_41BD3(uint32 a1)
 											break;
 										case 2:
 											v68x = &v121x[*(x_DWORD*)(v155 + 4)];
-											v69 = (x_BYTE*)(v169x->dword_1 + v123);
+											v69 = (x_BYTE*)(v169x->dword_1 + sprite_base_position_in_screen_buffer);
 											v70 = (x_DWORD*)(8 * (v165[2] - v116) + &x_DWORD_E9C38_smalltit[36960]);
 											pStrF0E20x = &m_str_F0E20x[*v165];
 											HIWORD(v72) = 0;
@@ -4462,7 +4464,7 @@ void GameRenderHD::DrawSprite_41BD3(uint32 a1)
 											break;
 										case 3:
 											v74x = &v121x[*(x_DWORD*)(v155 + 4)];
-											v75 = (x_BYTE*)(v169x->dword_1 + v123);
+											v75 = (x_BYTE*)(v169x->dword_1 + sprite_base_position_in_screen_buffer);
 											v76 = (x_DWORD*)(8 * (v165[2] - v116) + &x_DWORD_E9C38_smalltit[36960]);//to position
 											pStrF0E20x = &m_str_F0E20x[v165[0]];//from position
 											HIWORD(v78) = 0;
@@ -4502,7 +4504,7 @@ void GameRenderHD::DrawSprite_41BD3(uint32 a1)
 										case 4:
 											v80x = &v121x[*(x_DWORD*)(v155 + 4)];
 											HIWORD(v84) = HIWORD(str_F2C20ar.dword0x07);
-											v81 = (x_BYTE*)(v169x->dword_1 + v123);
+											v81 = (x_BYTE*)(v169x->dword_1 + sprite_base_position_in_screen_buffer);
 											v82 = (x_DWORD*)(8 * (v165[2] - v116) + &x_DWORD_E9C38_smalltit[36960]);
 											pStrF0E20x = &m_str_F0E20x[*v165];
 											BYTE1(v84) = str_F2C20ar.dword0x07;
@@ -4536,7 +4538,7 @@ void GameRenderHD::DrawSprite_41BD3(uint32 a1)
 										case 5:
 											v86x = &v121x[*(x_DWORD*)(v155 + 4)];
 											v87 = str_F2C20ar.dword0x07;
-											v88 = (x_BYTE*)(v169x->dword_1 + v123);
+											v88 = (x_BYTE*)(v169x->dword_1 + sprite_base_position_in_screen_buffer);
 											v89 = (x_DWORD*)(8 * (v165[2] - v116) + &x_DWORD_E9C38_smalltit[36960]);
 											pStrF0E20x = &m_str_F0E20x[*v165];
 											v91 = num_steps_inner_loop >> 1;    // 2-element loop unrolling in inner-most loop -> num_steps_inner_loop/2 steps
@@ -4569,7 +4571,7 @@ void GameRenderHD::DrawSprite_41BD3(uint32 a1)
 										case 6:
 											v92 = str_F2C20ar.dword0x00;
 											v93x = &v121x[*(x_DWORD*)(v155 + 4)];
-											v94 = (x_BYTE*)(v169x->dword_1 + v123);
+											v94 = (x_BYTE*)(v169x->dword_1 + sprite_base_position_in_screen_buffer);
 											HIWORD(v95) = 0;
 											v96 = (x_DWORD*)(v155 + 8);
 											pStrF0E20x = &v169x[1];
@@ -4592,7 +4594,7 @@ void GameRenderHD::DrawSprite_41BD3(uint32 a1)
 										case 7:
 											v98 = str_F2C20ar.dword0x00;
 											v99x = &v121x[*(x_DWORD*)(v155 + 4)];
-											v100 = (x_BYTE*)(v169x->dword_1 + v123);
+											v100 = (x_BYTE*)(v169x->dword_1 + sprite_base_position_in_screen_buffer);
 											HIWORD(v101) = 0;
 											v102 = (x_DWORD*)(v155 + 8);
 											pStrF0E20x = &v169x[1];
@@ -4613,10 +4615,11 @@ void GameRenderHD::DrawSprite_41BD3(uint32 a1)
 											} while (num_steps_inner_loop);
 											break;
 										case 8:
-											// level 1 when flying towards the first waypoint
+											// shadow on the ground
+											/*
 											v104x = &v121x[*(x_DWORD*)(v155 + 4)];
 											v105 = str_F2C20ar.dword0x00;
-											v106 = (x_BYTE*)(v169x->dword_1 + v123);
+											v106 = (x_BYTE*)(v169x->dword_1 + sprite_base_position_in_screen_buffer);
 											v107 = (x_DWORD*)(8 * (v165[2] - v116) + &x_DWORD_E9C38_smalltit[36960]);
 											pStrF0E20x = &m_str_F0E20x[*v165];
 											v109 = num_steps_inner_loop >> 1;    // 2-element loop unrolling in inner-most loop -> num_steps_inner_loop/2 steps
@@ -4634,6 +4637,7 @@ void GameRenderHD::DrawSprite_41BD3(uint32 a1)
 												{
 													LOBYTE(v105) = *v106;
 													*v106 = x_BYTE_F6EE0_tablesx[v105];
+													*v106 = 120; // FIXME: just for debugging
 												}
 												v106 += pStrF0E20x[3].dword_0;
 
@@ -4647,15 +4651,36 @@ void GameRenderHD::DrawSprite_41BD3(uint32 a1)
 												{
 													LOBYTE(v105) = *v106;
 													*v106 = x_BYTE_F6EE0_tablesx[v105];
+													*v106 = 120; // FIXME: just for debugging
 												}
 												v106 += pStrF0E20x[0].dword_0;
 											}
+											*/
+											v104x = &v121x[*(x_DWORD*)(v155 + 4)];
+											v105 = str_F2C20ar.dword0x00;
+											v106 = (x_BYTE*)(v169x->dword_1 + sprite_base_position_in_screen_buffer);
+											v107 = (x_DWORD*)(8 * (v165[2] - v116) + &x_DWORD_E9C38_smalltit[36960]);
+											pStrF0E20x = &m_str_F0E20x[*v165];
+
+											for (int line = 0; line < num_steps_inner_loop; ++line) {
+												v104x += v107[2];
+												if (v104x[0])
+												{
+													LOBYTE(v105) = *v106;
+													*v106 = CommandLineParams.DoDebugSprites() ? 120 : x_BYTE_F6EE0_tablesx[v105]; // lookup shaded color value of pixel on screen
+												}
+												v106 += pStrF0E20x[3].dword_0;
+
+												v107 += 2;
+												pStrF0E20x++;
+											}
+
 											break;
 										}
 									}
 								}
 								str_F2C20ar.dword0x0a_actIdx += v135;
-								v123 += str_F2C20ar.dword0x23;
+								sprite_base_position_in_screen_buffer += str_F2C20ar.dword0x23;
 								v165 += 3;
 							}
 						}
@@ -4699,7 +4724,7 @@ void GameRenderHD::DrawSprite_41BD3(uint32 a1)
 							v158 += v152 * v161;
 							v171 = str_F2C20ar.width0x25;
 						}
-						v123 = iScreenWidth_DE560 * (str_F2C20ar.width0x25 - 1 - v171) + ViewPortRenderBufferStart_DE558;
+						sprite_base_position_in_screen_buffer = iScreenWidth_DE560 * (str_F2C20ar.width0x25 - 1 - v171) + ViewPortRenderBufferStart_DE558;
 					LABEL_285:
 						v142 = str_F2C20ar.width0x25 - str_F2C20ar.dword0x21;
 						if (v171 < str_F2C20ar.width0x25)
