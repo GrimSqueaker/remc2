@@ -21,6 +21,7 @@
             "request": "launch",
             "program": "${workspaceFolder}/buildsanitizers/Debug/inst/bin/remc2",
             "args": [
+                "--debug_sprites"
             ],
             "stopAtEntry": false,
             "cwd": "${workspaceFolder}/buildsanitizers/Debug/inst/bin",
