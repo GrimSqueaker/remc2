@@ -40,7 +40,16 @@ void StateMonitor::Init() {
     uint32_t alphaMask = 0xff000000;
 #endif
 
-    m_window = SDL_CreateWindow("StateMonitor", SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, STATE_MONITOR_WIDTH, STATE_MONITOR_HEIGHT, 0);
+    // if we have a second monitor, we can use it to display the state monitor
+    // otherwise we will display it on the main monitor
+    int display_index = 0;
+    if (SDL_GetNumVideoDisplays() > 1) {
+        display_index = 1;
+    }
+    SDL_Rect display_bounds;
+    SDL_GetDisplayBounds(display_index, &display_bounds);
+
+    m_window = SDL_CreateWindow("StateMonitor", display_bounds.x+50, display_bounds.y+50, STATE_MONITOR_WIDTH, STATE_MONITOR_HEIGHT, 0);
     m_renderer = SDL_CreateRenderer(m_window, -1, SDL_RENDERER_ACCELERATED | SDL_RENDERER_TARGETTEXTURE);
     SDL_SetRenderDrawColor(m_renderer, 255,255,255,250);
 

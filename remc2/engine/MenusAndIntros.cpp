@@ -3688,7 +3688,7 @@ int NewGameDraw_7EAE0(int16_t* posx, int16_t* posy, __int16* a3, __int16* a4, in
 	LABEL_66:
 		NewGameSubdraw_81760();//draw cursor
 		goto LABEL_92;
-	case 2:
+	case 2: // auto move map screen to next level
 		//v25 = *a4;
 		//v26 = *a3;
 		if (sub_7E9D0(posx, posy, a6))

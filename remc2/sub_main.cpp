@@ -34314,7 +34314,7 @@ int AddHouse0A_2D_38330(type_event_0x6E8E* event)//219330
 }
 
 //----- (000385C0) --------------------------------------------------------
-void sub_385C0_remove_castle_stage(type_event_0x6E8E* a1x)//2195c0 //remove castle stage
+void sub_385C0_remove_castle_stage(type_event_0x6E8E* a1x)//2195c0 // remove castle stage - player and non-player
 {
 	int16_t v2; // eax
 	uint8_t* v3; // edi
